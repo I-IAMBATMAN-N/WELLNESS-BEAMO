@@ -1,0 +1,35 @@
+/* COLORS 
+
+logo(company name)
+#CD8376
+white
+#FFF9F9
+grey
+#4C4B4B
+main(background)
+#EFD8D1
+accent
+#6E825F
+*/
+
+/* FONTS
+
+sizes
+
+*/
+:root {
+  --color-primary: #efd8d1;
+  --color-text-grey: #4c4b4b;
+  --color-text-white: #fff9f9;
+  --color-accent: #6e825f;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
