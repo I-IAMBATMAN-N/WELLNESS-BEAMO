@@ -16,6 +16,13 @@ accent
 
 sizes
 
+
+
+  FONT SIZE SYSTEM (px)
+  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+  SPACING SYSTEM (px)
+  2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
 */
 :root {
   --color-primary: #efd8d1;
@@ -80,4 +87,96 @@ html {
   text-decoration: none;
   color: var(--color-accent);
   text-transform: uppercase;
+}
+.hero {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  height: 100vh;
+  position: relative;
+  padding-top: 12.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Merriweather", serif;
+  position: relative;
+}
+.hero::before {
+  content: "";
+  /* width: 165rem;
+  height: 165rem; */
+  border-radius: 500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.article {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 100rem;
+  height: 100%;
+}
+.hero-article {
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  gap: 8rem;
+  margin-bottom: 12.8rem;
+}
+.hero-heading {
+  font-size: 4.4rem;
+  color: var(--color-accent);
+}
+.hero-heading span {
+  font-size: 2.4rem;
+}
+.hero-subheading {
+  color: var(--color-grey);
+  font-size: 2rem;
+}
+.hero-subheading span {
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.img-container {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+.img-container::before {
+  content: "";
+  position: absolute;
+  width: 40rem;
+  aspect-ratio: 1/1;
+  border-radius: 100rem;
+  transform: translate(-50%, 0);
+  top: -4.6rem;
+  left: 50%;
+  background-color: var(--color-accent);
+  z-index: -1;
+}
+.socials {
+  width: 56.8rem;
+  padding: 1rem 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  background-color: var(--color-accent);
+  position: absolute;
+  left: 0;
+  bottom: 15rem;
+  border-top-right-radius: 100rem;
+  border-bottom-right-radius: 100rem;
+  gap: 8rem;
+}
+.social-icon {
+  fill: var(--color-white);
+  width: 6.4rem;
 }
