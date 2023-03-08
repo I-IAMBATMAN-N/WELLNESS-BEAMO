@@ -35,11 +35,15 @@ html {
   background-color: var(--color-white);
 }
 .main-header {
+  position: fixed;
+  width: 100%;
+}
+.main-header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 120rem;
   margin: 0 auto;
+  max-width: 120rem;
   padding: 1.2rem 0;
 }
 /* LOGO */
@@ -67,7 +71,7 @@ html {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 2.4rem;
+  gap: 6.4rem;
   font-size: 1.8rem;
   font-weight: bold;
   font-family: "Raleway", serif;
