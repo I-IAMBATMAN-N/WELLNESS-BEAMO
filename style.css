@@ -19,8 +19,8 @@ sizes
 */
 :root {
   --color-primary: #efd8d1;
-  --color-text-grey: #4c4b4b;
-  --color-text-white: #fff9f9;
+  --color-grey: #4c4b4b;
+  --color-white: #fff9f9;
   --color-accent: #6e825f;
 }
 * {
@@ -32,4 +32,48 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;
+  background-color: var(--color-white);
+}
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 1.2rem 0;
+}
+/* LOGO */
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+.logo img {
+  max-width: 8.2rem;
+  margin-left: 2.2rem;
+}
+.company-name {
+  font-size: 1.8rem;
+  color: #cd8376;
+}
+.logo-name {
+  font-size: 2.4rem;
+  color: var(--color-accent);
+  font-family: "Great Vibes", sans-serif;
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: "Raleway", serif;
+}
+.nav-link {
+  text-decoration: none;
+  color: var(--color-accent);
+  text-transform: uppercase;
 }
