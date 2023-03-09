@@ -42,6 +42,62 @@ html {
   font-family: "Raleway", sans-serif;
   background-color: var(--color-white);
 }
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+/* GENERAL stylings */
+.section {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 12.5rem;
+  position: relative;
+}
+.article {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 100rem;
+  height: 100%;
+  gap: 8rem;
+}
+/* -BACKGROUNDS for SECTION */
+.section.hero::before,
+.section.about::before {
+  content: "";
+  display: inline-block;
+
+  width: 500rem;
+  aspect-ratio: 5/2;
+  position: absolute;
+}
+.section.hero::before {
+  top: -85%;
+  left: -500rem;
+  border-radius: 70rem;
+
+  transform: translate(22%, 0) rotate(35deg);
+  z-index: -2;
+  background-color: var(--color-primary);
+}
+.section.about::before {
+  position: absolute;
+
+  bottom: -112.7%;
+  left: 30%;
+  border-radius: 70rem;
+
+  background-color: var(--color-primary);
+
+  z-index: -2;
+}
+/*  -HEADER- */
 .main-header {
   position: fixed;
   width: 100%;
@@ -56,7 +112,7 @@ html {
   max-width: 120rem;
   padding: 1.2rem 0;
 }
-/* LOGO */
+/*  -LOGO- */
 .logo {
   display: flex;
   flex-direction: column;
@@ -91,31 +147,11 @@ html {
   color: var(--color-accent);
   text-transform: uppercase;
 }
-.section {
-  width: 100%;
-  max-width: 120rem;
-  margin: 0 auto;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 12.5rem;
-  position: relative;
-}
 .hero {
   position: relative;
   justify-content: center;
   font-family: "Merriweather", serif;
   position: relative;
-}
-.article {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  max-width: 100rem;
-  height: 100%;
-  gap: 8rem;
 }
 .hero-article {
   font-weight: bold;
@@ -240,36 +276,4 @@ html {
   color: var(--color-accent);
 
   background-color: var(--color-white-oppacity);
-}
-
-/* Section bacgkrounds */
-
-.section.hero::before,
-.section.about::before {
-  content: "";
-  display: inline-block;
-
-  width: 500rem;
-  aspect-ratio: 5/2;
-  position: absolute;
-}
-.section.hero::before {
-  top: -85%;
-  left: -500rem;
-  border-radius: 70rem;
-
-  transform: translate(22%, 0) rotate(35deg);
-  z-index: -2;
-  background-color: var(--color-primary);
-}
-.section.about::before {
-  position: absolute;
-
-  bottom: -112.7%;
-  left: 30%;
-  border-radius: 70rem;
-
-  background-color: var(--color-primary);
-
-  z-index: -2;
 }
