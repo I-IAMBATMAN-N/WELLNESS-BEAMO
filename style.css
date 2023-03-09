@@ -192,7 +192,6 @@ html {
   font-size: 7.4rem;
   font-weight: normal;
 }
-
 .about .img-container::before {
   content: "";
   position: absolute;
@@ -204,4 +203,40 @@ html {
   left: 50%;
   background-color: var(--color-accent);
   z-index: -1;
+}
+.services {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9.6rem;
+  font-family: "Merriweather", serif;
+}
+.service-container {
+  width: 50%;
+  aspect-ratio: 1/1;
+  background-image: url(images/Kosmetische_Behandlungen/beauty-teenies.jpg);
+  background-size: 100%;
+  background-position: center;
+  box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.25);
+}
+.service-container:last-child {
+  background-image: url(images/Wellness_Massagen/pexels-ornella-delfino-8460603.jpg);
+}
+.service-link {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 4.6rem;
+  color: var(--color-accent);
+
+  background-color: var(--color-white-oppacity);
 }
