@@ -277,3 +277,94 @@ body {
 
   background-color: var(--color-white-oppacity);
 }
+
+/* FOOTER */
+.section.contacts-container {
+  padding-top: 0;
+  max-width: 100rem;
+}
+.contacts-container {
+  gap: 4.6rem;
+  flex-direction: row;
+}
+.contact-card,
+.contact-section,
+.contact-content,
+.required-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-card {
+  font-family: "Merriweather", serif;
+  width: 33%;
+  height: 44rem;
+  background-color: var(--color-accent);
+  border-radius: 2rem;
+  /* gap: 1.6rem; */
+  padding: 1.8rem;
+  padding-bottom: 2.4rem;
+  text-align: center;
+  color: var(--color-white);
+  box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.25);
+}
+.contact-card:nth-child(2) {
+  background-color: var(--color-white);
+  color: var(--color-grey);
+}
+.contact-card:nth-child(2) .contact-heading {
+  color: var(--color-accent);
+}
+
+.contact-card:nth-child(2) .contact-link {
+  color: var(--color-grey);
+}
+.contact-card:nth-child(2) .contact-icon {
+  color: var(--color-accent);
+}
+.contact-heading {
+  font-size: 5.2rem;
+  font-family: "Great Vibes";
+  font-weight: normal;
+  margin-bottom: 2.4rem;
+}
+.contact-text {
+  font-size: 2rem;
+  font-family: "Merriweather", serif;
+  line-height: 1.5;
+}
+.contact-section {
+  flex: 1 0 0;
+  justify-content: space-evenly;
+}
+.contact-link {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 2rem;
+}
+.contact-icon {
+  color: var(--color-accent);
+  color: var(--color-white);
+  /* background-color: var(--color-white); */
+  font-size: 2.4rem;
+  padding: 0.4rem;
+  border-radius: 50%;
+}
+.contact-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.contact-logo .company-name {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+}
+.contact-logo .logo-name {
+  font-size: 2.4rem;
+}
+.required-link {
+  color: var(--color-accent);
+  font-weight: bold;
+  font-size: 2rem;
+}
