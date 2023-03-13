@@ -41,6 +41,7 @@ html {
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;
   background-color: var(--color-white);
+  color: var(--color-grey);
 
   scroll-behavior: smooth;
 }
@@ -308,16 +309,15 @@ img:not(.logo img) {
 }
 .contacts {
   flex: 1 0 0;
-  flex-direction: row;
-  gap: 3.2 rem;
-  justify-content: space-between;
   width: 100%;
   max-width: 100rem;
+  flex-direction: row;
+  gap: 3.2rem;
+  justify-content: space-between;
 }
 .contact-card {
   flex: 1 0 0;
   font-family: "Merriweather", serif;
-  width: 33%;
   height: 44rem;
   background-color: var(--color-accent);
   border-radius: 2rem;
@@ -387,4 +387,20 @@ img:not(.logo img) {
   color: var(--color-accent);
   font-weight: bold;
   font-size: 2rem;
+}
+.service-description {
+  width: 100%;
+  max-width: 100rem;
+}
+.service-heading {
+  font-size: 4.4rem;
+  font-family: "Merriweather", serif;
+  color: var(--color-accent);
+  margin-bottom: 4.8rem;
+}
+.service-text {
+  font-size: 2.4rem;
+  font-weight: normal;
+  letter-spacing: 0.2rem;
+  line-height: 1.6;
 }
