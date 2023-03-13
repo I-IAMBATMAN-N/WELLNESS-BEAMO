@@ -41,20 +41,28 @@ html {
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;
   background-color: var(--color-white);
+
+  scroll-behavior: smooth;
 }
 body {
   width: 100%;
   overflow-x: hidden;
+}
+img:not(.logo img) {
+  border-radius: 1000rem;
+  box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.25);
 }
 /* GENERAL stylings */
 .section {
   width: 100%;
   max-width: 120rem;
   margin: 0 auto;
+  padding: 1.2rem;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding-top: 12.5rem;
   position: relative;
 }
@@ -196,7 +204,7 @@ body {
   z-index: -1;
 }
 .socials {
-  width: 56.8rem;
+  width: 40%;
   padding: 1rem 2.4rem;
   display: flex;
   align-items: center;
@@ -208,10 +216,11 @@ body {
   border-top-right-radius: 100rem;
   border-bottom-right-radius: 100rem;
   gap: 8rem;
+  box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.25);
 }
 .social-icon {
-  fill: var(--color-white);
-  width: 6.4rem;
+  color: var(--color-white);
+  font-size: 6.4rem;
 }
 .about-text {
   font-size: 2rem;
@@ -228,6 +237,7 @@ body {
   font-family: "Great Vibes";
   font-size: 7.4rem;
   font-weight: normal;
+  text-shadow: 0.8rem 0.8rem 0.8rem rgba(0, 0, 0, 0.25);
 }
 .about .img-container::before {
   content: "";
@@ -277,16 +287,16 @@ body {
 
   background-color: var(--color-white-oppacity);
 }
-
+.service-container:hover,
+.service-link:hover {
+  transform: scale(1.1);
+  transition: 1s ease;
+}
+.service-container:hover {
+  box-shadow: 2.2rem 2.2rem 2.2rem rgba(0, 0, 0, 0.25);
+}
 /* FOOTER */
-.section.contacts-container {
-  padding-top: 0;
-  max-width: 100rem;
-}
-.contacts-container {
-  gap: 4.6rem;
-  flex-direction: row;
-}
+.contacts,
 .contact-card,
 .contact-section,
 .contact-content,
@@ -294,8 +304,18 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
+}
+.contacts {
+  flex: 1 0 0;
+  flex-direction: row;
+  gap: 3.2 rem;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 100rem;
 }
 .contact-card {
+  flex: 1 0 0;
   font-family: "Merriweather", serif;
   width: 33%;
   height: 44rem;
@@ -358,10 +378,10 @@ body {
 .contact-logo .company-name {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 .contact-logo .logo-name {
-  font-size: 2.4rem;
+  font-size: 2.8rem;
 }
 .required-link {
   color: var(--color-accent);
