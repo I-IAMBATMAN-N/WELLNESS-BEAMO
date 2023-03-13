@@ -49,6 +49,7 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
+
 .section img {
   border-radius: 1000rem;
   box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.25);
@@ -387,4 +388,142 @@ body {
   color: var(--color-accent);
   font-weight: bold;
   font-size: 2rem;
+}
+.service-description {
+  width: 100%;
+  max-width: 100rem;
+}
+.service-heading {
+  font-size: 4.4rem;
+  font-family: "Merriweather", serif;
+  color: var(--color-accent);
+  margin-bottom: 4.8rem;
+}
+.service-text {
+  font-size: 2.4rem;
+  font-weight: normal;
+  letter-spacing: 0.2rem;
+  line-height: 1.6;
+}
+
+/*  */
+.treatment-cards {
+  width: 100%;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+.treatment-card-medium {
+  display: flex;
+
+  position: relative;
+  background-color: var(--color-primary);
+
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+
+  min-height: 42rem;
+
+  box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.25);
+}
+
+.treatment-card-large {
+  display: flex;
+
+  position: relative;
+
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+
+  min-height: 54rem;
+  height: fit-content;
+
+  width: 100%;
+
+  background-color: var(--color-accent);
+  box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.25);
+}
+.treatment-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 0 0;
+
+  padding-right: 4.2rem;
+
+  padding-top: 4rem;
+  padding-left: 4rem;
+
+  font-size: 1.6rem;
+  line-height: 1.5;
+  letter-spacing: 0.2rem;
+}
+.treatment-heading {
+  font-size: 6.2rem;
+  font-family: "Great Vibes";
+  letter-spacing: 0.4rem;
+  font-weight: normal;
+  color: var(--color-accent);
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-12%, -110%);
+
+  text-shadow: 0.8rem 0.8rem 0.8rem rgba(0, 0, 0, 0.25);
+}
+.treatment-description {
+  width: 100%;
+  padding-right: 3rem;
+}
+.treatment-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.treatment-time {
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+}
+.treatment-time span {
+  font-family: "Great Vibes";
+  font-size: 4.6rem;
+  display: inline-block;
+  letter-spacing: -0.2rem;
+}
+.treatment-time span::first-letter {
+  margin-left: 0.6rem;
+}
+.treatment-price {
+  font-family: "Great Vibes";
+  font-size: 9.4rem;
+  color: var(--color-white);
+  background-color: var(--color-accent);
+
+  line-height: 1;
+  letter-spacing: -0.8rem;
+
+  padding: 0 3.2rem;
+  padding-top: 1.2rem;
+
+  text-align: center;
+
+  border-bottom-left-radius: 2rem;
+  border-top-left-radius: 2rem;
+}
+.treatment-price::first-letter {
+  font-size: 3rem;
+  margin-right: 1.2rem;
+}
+.treatment-cards img {
+  height: fit-content;
+
+  border-radius: 2rem;
+
+  margin: auto 0;
+  transform: scale(1.35);
+
+  /* position: absolute;
+  right: 0;
+  top: 50%;
+
+  box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.25); */
 }
