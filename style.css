@@ -619,6 +619,18 @@ body {
   .treatment-card-large .treatment-info {
     padding-right: 9.6rem;
   }
+  .hero .img-container,
+  .about .img-container {
+    flex: 0 0 30%;
+  }
+  .hero .img-container::before,
+  .about .img-container::before {
+    width: 120%;
+    height: 120%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 /* 880 px */
