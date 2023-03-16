@@ -59,7 +59,6 @@ body {
   width: 100%;
   max-width: 120rem;
   margin: 0 auto;
-  padding: 1.2rem;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -71,11 +70,14 @@ body {
 .article {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   width: 100%;
   max-width: 100rem;
   height: 100%;
   gap: 8rem;
+}
+.article section {
+  flex: 1 0 0;
 }
 /* -BACKGROUNDS for SECTION */
 .section.hero::before,
@@ -190,8 +192,9 @@ body {
 }
 .img-container {
   position: relative;
-  width: fit-content;
-  height: fit-content;
+}
+.img-container img {
+  width: 100%;
 }
 .img-container::before {
   content: "";
@@ -261,12 +264,21 @@ body {
   gap: 9.6rem;
   font-family: "Merriweather", serif;
 }
+.services-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6.4rem;
+}
 .service-container {
-  width: 50%;
+  flex: 1 0 50%;
   aspect-ratio: 1/1;
+
   background-image: url(images/Kosmetische_Behandlungen/beauty-teenies.jpg);
   background-size: 100%;
   background-position: center;
+  background-repeat: no-repeat;
+
   box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.25);
 }
 .service-container:last-child {
@@ -407,6 +419,9 @@ body {
 }
 
 /*  */
+.treatment-section {
+  padding-right: 8rem;
+}
 .treatment-cards {
   width: 100%;
   max-width: 100rem;
@@ -450,9 +465,6 @@ body {
 
   padding-right: 4.2rem;
 
-  padding-top: 4rem;
-  padding-left: 4rem;
-
   font-size: 1.6rem;
   line-height: 1.5;
   letter-spacing: 0.2rem;
@@ -469,15 +481,22 @@ body {
   transform: translate(-12%, -110%);
 
   text-shadow: 0.8rem 0.8rem 0.8rem rgba(0, 0, 0, 0.25);
+
+  padding-top: 4rem;
+  padding-left: 4rem;
 }
 .treatment-description {
   width: 100%;
   padding-right: 3rem;
+
+  padding-top: 3.2rem;
+  padding-left: 3.2rem;
 }
 .treatment-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 3.2rem;
 }
 .treatment-time {
   font-size: 1.6rem;
@@ -519,7 +538,7 @@ body {
   border-radius: 2rem;
 
   margin: auto 0;
-  transform: scale(1.35);
+  transform: scale(1.32);
 
   /* position: absolute;
   right: 0;
@@ -565,7 +584,49 @@ body {
 .benefit-icon {
   font-size: 2.4rem;
 }
+
 /*   FONT SIZE SYSTEM (px)
   10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
   SPACING SYSTEM (px)
   2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
+
+/* 
+  
+  
+  */
+
+@media (max-width: 71.5em) {
+  html {
+    font-size: 56.25%;
+  }
+  .treatment-card-large img {
+    transform: scale(1.6);
+  }
+  .treatment-card-medium img {
+    transform: scale(1.2);
+  }
+  .treatment-card-large .treatment-info {
+    padding-right: 11.2rem;
+  }
+}
+@media (max-width: 61.25em) {
+  html {
+    font-size: 50%;
+  }
+  .treatment-card-large img {
+    transform: scale(1.45);
+  }
+  .treatment-card-large .treatment-info {
+    padding-right: 9.6rem;
+  }
+}
+
+/* 880 px */
+@media (max-width: 55em) {
+  html {
+    font-size: 46%;
+  }
+  .treatment-card-large img {
+    transform: scale(1.4);
+  }
+}
