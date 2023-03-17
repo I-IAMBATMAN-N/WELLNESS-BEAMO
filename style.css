@@ -48,7 +48,7 @@ html {
 }
 body {
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .section img {
   border-radius: 1000rem;
@@ -81,6 +81,11 @@ body {
   flex: 1 0 0;
 }
 /* -BACKGROUNDS for SECTION */
+.section.hero,
+.section.about,
+.section.hero {
+  overflow: hidden;
+}
 .section.hero::before,
 .section.about::before {
   content: "";
