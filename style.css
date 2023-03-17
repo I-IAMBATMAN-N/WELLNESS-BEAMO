@@ -257,7 +257,6 @@ body {
   z-index: -1;
 }
 .services {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -265,13 +264,13 @@ body {
   font-family: "Merriweather", serif;
 }
 .services-container {
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 6.4rem;
+  justify-content: space-evenly;
 }
 .service-container {
-  flex: 1 0 50%;
+  flex: 0 0 45%;
   aspect-ratio: 1/1;
 
   background-image: url(images/Kosmetische_Behandlungen/beauty-teenies.jpg);
@@ -319,6 +318,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+}
+.main-footer {
+  padding: 3.2rem;
 }
 .contacts {
   flex: 1 0 0;
@@ -640,5 +642,89 @@ body {
   }
   .treatment-card-large img {
     transform: scale(1.4);
+  }
+}
+@media (max-width: 48em) {
+  .section {
+    padding: 0 2.4rem;
+  }
+  .treatment-section {
+  }
+  .services-container {
+    flex-direction: column;
+    gap: 4.8rem;
+    height: 100%;
+    width: 100%;
+  }
+  .service-container {
+    flex: 0 0 40%;
+    width: 100%;
+    max-width: 75rem;
+  }
+  .treatment-card-medium,
+  .treatment-card-large {
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 75rem;
+    max-width: 60rem;
+  }
+  .treatment-card-medium {
+    flex-direction: column;
+  }
+  .treatment-card-large img,
+  .treatment-card-medium img {
+    aspect-ratio: 1/1;
+    width: 100%;
+    max-width: 60rem;
+
+    /*     
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0) scale(1); */
+    transform: scale(1);
+  }
+  .treatment-card-medium {
+    min-height: 0rem;
+    border-radius: 2rem;
+  }
+  .treatment-card-medium .treatment-info {
+    padding-right: 0;
+  }
+  .treatment-card-large {
+    border-radius: 2rem;
+  }
+  .treatment-card-medium .treatment-description,
+  .treatment-card-large .treatment-description {
+    border-radius: 2rem;
+    padding-right: 8rem;
+  }
+  .treatment-card-large .treatment-info {
+    padding: 0;
+    padding-bottom: 2.4rem;
+    padding-right: 0;
+  }
+  .treatment-card-large .treatment-footer {
+    padding-right: 3.2rem;
+  }
+  .treatment-footer {
+    padding-top: 2.4rem;
+  }
+  .treatment-price {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 2rem;
+  }
+  .contacts {
+    flex-direction: column;
+  }
+  .contact-card {
+    width: 100%;
+    max-width: 60rem;
+  }
+}
+@media (max-width: 36em) {
+  html {
+    font-size: 41%;
   }
 }
