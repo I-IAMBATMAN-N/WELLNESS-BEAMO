@@ -498,7 +498,7 @@ body {
 .treatment-footer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   padding-left: 3.2rem;
 }
 .treatment-time {
@@ -757,6 +757,13 @@ body {
   .treatment-card-medium {
     min-height: 0rem;
   }
+  .treatment-info,
+  .treatment-time {
+    font-size: 2rem;
+  }
+  .treatment-price {
+    font-size: 9.8rem;
+  }
   .treatment-card-medium .treatment-info {
     padding-right: 0;
   }
@@ -767,7 +774,6 @@ body {
   .treatment-card-medium .treatment-description,
   .treatment-card-large .treatment-description {
     border-radius: 2rem;
-    padding-right: 8rem;
   }
   .treatment-card-large .treatment-info {
     padding: 0;
