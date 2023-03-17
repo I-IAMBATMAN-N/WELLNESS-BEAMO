@@ -84,7 +84,7 @@ body {
 .section.hero,
 .section.about,
 .section.hero {
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .section.hero::before,
 .section.about::before {
@@ -656,6 +656,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 126px;
+  }
+  .section.hero::before,
+  .section.about::before {
+    display: none;
   }
   .main-header {
     display: none;
