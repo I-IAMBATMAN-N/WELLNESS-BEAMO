@@ -651,7 +651,7 @@ body {
   .section {
     padding: 0 2.4rem;
     height: auto;
-    min-height: 100vh;
+    min-height: 150vh;
     padding-top: 126px;
   }
   .treatment-section {
