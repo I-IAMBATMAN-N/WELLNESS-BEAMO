@@ -700,15 +700,13 @@ body {
       rgba(255, 255, 255, 0)
     );
   }
+
   .socials {
     width: fit-content;
   }
   .hero-text,
   .about-text {
     width: 64%;
-  }
-  .about-text span:last-child {
-    display: block;
   }
   .hero .img-container,
   .about .img-container {
