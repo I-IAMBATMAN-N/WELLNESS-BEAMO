@@ -343,10 +343,17 @@ body {
   text-align: center;
   color: var(--color-white);
   box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.2rem;
 }
 .contact-card:nth-child(2) {
   background-color: var(--color-white);
   color: var(--color-grey);
+}
+.contact-heading {
+  font-size: 5.2rem;
+  font-family: "Great Vibes";
+  font-weight: normal;
+  margin-bottom: 2.4rem;
 }
 .contact-card:nth-child(2) .contact-heading {
   color: var(--color-accent);
@@ -358,15 +365,9 @@ body {
 .contact-card:nth-child(2) .contact-icon {
   color: var(--color-accent);
 }
-.contact-heading {
-  font-size: 5.2rem;
-  font-family: "Great Vibes";
-  font-weight: normal;
-  margin-bottom: 2.4rem;
-}
 .contact-text {
   font-size: 2rem;
-  font-family: "Merriweather", serif;
+  font-family: "Raleway", serif;
   line-height: 1.5;
 }
 .contact-section {
@@ -796,6 +797,15 @@ body {
   .contact-card {
     width: 100%;
     max-width: 60rem;
+  }
+  .contact-heading {
+    font-size: 6.2rem;
+    padding: 1.2rem 0;
+    letter-spacing: 0.4rem;
+  }
+  .contact-text,
+  .contact-link {
+    font-size: 2.4rem;
   }
 }
 @media (max-width: 36em) {
