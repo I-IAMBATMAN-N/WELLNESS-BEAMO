@@ -48,7 +48,7 @@ html {
 }
 body {
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .section img {
   border-radius: 1000rem;
