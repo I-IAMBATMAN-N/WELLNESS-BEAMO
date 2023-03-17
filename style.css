@@ -707,6 +707,9 @@ body {
   .about-text {
     width: 64%;
   }
+  .about-text span:last-child {
+    display: block;
+  }
   .hero .img-container,
   .about .img-container {
     position: absolute;
