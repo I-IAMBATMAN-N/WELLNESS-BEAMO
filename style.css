@@ -84,7 +84,7 @@ body {
 .section.hero,
 .section.about,
 .section.hero {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .section.hero::before,
 .section.about::before {
