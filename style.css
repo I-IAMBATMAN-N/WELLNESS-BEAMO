@@ -342,9 +342,9 @@ body {
   height: 44rem;
   background-color: var(--color-accent);
   border-radius: 2rem;
-  /* gap: 1.6rem; */
+  gap: 1.6rem;
   padding: 1.8rem;
-  padding-bottom: 2.4rem;
+  padding-bottom: 4.8rem;
   text-align: center;
   color: var(--color-white);
   box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.25);
@@ -358,7 +358,6 @@ body {
   font-size: 5.2rem;
   font-family: "Great Vibes";
   font-weight: normal;
-  margin-bottom: 2.4rem;
 }
 .contact-card:nth-child(2) .contact-heading {
   color: var(--color-accent);
@@ -377,7 +376,8 @@ body {
 }
 .contact-section {
   flex: 1 0 0;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 1.6rem;
 }
 .contact-link {
   color: var(--color-white);
@@ -677,6 +677,15 @@ body {
     justify-content: center;
     padding: 0;
   }
+  .section.hero {
+    background-image: linear-gradient(
+      to right,
+      var(--color-white-oppacity-2),
+      var(--color-white-oppacity-2),
+      var(--color-white-oppacity-2),
+      rgba(255, 255, 255, 0)
+    );
+  }
   .hero,
   .about {
     position: relative;
@@ -685,31 +694,18 @@ body {
     flex: 1 0 0;
     width: 100%;
     height: auto;
-    background-image: linear-gradient(
-      to right,
-      var(--color-white-oppacity-2),
-      var(--color-white-oppacity-2),
-      var(--color-white-oppacity-2),
-      rgba(255, 255, 255, 0)
-    );
+
     margin-bottom: 0;
-  }
-  .article.hero {
     justify-content: start;
-    background-image: linear-gradient(
-      to right,
-      var(--color-white-oppacity-2),
-      var(--color-white-oppacity-2),
-      var(--color-white-oppacity-2),
-      var(--color-white-oppacity),
-      rgba(255, 255, 255, 0)
-    );
   }
   .article.about {
     flex-direction: column;
   }
   .socials {
     width: fit-content;
+    position: initial;
+    align-self: flex-start;
+    margin-bottom: 4.8rem;
   }
   .hero-text {
     width: 75%;
@@ -802,6 +798,7 @@ body {
   .contact-card {
     width: 100%;
     max-width: 60rem;
+    height: fit-content;
   }
   .contact-heading {
     font-size: 6.2rem;
@@ -811,6 +808,18 @@ body {
   .contact-text,
   .contact-link {
     font-size: 2.4rem;
+  }
+  .contact-content {
+    gap: 0.8rem;
+  }
+  .contact-icon {
+    font-size: 3rem;
+  }
+  .contact-logo .company-name {
+    font-size: 3rem;
+  }
+  .contact-logo .logo-name {
+    font-size: 3.6rem;
   }
 }
 @media (max-width: 36em) {
