@@ -421,7 +421,7 @@ body {
 }
 
 /*  */
-.treatment-section {
+.treatment {
   padding-right: 8rem;
 }
 .treatment-cards {
@@ -648,13 +648,15 @@ body {
   .main-header {
     display: none;
   }
+  .treatment-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 124px;
+  }
   .section {
     padding: 0 2.4rem;
     height: auto;
-    min-height: 150vh;
-    padding-top: 126px;
-  }
-  .treatment-section {
+    min-height: 100vh;
   }
   .services-container {
     flex-direction: column;
