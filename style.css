@@ -75,6 +75,7 @@ body {
   max-width: 100rem;
   height: 100%;
   gap: 8rem;
+  padding: 2.4rem;
 }
 .article section {
   flex: 1 0 0;
@@ -674,8 +675,7 @@ body {
   .about {
     position: relative;
   }
-  .article.hero,
-  .article.about {
+  .article.hero {
     flex: 1 0 0;
     width: 100%;
     height: auto;
@@ -687,7 +687,6 @@ body {
       rgba(255, 255, 255, 0)
     );
     margin-bottom: 0;
-    padding: 0 2.4rem;
   }
   .article.hero {
     justify-content: start;
@@ -700,15 +699,20 @@ body {
       rgba(255, 255, 255, 0)
     );
   }
+  .article.about {
+    flex-direction: column;
+  }
   .socials {
     width: fit-content;
   }
-  .hero-text,
-  .about-text {
+  .hero-text {
     width: 75%;
   }
-  .hero .img-container,
-  .about .img-container {
+  .about .img-container::before {
+    width: 110%;
+    height: 110%;
+  }
+  .hero .img-container {
     position: absolute;
     right: 0;
     top: 50%;
