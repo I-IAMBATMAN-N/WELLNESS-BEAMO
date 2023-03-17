@@ -645,10 +645,14 @@ body {
   }
 }
 @media (max-width: 48em) {
+  .main-header {
+    display: none;
+  }
   .section {
     padding: 0 2.4rem;
     height: auto;
     min-height: 100vh;
+    padding-top: 8rem;
   }
   .treatment-section {
   }
