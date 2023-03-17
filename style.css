@@ -645,6 +645,11 @@ body {
   }
 }
 @media (max-width: 48em) {
+  body {
+    display: flex;
+    flex-direction: column;
+    gap: 126px;
+  }
   .main-header {
     display: none;
   }
