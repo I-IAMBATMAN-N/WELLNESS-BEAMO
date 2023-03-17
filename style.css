@@ -50,7 +50,6 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
-
 .section img {
   border-radius: 1000rem;
   box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.25);
@@ -684,6 +683,7 @@ body {
       to right,
       var(--color-white-oppacity-2),
       var(--color-white-oppacity-2),
+      var(--color-white-oppacity-2),
       rgba(255, 255, 255, 0)
     );
     margin-bottom: 0;
@@ -700,13 +700,12 @@ body {
       rgba(255, 255, 255, 0)
     );
   }
-
   .socials {
     width: fit-content;
   }
   .hero-text,
   .about-text {
-    width: 64%;
+    width: 75%;
   }
   .hero .img-container,
   .about .img-container {
