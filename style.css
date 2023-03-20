@@ -161,6 +161,71 @@ body {
   color: var(--color-accent);
   text-transform: uppercase;
 }
+.slider-controls {
+  height: 10rem;
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3.2rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.slider-btn {
+  color: var(--color-accent);
+  font-size: 3.6rem;
+}
+.slider-btn {
+  transition: 1s;
+  cursor: pointer;
+}
+.slider-btn:first-child:hover {
+  transform: translate(-25%, 0) scale(1.5);
+}
+.slider-btn:last-child:hover {
+  transform: translate(25%, 0) scale(1.5);
+}
+.slider-dots {
+  display: flex;
+  flex: 1 0 0;
+  align-items: center;
+  height: fit-content;
+  gap: 3.2rem;
+  justify-content: space-evenly;
+}
+.slider-dot {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  border: 0.2rem solid var(--color-accent);
+  transition: 0.4s;
+}
+.slider-dot.active {
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: var(--color-accent);
+}
+.treatment-slider {
+  width: 100%;
+  min-height: 85rem;
+  position: relative;
+  margin: auto auto;
+  overflow: hidden;
+}
+.treatment-card {
+  border-radius: 2rem;
+  max-width: 90rem;
+}
+.treatment-slider .treatment-card.medium,
+.treatment-slider .treatment-card.large {
+  position: absolute;
+  left: 10rem;
+  bottom: 20rem;
+  /* transition: transform 1.5s; */
+}
+
 .hero {
   position: relative;
   justify-content: center;
@@ -651,15 +716,39 @@ body {
   .main-header {
     display: none;
   }
-  .treatment-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 124px;
-  }
   .section {
     padding: 0 2.4rem;
     height: auto;
     min-height: 100vh;
+  }
+  .slider-controls {
+    display: none;
+  }
+  .treatment-slider {
+    height: 100%;
+  }
+  .treatment-slider .treatment-card.medium,
+  .treatment-slider .treatment-card.large {
+    position: relative;
+    left: 0;
+    bottom: 0;
+  }
+  .treatment-card.medium {
+    min-height: 0rem;
+  }
+  .treatment-slider {
+    height: fit-content;
+    min-height: 0rem;
+    display: flex;
+    flex-direction: column;
+    gap: 24.6rem;
+    align-items: center;
+    overflow: visible;
+  }
+  .treatment-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 124px;
   }
   .section.hero,
   .section.about {
