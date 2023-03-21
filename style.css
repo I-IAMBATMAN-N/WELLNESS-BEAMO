@@ -725,6 +725,9 @@ body {
     flex-direction: column;
     gap: 126px;
   }
+  .main-header {
+    background-color: var(--color-white);
+  }
   .main-header .container {
     justify-content: center;
   }
@@ -741,6 +744,7 @@ body {
     align-items: center;
     gap: 3.2rem;
     letter-spacing: 0.1rem;
+    font-size: 2rem;
   }
   .nav-list.active {
     display: flex;
