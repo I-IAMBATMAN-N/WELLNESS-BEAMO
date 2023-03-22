@@ -11,7 +11,7 @@ sliderContainer.forEach((sliderContainer) => {
 
   slides.forEach((slide, index) => {
     if (window.innerWidth > 770) {
-      slide.style.transform = `translateX(${140 * index}%)`;
+      slide.style.transform = `translate(${50 + 160 * index}%, -50%)`;
       dotContainer.innerHTML += `<div class="slider-dot"></div>`;
     }
   });
@@ -56,9 +56,9 @@ sliderContainer.forEach((sliderComponent) => {
         //
         //shift all current slides on click
         for (let i = 0; i < currSlides.length - 1; i++) {
-          currSlides[i].style.transform = `translateX(${
-            140 * (i - currSlide)
-          }%)`;
+          currSlides[i].style.transform = `translate(${
+            50 + 160 * (i - currSlide)
+          }%, -50%)`;
         }
         //reset active status for all dots
         for (let i = 0; i < currDots.length; i++) {

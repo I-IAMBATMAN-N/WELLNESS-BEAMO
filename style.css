@@ -78,6 +78,7 @@ body {
   justify-content: center;
   padding-top: 12.5rem;
   position: relative;
+  overflow: visible;
 }
 .article {
   display: flex;
@@ -221,20 +222,22 @@ body {
 }
 .treatment-slider {
   width: 100%;
-  min-height: 85rem;
+  height: 100%;
   position: relative;
   margin: auto auto;
-  overflow: hidden;
+  overflow: visible;
 }
 .treatment-card {
   border-radius: 2rem;
+  width: 100%;
   max-width: 90rem;
 }
 .treatment-slider .treatment-card.medium,
 .treatment-slider .treatment-card.large {
   position: absolute;
-  left: 10rem;
-  bottom: 20rem;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
   /* transition: transform 1.5s; */
 }
 
@@ -853,10 +856,11 @@ body {
     width: 100%;
     max-width: 75rem;
   }
-  .behandlungen-container {
+  .treatment-container {
     display: flex;
     flex-direction: column;
     gap: 24.6rem;
+    overflow: visible;
   }
   .treatment-card {
     flex-direction: column;
