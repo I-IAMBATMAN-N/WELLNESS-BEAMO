@@ -67,7 +67,7 @@ optionalControls.forEach((control) => {
   let currOption = 0;
   control.addEventListener("click", function (event) {
     //
-    const optioncardOptions = event.target
+    const treatmentCardOptions = event.target
       .closest(".treatment-card")
       .children[1].children[1].querySelectorAll("span");
     const optionPrices = event.target
@@ -75,20 +75,24 @@ optionalControls.forEach((control) => {
       .children[1].children[3].children[1].querySelectorAll("span");
     //
     if (event.target.name === "chevron-forward-outline") {
-      if (currOption === options.length) {
+      if (currOption === treatmentCardOptions.length - 1) {
         currOption = 0;
-      } else if (currOption !== options.length) {
+        console.log(currOption);
+      } else if (currOption !== treatmentCardOptions.length - 1) {
         currOption++;
+        console.log(currOption);
       }
     } else if (event.target.name === "chevron-back-outline") {
       if (currOption === 0) {
-        currOption = options.length - 1;
+        currOption = treatmentCardOptions.length - 1;
+        console.log(currOption);
       } else if (currOption !== 0) {
         currOption--;
+        console.log(currOption);
       }
     }
 
-    optioncardOptions.forEach((option, index) => {
+    treatmentCardOptions.forEach((option, index) => {
       if (index === currOption) {
         option.style.display = "inline-block";
       } else if (index !== currOption) {
