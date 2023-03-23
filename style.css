@@ -811,6 +811,12 @@ body {
   .slider-controls {
     display: none;
   }
+  .slider-btn:first-child:hover {
+    transform: translate(-25%, 0) scale(1);
+  }
+  .slider-btn:last-child:hover {
+    transform: translate(25%, 0) scale(1);
+  }
   .treatment-slider {
     height: 100%;
     padding-top: 15.4rem;
