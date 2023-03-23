@@ -23,7 +23,30 @@
     ></script>
     <!-- CUSTOM STYLES and SCRIPTS -->
     <link rel="stylesheet" href="style.css" />
-    <style></style>
+    <style>
+      .section.manicure {
+        /* display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24.6rem;
+        height: fit-content; */
+      }
+      .section.manicure .treatment-info {
+        font-size: 2.4rem;
+      }
+      /* .section.manicure .treatment-card:nth-child(even) img {
+        order: -1;
+      } */
+      /* .section.manicure .treatment-card:nth-child(even) .treatment-info {
+        padding-left: 4.2rem;
+        padding-right: 0;
+      } */
+      /* .section.manicure .treatment-card:nth-child(even) .treatment-heading {
+        left: auto;
+        right: 0;
+        transform: translate(12%, -110%);
+      } */
+    </style>
     <script defer src="script.js"></script>
     <script defer src="slider.js"></script>
     <title>BEAMO</title>
@@ -68,7 +91,7 @@
       </div>
     </header>
     <!-- BEHANDLUNGEN -->
-    <div class="behandlungen-container">
+    <div class="treatment-container">
       <!-- text -->
       <seciton class="section">
         <article class="service-description">
@@ -88,200 +111,7 @@
       </seciton>
       <!--  -->
       <section class="section treatment">
-        <div class="treatment-slider large">
-          <article class="treatment-card large">
-            <h3 class="treatment-heading">Fruit Apeel</h3>
-            <section class="treatment-info">
-              <p class="treatment-description">
-                Das Fruchtsäurepeeling ist eine dermazeutische Behandlung auf
-                höchstem Niveau.
-                <br />
-                <br />
-                Die Fruchtsäurebehandlung verbessert u. a. folgende Hautprobleme
-                und beugt diese gleichzeitig vor:
-              </p>
-              <ul class="treatment-benefits">
-                <li class="benefit-item">
-                  <ion-icon
-                    name="checkmark-outline"
-                    class="benefit-icon"
-                  ></ion-icon>
-                  <p>Feuchtigkeitsdefizite</p>
-                </li>
-                <li class="benefit-item">
-                  <ion-icon
-                    name="checkmark-outline"
-                    class="benefit-icon"
-                  ></ion-icon>
-                  <p>Alterungserscheinungen</p>
-                </li>
-                <li class="benefit-item">
-                  <ion-icon
-                    name="checkmark-outline"
-                    class="benefit-icon"
-                  ></ion-icon>
-                  <p>Sonnenschädigungen</p>
-                </li>
-                <li class="benefit-item">
-                  <ion-icon
-                    name="checkmark-outline"
-                    class="benefit-icon"
-                  ></ion-icon>
-                  <p>Überpigmentierungen</p>
-                </li>
-                <li class="benefit-item">
-                  <ion-icon
-                    name="checkmark-outline"
-                    class="benefit-icon"
-                  ></ion-icon>
-                  <p>Altersflecken</p>
-                </li>
-                <li class="benefit-item">
-                  <ion-icon
-                    name="checkmark-outline"
-                    class="benefit-icon"
-                  ></ion-icon>
-                  <p>feinen Linien und Falten</p>
-                </li>
-                <li class="benefit-item">
-                  <ion-icon
-                    name="checkmark-outline"
-                    class="benefit-icon"
-                  ></ion-icon>
-                  <p>unreine Haut</p>
-                </li>
-                <li class="benefit-item">
-                  <ion-icon
-                    name="checkmark-outline"
-                    class="benefit-icon"
-                  ></ion-icon>
-                  <p>Aknenarben</p>
-                </li>
-              </ul>
-              <footer class="treatment-footer">
-                <p class="treatment-time">ca. <span>70</span> min.</p>
-                <p class="treatment-price">€72</p>
-              </footer>
-            </section>
-            <img
-              src="/images/Dermazeutische_Behandlungen/fruit-appeel.jpg"
-              alt=""
-              class="treatment-image"
-            />
-          </article>
-          <article class="treatment-card large">
-            <h3 class="treatment-heading">Mesoporation</h3>
-            <section class="treatment-info">
-              <p class="treatment-description">
-                Bei der Mesoporation handelt es sich um eine hocheffektive und
-                intensive Behandlungsmethode zur Hautverjüngung und
-                Faltenbehandlung um Wirkstoffe in tiefere Huatschichten zu
-                transportierená.
-              </p>
-              <ul class="treatment-benefits">
-                <li class="benefit-item">
-                  <ion-icon
-                    name="checkmark-outline"
-                    class="benefit-icon"
-                  ></ion-icon>
-                  <p>Glättung und Verjüngung des Hautbilds</p>
-                </li>
-                <li class="benefit-item">
-                  <ion-icon
-                    name="checkmark-outline"
-                    class="benefit-icon"
-                  ></ion-icon>
-                  <p>Erhöhung des Hautvolumens</p>
-                </li>
-                <li class="benefit-item">
-                  <ion-icon
-                    name="checkmark-outline"
-                    class="benefit-icon"
-                  ></ion-icon>
-                  <p>Straffung Hals und Dekolleté</p>
-                </li>
-                <li class="benefit-item">
-                  <ion-icon
-                    name="checkmark-outline"
-                    class="benefit-icon"
-                  ></ion-icon>
-                  <p>Verminderung von Falten und Linien</p>
-                </li>
-              </ul>
-              <footer class="treatment-footer">
-                <p class="treatment-time">ca. <span>70</span> min.</p>
-                <p class="treatment-price">€72</p>
-              </footer>
-            </section>
-            <img
-              src="/images/Dermazeutische_Behandlungen/mesoporation.jpg"
-              alt=""
-              class="treatment-image"
-            />
-          </article>
-          <article class="treatment-card large">
-            <h3 class="treatment-heading">Microdermabrasion</h3>
-            <section class="treatment-info">
-              <p class="treatment-description">
-                Die Mikrodermabrasion ist ein sanftes und schmerzfreies
-                Verfahren der Hautabschleifung, das zur Verfeinerung und
-                Glättung der Haut eingesetzt wird. Mithilfe feinster
-                Diamantaufsätze wird die oberste Hautschicht bei dieser
-                Behandlungsmethode gezielt mechanisch abgetragen, OHNE das
-                umliegende Gewebe dabei zu verletzten.
-              </p>
-              <ul class="treatment-benefits">
-                <li class="benefit-item">
-                  <ion-icon
-                    name="checkmark-outline"
-                    class="benefit-icon"
-                  ></ion-icon>
-                  <p>Reduzierung von Falten und Pigmentstörungen</p>
-                </li>
-                <li class="benefit-item">
-                  <ion-icon
-                    name="checkmark-outline"
-                    class="benefit-icon"
-                  ></ion-icon>
-                  <p>Behandlung von großporiger, unreine Haut</p>
-                </li>
-                <li class="benefit-item">
-                  <ion-icon
-                    name="checkmark-outline"
-                    class="benefit-icon"
-                  ></ion-icon>
-                  <p>Verfeinerung des Hautbildes</p>
-                </li>
-                <li class="benefit-item">
-                  <ion-icon
-                    name="checkmark-outline"
-                    class="benefit-icon"
-                  ></ion-icon>
-                  <p>Zellaktivierung</p>
-                </li>
-              </ul>
-              <footer class="treatment-footer">
-                <p class="treatment-time">ca. <span>70</span> min.</p>
-                <p class="treatment-price">€72</p>
-              </footer>
-            </section>
-            <img
-              src="/images/Dermazeutische_Behandlungen/microdermabrasion.jpg"
-              alt=""
-              class="treatment-image"
-            />
-          </article>
-          <div class="slider-controls">
-            <ion-icon name="chevron-back-outline" class="slider-btn"></ion-icon>
-            <div class="slider-dots"></div>
-            <ion-icon
-              name="chevron-forward-outline"
-              class="slider-btn"
-            ></ion-icon>
-          </div>
-        </div>
-      </section>
-      <section class="section treatment">
+        <h2 class="section-heading">Kosmetische</h2>
         <div class="treatment-slider medium">
           <article class="treatment-card medium">
             <h3 class="treatment-heading">Beauty Intensiv</h3>
@@ -494,6 +324,205 @@
         </div>
       </section>
       <section class="section treatment">
+        <h2 class="section-heading">
+          Top 3 <br />
+          Dermazeutische
+        </h2>
+        <div class="treatment-slider large">
+          <article class="treatment-card large">
+            <h3 class="treatment-heading">Fruit Apeel</h3>
+            <section class="treatment-info">
+              <p class="treatment-description">
+                Das Fruchtsäurepeeling ist eine dermazeutische Behandlung auf
+                höchstem Niveau.
+                <br />
+                <br />
+                Die Fruchtsäurebehandlung verbessert u. a. folgende Hautprobleme
+                und beugt diese gleichzeitig vor:
+              </p>
+              <ul class="treatment-benefits">
+                <li class="benefit-item">
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="benefit-icon"
+                  ></ion-icon>
+                  <p>Feuchtigkeitsdefizite</p>
+                </li>
+                <li class="benefit-item">
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="benefit-icon"
+                  ></ion-icon>
+                  <p>Alterungserscheinungen</p>
+                </li>
+                <li class="benefit-item">
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="benefit-icon"
+                  ></ion-icon>
+                  <p>Sonnenschädigungen</p>
+                </li>
+                <li class="benefit-item">
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="benefit-icon"
+                  ></ion-icon>
+                  <p>Überpigmentierungen</p>
+                </li>
+                <li class="benefit-item">
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="benefit-icon"
+                  ></ion-icon>
+                  <p>Altersflecken</p>
+                </li>
+                <li class="benefit-item">
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="benefit-icon"
+                  ></ion-icon>
+                  <p>feinen Linien und Falten</p>
+                </li>
+                <li class="benefit-item">
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="benefit-icon"
+                  ></ion-icon>
+                  <p>unreine Haut</p>
+                </li>
+                <li class="benefit-item">
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="benefit-icon"
+                  ></ion-icon>
+                  <p>Aknenarben</p>
+                </li>
+              </ul>
+              <footer class="treatment-footer">
+                <p class="treatment-time">ca. <span>70</span> min.</p>
+                <p class="treatment-price">€72</p>
+              </footer>
+            </section>
+            <img
+              src="/images/Dermazeutische_Behandlungen/fruit-appeel.jpg"
+              alt=""
+              class="treatment-image"
+            />
+          </article>
+          <article class="treatment-card large">
+            <h3 class="treatment-heading">Mesoporation</h3>
+            <section class="treatment-info">
+              <p class="treatment-description">
+                Bei der Mesoporation handelt es sich um eine hocheffektive und
+                intensive Behandlungsmethode zur Hautverjüngung und
+                Faltenbehandlung um Wirkstoffe in tiefere Huatschichten zu
+                transportierená.
+              </p>
+              <ul class="treatment-benefits">
+                <li class="benefit-item">
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="benefit-icon"
+                  ></ion-icon>
+                  <p>Glättung und Verjüngung des Hautbilds</p>
+                </li>
+                <li class="benefit-item">
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="benefit-icon"
+                  ></ion-icon>
+                  <p>Erhöhung des Hautvolumens</p>
+                </li>
+                <li class="benefit-item">
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="benefit-icon"
+                  ></ion-icon>
+                  <p>Straffung Hals und Dekolleté</p>
+                </li>
+                <li class="benefit-item">
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="benefit-icon"
+                  ></ion-icon>
+                  <p>Verminderung von Falten und Linien</p>
+                </li>
+              </ul>
+              <footer class="treatment-footer">
+                <p class="treatment-time">ca. <span>70</span> min.</p>
+                <p class="treatment-price">€72</p>
+              </footer>
+            </section>
+            <img
+              src="/images/Dermazeutische_Behandlungen/mesoporation.jpg"
+              alt=""
+              class="treatment-image"
+            />
+          </article>
+          <article class="treatment-card large">
+            <h3 class="treatment-heading">Microdermabrasion</h3>
+            <section class="treatment-info">
+              <p class="treatment-description">
+                Die Mikrodermabrasion ist ein sanftes und schmerzfreies
+                Verfahren der Hautabschleifung, das zur Verfeinerung und
+                Glättung der Haut eingesetzt wird. Mithilfe feinster
+                Diamantaufsätze wird die oberste Hautschicht bei dieser
+                Behandlungsmethode gezielt mechanisch abgetragen, OHNE das
+                umliegende Gewebe dabei zu verletzten.
+              </p>
+              <ul class="treatment-benefits">
+                <li class="benefit-item">
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="benefit-icon"
+                  ></ion-icon>
+                  <p>Reduzierung von Falten und Pigmentstörungen</p>
+                </li>
+                <li class="benefit-item">
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="benefit-icon"
+                  ></ion-icon>
+                  <p>Behandlung von großporiger, unreine Haut</p>
+                </li>
+                <li class="benefit-item">
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="benefit-icon"
+                  ></ion-icon>
+                  <p>Verfeinerung des Hautbildes</p>
+                </li>
+                <li class="benefit-item">
+                  <ion-icon
+                    name="checkmark-outline"
+                    class="benefit-icon"
+                  ></ion-icon>
+                  <p>Zellaktivierung</p>
+                </li>
+              </ul>
+              <footer class="treatment-footer">
+                <p class="treatment-time">ca. <span>70</span> min.</p>
+                <p class="treatment-price">€72</p>
+              </footer>
+            </section>
+            <img
+              src="/images/Dermazeutische_Behandlungen/microdermabrasion.jpg"
+              alt=""
+              class="treatment-image"
+            />
+          </article>
+          <div class="slider-controls">
+            <ion-icon name="chevron-back-outline" class="slider-btn"></ion-icon>
+            <div class="slider-dots"></div>
+            <ion-icon
+              name="chevron-forward-outline"
+              class="slider-btn"
+            ></ion-icon>
+          </div>
+        </div>
+      </section>
+      <section class="section treatment">
+        <h2 class="section-heading">Dermazeutische</h2>
         <div class="treatment-slider medium">
           <article class="treatment-card medium">
             <h3 class="treatment-heading">Courperose</h3>
@@ -615,6 +644,145 @@
             ></ion-icon>
           </div>
         </div>
+      </section>
+      <section class="section treatment manicure">
+        <h2 class="section-heading">Fußpflege</h2>
+        <div class="treatment-slider medium">
+          <article class="treatment-card medium">
+            <h3 class="treatment-heading">Fußpflege classic</h3>
+            <section class="treatment-info">
+              <p class="treatment-description">
+                Fußbad, kürzen der Nägel, Behandlung der Nagel- und Hornhaut,
+                kurze Fußmassage
+              </p>
+              <footer class="treatment-footer">
+                <p class="treatment-time">ca.<span>20</span> min.</p>
+                <p class="treatment-price">€24</p>
+              </footer>
+            </section>
+            <img
+              src="/images/Hand&Fußpflege/fusspflege-classic.jpg"
+              alt=""
+              class="treatment-image"
+            />
+          </article>
+          <article class="treatment-card medium optional">
+            <h3 class="treatment-heading">Fußpflege Intensiv</h3>
+            <section class="treatment-info">
+              <p class="treatment-description">
+                Fussbad, kürzen der Nägel, Behandlung der Nagel- und Hornhaut,
+                Entfernung der Hühneraugen und Nagellack
+              </p>
+              <p class="treatment-options">
+                <span>Classic</span>
+                <span>Fußpflege inkl. UV Abschlusslack</span>
+                <span>Nagelspange ‍</span>
+                <span>Fußpflege mit Frenchlackierung</span>
+              </p>
+              <div class="options-controls">
+                <ion-icon
+                  name="chevron-back-outline"
+                  class="slider-btn"
+                ></ion-icon>
+                <!-- <div class="slider-dots"></div> -->
+                <ion-icon
+                  name="chevron-forward-outline"
+                  class="slider-btn"
+                ></ion-icon>
+              </div>
+              <footer class="treatment-footer">
+                <p class="treatment-time">ca.<span>20</span> min.</p>
+                <p class="treatment-price">
+                  €<span>24</span><span>29</span><span>25</span><span>29</span>
+                </p>
+              </footer>
+            </section>
+            <img
+              src="/images/Hand&Fußpflege/fusspflege-intensiv.jpg"
+              alt=""
+              class="treatment-image"
+            />
+          </article>
+          <article class="treatment-card medium">
+            <h3 class="treatment-heading">Fußpflege Wellness</h3>
+            <section class="treatment-info">
+              <p class="treatment-description">
+                Fußpflege intensiv mit verwöhnenden und entspannenden
+                ayurvedischer <br />
+                Fuß-Bein-Massage
+              </p>
+              <footer class="treatment-footer">
+                <p class="treatment-time">ca.<span>50</span> min.</p>
+                <p class="treatment-price">€56</p>
+              </footer>
+            </section>
+            <img
+              src="/images/Hand&Fußpflege/fusspflege-wellness.jpg"
+              alt=""
+              class="treatment-image"
+            />
+          </article>
+          <div class="slider-controls">
+            <ion-icon name="chevron-back-outline" class="slider-btn"></ion-icon>
+            <div class="slider-dots"></div>
+            <ion-icon
+              name="chevron-forward-outline"
+              class="slider-btn"
+            ></ion-icon>
+          </div>
+        </div>
+      </section>
+      <section class="section treatment manicure">
+        <h2 class="section-heading">Maniküre</h2>
+        <div class="treatment-slider medium">
+          <article class="treatment-card medium optional">
+            <h3 class="treatment-heading">Maniküre classic</h3>
+            <section class="treatment-info">
+              <p class="treatment-description">
+                Maniküre mit Handpeeling, Nägel in Form feilen, Behandlung der
+                Nagelhaut, kurze Handmassage
+              </p>
+              <p class="treatment-options">
+                <span>Classic</span>
+                <span>Inklusive Nagellack</span>
+                <span
+                  >Inklusive Nagellack <br> und UV
+                  Abschlusslack</span
+                >
+              </p>
+              <div class="options-controls">
+                <ion-icon
+                  name="chevron-back-outline"
+                  class="slider-btn"
+                ></ion-icon>
+                <!-- <div class="slider-dots"></div> -->
+                <ion-icon
+                  name="chevron-forward-outline"
+                  class="slider-btn"
+                ></ion-icon>
+              </div>
+              <footer class="treatment-footer">
+                <p class="treatment-time">ca.<span>20</span> min.</p>
+                <p class="treatment-price">
+                  €<span>29</span><span>35</span><span>39</span>
+                </p>
+              </footer>
+            </section>
+            <img
+              src="/images/Hand&Fußpflege/pexels-roman-titov-9329773.jpg"
+              alt=""
+              class="treatment-image"
+            />
+          </article>
+          <!-- <div class="slider-controls">
+            <ion-icon name="chevron-back-outline" class="slider-btn"></ion-icon>
+            <div class="slider-dots"></div>
+            <ion-icon
+              name="chevron-forward-outline"
+              class="slider-btn"
+            ></ion-icon>
+          </div>
+        </div> -->
       </section>
     </div>
     <footer class="main-footer">
