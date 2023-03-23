@@ -812,10 +812,10 @@ body {
     display: none;
   }
   .slider-btn:first-child:hover {
-    transform: translate(-25%, 0) scale(1);
+    transform: translate(0, 0) scale(1);
   }
   .slider-btn:last-child:hover {
-    transform: translate(25%, 0) scale(1);
+    transform: translate(0, 0) scale(1);
   }
   .treatment-slider {
     height: 100%;
