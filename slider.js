@@ -11,13 +11,15 @@ sliderContainer.forEach((sliderContainer) => {
 
   slides.forEach((slide, index) => {
     if (window.innerWidth > 770) {
-      slide.style.transform = `translate(${50 + 160 * index}%, -50%)`;
-      dotContainer.innerHTML += `<div class="slider-dot"></div>`;
+      if (slides.length > 1) {
+        slide.style.transform = `translate(${50 + 160 * index}%, -50%)`;
+        dotContainer.innerHTML += `<div class="slider-dot"></div>`;
+        const dots = dotContainer.querySelectorAll(".slider-dot");
+        dots[counter].classList.add("active");
+      }
     }
   });
   //display default current dot
-  const dots = dotContainer.querySelectorAll(".slider-dot");
-  dots[counter].classList.add("active");
 });
 
 let currSlides;
@@ -29,7 +31,7 @@ sliderContainer.forEach((sliderComponent) => {
     .querySelectorAll(".slider-controls")
     .forEach((sliderControl) => {
       sliderControl.addEventListener("click", function (event) {
-        console.log("sliderControl", sliderControl);
+        // console.log("sliderControl", sliderControl);
         //
         currSlides = event.target
           .closest(".slider-controls")
