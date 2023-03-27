@@ -119,7 +119,8 @@ setTimeout(() => {
 const sections = document.querySelectorAll(".section");
 
 sections.forEach((section, index) => {
-  index > 0 ? section.classList.add("hidden") : "";
+  if (!section.classList.contains("treatment"))
+    index > 0 ? section.classList.add("hidden") : "";
 });
 
 //On scroll animated display of sections
@@ -146,3 +147,5 @@ function obsCallback(entries, observer) {
 sections.forEach((section) => {
   observer.observe(section);
 });
+
+console.log(window.innerWidth);
