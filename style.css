@@ -106,7 +106,7 @@ body {
   justify-content: space-between;
   width: 100%;
   max-width: 100rem;
-  height: 100%;
+  /* height: 100%; */
   gap: 8rem;
   padding: 2.4rem;
 }
@@ -289,11 +289,9 @@ body {
   justify-content: center;
   font-family: "Merriweather", serif;
   position: relative;
-}
-.hero {
   font-weight: bold;
   letter-spacing: 0.2rem;
-  margin-bottom: 12.8rem;
+  gap: 6.4rem;
 }
 .hero-heading {
   font-size: 4.4rem;
@@ -336,13 +334,14 @@ body {
 .socials {
   width: 40%;
   padding: 1rem 2.4rem;
+  align-self: flex-start;
   display: flex;
   align-items: center;
   justify-content: end;
   background-color: var(--color-accent);
-  position: absolute;
+  /* position: absolute;
   left: 0;
-  bottom: 15rem;
+  bottom: 15rem; */
   border-top-right-radius: 100rem;
   border-bottom-right-radius: 100rem;
   gap: 8rem;
@@ -881,7 +880,6 @@ body {
   }
   .socials {
     width: fit-content;
-    position: initial;
     align-self: flex-start;
     margin-bottom: 4.8rem;
   }
