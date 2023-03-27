@@ -51,8 +51,13 @@ body {
   overflow-x: hidden;
 }
 .main-nav {
+  flex: 0 0 60%;
   display: flex;
   align-items: center;
+  width: fit-content;
+  position: absolute;
+  right: 2.4rem;
+  transition: 1s ease;
 }
 .mobile-menu-icon {
   font-size: 4.4rem;
@@ -80,6 +85,8 @@ body {
   position: relative;
   overflow: visible;
   margin-bottom: 4.8rem;
+
+  transition: opacity 2s ease;
 }
 
 .section-heading {
@@ -150,12 +157,29 @@ body {
   z-index: -2; 
 }*/
 /*  -HEADER- */
+.hidden {
+  opacity: 0%;
+}
+/**/
 .main-header {
   position: fixed;
   width: 100%;
   background-color: var(--color-white-oppacity);
   z-index: 1;
-  padding: 0 2.4rem;
+}
+.main-header.intro .container {
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  margin: 0 auto;
+}
+.main-header.intro .main-nav {
+  right: -100%;
+}
+.main-header.intro .logo {
+  margin: auto;
+  left: 50%;
+  transform: translate(-50%, 0) scale(3);
 }
 .main-header .container {
   display: flex;
@@ -163,7 +187,11 @@ body {
   justify-content: space-between;
   margin: 0 auto;
   max-width: 120rem;
-  padding: 1.2rem 0;
+  padding: 1.2rem 2.4rem;
+
+  height: 12rem;
+  transition: height 1s ease;
+  position: relative;
 }
 /*  -LOGO- */
 .logo {
@@ -173,6 +201,10 @@ body {
   justify-content: center;
   text-decoration: none;
   gap: 0.4rem;
+  position: absolute;
+  left: 2.4rem;
+
+  transition: 1s ease;
 }
 .logo:hover {
   cursor: pointer;
@@ -353,7 +385,7 @@ body {
 }
 .social-icon {
   color: var(--color-white);
-  font-size: 6.4rem;
+  font-size: 5.2rem;
 }
 .about-text {
   font-size: 2rem;
@@ -788,16 +820,29 @@ body {
     flex-direction: column;
     gap: 3.2rem;
   }
-  .nav-list {
+  .main-nav.active {
+    width: 100%;
+    height: 100vh;
+    bottom: -100vh;
+    background-color: var(--color-white);
+    right: 0;
+    transition: 0s;
+  }
+  .main-nav.active .mobile-menu-icon {
+    font-size: 6.2rem;
+  }
+  .main-nav.active .nav-list {
+    height: 40%;
+    display: flex;
+  }
+  .main-nav .nav-list {
     display: none;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
     gap: 3.2rem;
-    letter-spacing: 0.1rem;
-    font-size: 2rem;
-  }
-  .nav-list.active {
-    display: flex;
+    letter-spacing: 0rem;
+    font-size: 3.6rem;
   }
   /* .mobile-menu-icon:first-child {
     display: inline-block;

@@ -1,14 +1,15 @@
 "use strict";
 
 const menuIcons = document.querySelectorAll(".mobile-menu-icon");
-const navList = document.querySelector(".nav-list");
+// const navList = document.querySelector(".nav-list");
+const mainNav = document.querySelector(".main-nav");
 
 menuIcons.forEach((icon) =>
   icon.addEventListener("click", function (event) {
     menuIcons.forEach((icon) => {
       icon.classList.toggle("active");
     });
-    navList.classList.toggle("active");
+    mainNav.classList.toggle("active");
   })
 );
 
@@ -107,4 +108,41 @@ optionalControls.forEach((control) => {
       }
     });
   });
+});
+
+//Start header animation
+setTimeout(() => {
+  document.querySelector(".main-header").classList.remove("intro");
+}, 2000);
+
+//Add hidden class for each section (will be removed in future in order to animate)
+const sections = document.querySelectorAll(".section");
+
+sections.forEach((section, index) => {
+  index > 0 ? section.classList.add("hidden") : "";
+});
+
+//On scroll animated display of sections
+const obsOptions = {
+  root: null,
+  threshold: 0.4,
+};
+
+const observer = new IntersectionObserver(obsCallback, obsOptions);
+
+let time = 3000;
+
+function obsCallback(entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => {
+        entry.target.classList.remove("hidden");
+      }, time);
+      time = 0;
+      // console.log(time);
+    }
+  });
+}
+sections.forEach((section) => {
+  observer.observe(section);
 });
