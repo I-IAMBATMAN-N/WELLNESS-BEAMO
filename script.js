@@ -147,5 +147,3 @@ function obsCallback(entries, observer) {
 sections.forEach((section) => {
   observer.observe(section);
 });
-
-console.log(window.innerWidth);
