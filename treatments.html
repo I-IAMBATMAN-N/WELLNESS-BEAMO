@@ -27,31 +27,52 @@
       .sec-nav{
         width: 100%;
         max-width: 100rem;
-        color: var(--color-accent);
+        display: flex;
+        align-items:center;
+        justify-content: center;
       }
       .sec-nav--list{
         list-style: none;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 4.8rem;
+        width: 100%;
       }
       .sec-nav--item{
+        min-height: 15rem;
         text-align: center;
         padding-bottom: .4rem;
-        position: relative;
+
+        border: .2rem solid var(--color-accent);
+        background-color: var(--color-accent);
+
+        border-radius: 2rem;
+      }
+      .sec-nav--item:nth-child(3) .sec-nav--link,
+      .sec-nav--item:nth-child(4) .sec-nav--link{
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
       }
       .sec-nav--link{
-        font-size: 2rem;
+        display: inline-block;
+              
+        width: 100%;
+        height: 100%;
+
+        font-size: 3rem;
         text-transform: uppercase;
         line-height: 1.2;
         letter-spacing: .1rem;
         text-decoration: none;
         font-weight: bold;
-        color: var(--color-accent);
+        color: var(--color-white);
+        padding: 2.4rem;
+
       }
       .sec-nav--link span{
-        font-size: 1.2rem;
+        font-size: 2rem;
         text-transform: none;
       }
       .start-btn{
@@ -85,8 +106,8 @@
       }
       @media(max-width: 48em){
         .sec-nav--list{
-          flex-direction: column;
-          gap: 8rem;
+          grid-template-columns: 1fr;
+          grid-gap: 8rem;
         }
         .sec-nav--link{
         font-size: 3rem;
@@ -145,9 +166,9 @@
       <seciton class="section">
         <nav class="sec-nav">
           <ul class="sec-nav--list">
-            <li class="sec-nav--item active"><a href="#cosmetic-dermaceutic" class="sec-nav--link">Kosmetische<br> <span>und</span><br>Dermazeutische</a></li>
+            <li class="sec-nav--item active"><a href="#cosmetic-dermaceutic" class="sec-nav--link">Kosmetische<br> <span>&</span><br>Dermazeutische</a></li>
+            <li class="sec-nav--item"><a href="#manicure-pedicure" class="sec-nav--link"> Hand<br><span>&</span><br>Fußpflege</a></li>
             <li class="sec-nav--item"><a href="#wellness" class="sec-nav--link">Wellness</a></li>
-            <li class="sec-nav--item"><a href="#manicure-pedicure" class="sec-nav--link"> Hand<br><span>und</span><br>Fußpflege</a></li>
             <li class="sec-nav--item"><a href="#additional" class="sec-nav--link">Zusatzprogramme</a></li>
           </ul>
         </nav>
