@@ -67,7 +67,22 @@
         font-size: 4.4rem;
         color: var(--color-white);
       }
-
+      .additional-table{
+        font-size: 2.4rem;
+        width: 100%;
+        max-width: 90rem;
+        margin-bottom: 3.2rem;
+        letter-spacing: .1rem;
+      }
+      .additional-table td:nth-child(2){
+        text-align: right;
+      }
+      .additional-table--header{
+        font-size: 3.2rem;
+        text-align: left;
+        color: var(--color-accent);
+        border-bottom: 2.4rem;
+      }
       @media(max-width: 48em){
         .sec-nav--list{
           flex-direction: column;
@@ -118,7 +133,7 @@
             <ion-icon
               name="menu-outline"
               class="mobile-menu-icon active"
-            ></ion-icon>A
+            ></ion-icon>
             <ion-icon name="close-outline" class="mobile-menu-icon"></ion-icon>
           </div>
         </nav>
@@ -877,7 +892,103 @@
         </section>
       </div>
       <div id="additional" class="wrapper">
-
+        <section class="section">
+          <table class="additional-table">
+            <thead class="additional-table--header">
+              <th >
+                Haarentferung mit Zuckerpaste
+              </th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Oberlippe, Kinn, Wangen</td>
+                <td>ab 19€</td>
+              </tr>
+              <tr>
+                <td>Achseln</td>
+                <td>ab 15€</td>
+              </tr>
+              <tr>
+                <td>Arme ohne Achseln</td>
+                <td>ab 25€</td>
+              </tr>
+              <tr>
+                <td>Unterschenkel mit Knie</td>
+                <td>ab 29€</td>
+              </tr>
+              <tr>
+                <td>Oberschenkel ohne Knie</td>
+                <td>ab 25€</td>
+              </tr>
+              <tr>
+                <td>Beine komplett</td>
+                <td>ab 42€</td>
+              </tr>
+              <tr>
+                <td>Bikini klassisch</td>
+                <td>ab 25€</td>
+              </tr>
+              <tr>
+                <td>Männerbrust</td>
+                <td>ab 35€</td>
+              </tr>
+              <tr>
+                <td>Männerbauch</td>
+                <td>ab 25€</td>
+              </tr>
+              <tr>
+                <td>Männerrücken</td>
+                <td>ab 49€</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="additional-table">
+            <thead class="additional-table--header">
+              <th colspan="2">
+                Individuelle Ergänzungen ohne Gesichtsbehandlung
+              </th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Korrektur der Augenbrauen</td>
+                <td>12 €</td>
+              </tr>
+              <tr>
+                <td>Färbung der Augenbrauen</td>
+                <td>10 €</td>
+              </tr>
+              <tr>
+                <td>Färbung der Wimpern</td>
+                <td>12 €</td>
+              </tr>
+              <tr>
+                <td>Korrektur & Färbung der Augenbrauen</td>
+                <td>19 €</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="additional-table">
+            <thead class="additional-table--header">
+              <th>
+                Gesichtsdepilation:
+              </th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Oberlippe</td>
+                <td>10 €</td>
+              </tr>
+              <tr>
+                <td>Oberlippe, Kinn</td>
+                <td>14 €</td> 
+              </tr>
+              <tr>
+                <td>Gesicht</td>
+                <td>16 €</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
       </div>
     </div>
     <footer class="main-footer">
