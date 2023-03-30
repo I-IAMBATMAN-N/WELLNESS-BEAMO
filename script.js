@@ -147,3 +147,21 @@ function obsCallback(entries, observer) {
 sections.forEach((section) => {
   observer.observe(section);
 });
+
+// const secNavItems = document.querySelectorAll(".sec-nav--item");
+// const wrappers = document.querySelectorAll(".wrapper");
+
+// secNavItems.forEach((navItem) => {
+//   navItem.addEventListener("click", function (event) {
+//     if (event.target.closest(".sec-nav--item")) {
+//       //
+//       secNavItems.forEach((item) => {
+//         if (item.classList.contains("active")) {
+//           item.classList.remove("active");
+//         }
+//       });
+//       console.log(event.target);
+//       event.target.closest(".sec-nav--item").classList.add("active");
+//     }
+//   });
+// });
