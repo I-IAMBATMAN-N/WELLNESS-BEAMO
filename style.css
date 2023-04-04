@@ -90,22 +90,21 @@ body {
 }
 
 .section-heading {
-  font-size: 5.2rem;
-  font-family: "Merriweather";
+  font-size: 6.2rem;
+  /* font-family: "Merriweather"; */
   color: var(--color-accent);
   text-align: left;
   align-self: flex-start;
   display: block;
-  font-weight: normal;
   /* text-shadow: 0.8rem 0.8rem 0.8rem rgba(0, 0, 0, 0.25); */
   padding-left: 1.2rem;
   padding-bottom: 1.2rem;
   letter-spacing: 0.2rem;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   /* transform: translate(0, 75%); */
   /* border-top-right-radius: 1000rem;
   border-bottom-right-radius: 1000rem; */
-  border-bottom: 0.2rem solid var(--color-accent);
+  /* border-bottom: 0.2rem solid var(--color-accent); */
 }
 .article {
   display: flex;
@@ -216,11 +215,14 @@ body {
 .company-name {
   font-size: 1.8rem;
   color: #cd8376;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
 }
 .logo-name {
   font-size: 2.4rem;
   color: var(--color-accent);
   font-family: "Great Vibes", sans-serif;
+  letter-spacing: 0.2rem;
 }
 .nav-list {
   list-style: none;
@@ -228,13 +230,14 @@ body {
   align-items: center;
   gap: 6.4rem;
   font-size: 1.8rem;
-  font-weight: bold;
+  /* font-weight: bold; */
   font-family: "Raleway", serif;
 }
 .nav-link {
   text-decoration: none;
-  color: var(--color-accent);
+  color: var(--color-grey);
   text-transform: uppercase;
+  letter-spacing: 0.1rem;
 }
 .slider-controls {
   width: fit-content;
@@ -553,7 +556,6 @@ body {
 }
 .contact-logo .company-name {
   font-family: "Raleway", sans-serif;
-  text-transform: uppercase;
   font-size: 2rem;
 }
 .contact-logo .logo-name {
