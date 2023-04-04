@@ -13,6 +13,12 @@ sliderContainer.forEach((sliderContainer) => {
     if (window.innerWidth > 770) {
       if (slides.length > 1) {
         slide.style.transform = `translate(${50 + 160 * index}%, -50%)`;
+        if (index !== 0) {
+          // console.log(slide);
+          slide.style.opacity = "0%";
+        } else if (index === 0) {
+          slide.style.opacity = "100%";
+        }
         dotContainer.innerHTML += `<div class="slider-dot"></div>`;
         const dots = dotContainer.querySelectorAll(".slider-dot");
         dots[counter].classList.add("active");
@@ -61,6 +67,12 @@ sliderContainer.forEach((sliderComponent) => {
           currSlides[i].style.transform = `translate(${
             50 + 160 * (i - currSlide)
           }%, -50%)`;
+          if (i !== currSlide) {
+            // console.log(currSlides[i]);
+            currSlides[i].style.opacity = "0%";
+          } else if (i === currSlide) {
+            currSlides[i].style.opacity = "100%";
+          }
         }
         //reset active status for all dots
         for (let i = 0; i < currDots.length; i++) {
