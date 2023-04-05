@@ -10,7 +10,25 @@ sliderContainer.forEach((sliderContainer) => {
   const slides = sliderContainer.querySelectorAll(".treatment-card");
 
   slides.forEach((slide, index) => {
-    if (window.innerWidth > 770) {
+    if (window.innerWidth > 768) {
+      //
+      const treatmentSlider = document.querySelectorAll(".treatment-slider");
+
+      treatmentSlider.forEach((slider) => {
+        let cardHeight = slider.children[0].getBoundingClientRect().height;
+        let headerHeight =
+          slider.children[0].children[0].getBoundingClientRect().height;
+
+        slider.style.height = `${cardHeight + headerHeight + 100}px`;
+        // console.log("-\n", slider.children[0].getBoundingClientRect().height);
+        // console.log(
+        //   "-\n",
+        //   slider.children[0].children[0].getBoundingClientRect().height
+        // );
+        // console.log(slider.children);
+        // slider.style.backgroundColor = "red";
+        // slider.style.height = `${slider.children[1].getBoundingClientRect().height}`;
+      });
       if (slides.length > 1) {
         slide.style.transform = `translate(${50 + 160 * index}%, -50%)`;
         if (index !== 0) {
@@ -28,9 +46,6 @@ sliderContainer.forEach((sliderContainer) => {
   //display default current dot
 });
 
-let currSlides;
-let currDots;
-
 sliderContainer.forEach((sliderComponent) => {
   let currSlide = 0;
   sliderComponent
@@ -39,12 +54,26 @@ sliderContainer.forEach((sliderComponent) => {
       sliderControl.addEventListener("click", function (event) {
         // console.log("sliderControl", sliderControl);
         //
-        currSlides = event.target
-          .closest(".slider-controls")
-          .closest(".treatment-slider").children;
+        let currSlides = event.target.closest(".treatment-slider").children;
 
-        currDots =
-          event.target.closest(".slider-controls").children[1].children;
+        // console.log(currSlides[0].getBoundingClientRect().height);
+
+        for (const slide of currSlides) {
+          console.log(slide);
+          // console.log(slide.children[0].getBoundingClientRect().height);
+        }
+        // console.log(
+        //   currSlides[0].children[0],
+        //   currSlides[0].children[0].height
+        // );
+
+        // console.log(currSlides[0].getBoundingClientRect());
+        let currControls = event.target.closest(".slider-controls");
+        let currDots =
+          currControls.closest(".slider-controls").children[1].children;
+
+        // currControls.style.top = `${currSlides[0].getBoundingClientRect().y}`;
+
         //
         //define slide direction
         if (event.target.name === "chevron-forward-outline") {
