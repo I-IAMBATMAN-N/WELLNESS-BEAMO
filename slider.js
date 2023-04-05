@@ -56,17 +56,6 @@ sliderContainer.forEach((sliderComponent) => {
         //
         let currSlides = event.target.closest(".treatment-slider").children;
 
-        // console.log(currSlides[0].getBoundingClientRect().height);
-
-        for (const slide of currSlides) {
-          console.log(slide);
-          // console.log(slide.children[0].getBoundingClientRect().height);
-        }
-        // console.log(
-        //   currSlides[0].children[0],
-        //   currSlides[0].children[0].height
-        // );
-
         // console.log(currSlides[0].getBoundingClientRect());
         let currControls = event.target.closest(".slider-controls");
         let currDots =
