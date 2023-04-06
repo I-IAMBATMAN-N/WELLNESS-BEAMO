@@ -76,11 +76,11 @@ body {
   width: 100%;
   max-width: 120rem;
   margin: 0 auto;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 4.8rem;
   padding-top: 12.5rem;
   position: relative;
   overflow: visible;
@@ -88,7 +88,9 @@ body {
 
   transition: opacity 2s ease;
 }
-
+.lg {
+  height: 100vh;
+}
 .section-heading {
   font-size: 6.2rem;
   /* font-family: "Merriweather"; */
@@ -134,7 +136,7 @@ body {
   width: 500rem;
   aspect-ratio: 5/2;
   position: absolute;
-}
+} */
 .section.hero::before {
   top: -85%;
   left: -500rem;
@@ -153,8 +155,8 @@ body {
 
   background-color: var(--color-primary);
 
-  z-index: -2; 
-}*/
+  z-index: -2;
+}
 /*  -HEADER- */
 .hidden {
   opacity: 0%;
@@ -326,7 +328,6 @@ body {
 .hero {
   position: relative;
   justify-content: center;
-  font-family: "Merriweather", serif;
   position: relative;
   font-weight: bold;
   letter-spacing: 0.2rem;
@@ -593,7 +594,6 @@ body {
 
   position: relative;
   background-color: var(--color-primary);
-
   border-top-left-radius: 2rem;
   border-bottom-left-radius: 2rem;
 
@@ -809,6 +809,9 @@ body {
     flex-direction: column;
     gap: 126px;
   }
+  .lg {
+    height: auto;
+  }
   .main-header {
     background-color: var(--color-white);
   }
@@ -855,8 +858,8 @@ body {
   }
   .section {
     padding: 0 2.4rem;
-    height: auto;
     min-height: 100vh;
+    gap: 0;
   }
   .slider-controls {
     display: none;
@@ -961,10 +964,12 @@ body {
     max-width: 75rem;
   }
   .treatment-container {
+  }
+  .wrapper {
     display: flex;
     flex-direction: column;
-    gap: 24.6rem;
     overflow: visible;
+    gap: 24.6rem;
   }
   .treatment-card {
     flex-direction: column;
