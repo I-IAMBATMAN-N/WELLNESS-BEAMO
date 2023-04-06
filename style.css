@@ -307,9 +307,6 @@ body {
   /* transition: transform 1.5s; */
 }
 .treatment-card.optional .treatment-price {
-  display: flex;
-}
-.treatment-card.optional .treatment-price {
   font-size: 3rem;
 }
 .treatment-card.optional .treatment-price span {
