@@ -631,7 +631,7 @@ body {
 .treatment-info {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   flex: 1 0 0;
 
   padding-right: 5.5rem;
@@ -654,8 +654,10 @@ body {
   left: 0;
   top: 0;
   transform: translate(-12%, -110%);
-
   /* text-shadow: 0.8rem 0.8rem 0.8rem rgba(0, 0, 0, 0.25); */
+}
+.treatment-heading span {
+  font-size: 3.6rem;
 }
 .treatment-description {
   width: 100%;
@@ -669,6 +671,7 @@ body {
   justify-content: space-between;
   align-items: flex-end;
   padding-left: 3.2rem;
+  margin-top: auto;
 }
 .treatment-time {
   font-size: 1.6rem;
@@ -753,7 +756,7 @@ body {
 }
 .benefit-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.6rem;
 }
 .benefit-icon {
