@@ -893,6 +893,12 @@ body {
   }
   .section-heading {
     position: initial;
+    padding-left: 0;
+  }
+  .treatment-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12.8rem;
   }
   .treatment-slider .treatment-card.medium,
   .treatment-slider .treatment-card.large {
