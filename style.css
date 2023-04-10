@@ -339,22 +339,24 @@ body {
   justify-content: center;
   position: relative;
   font-weight: bold;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
   gap: 6.4rem;
 }
 .hero-heading {
   font-size: 4.4rem;
   color: var(--color-accent);
+  font-family: "Merriweather";
 }
 .hero-heading span {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
 }
 .hero-subheading {
   color: var(--color-grey);
   font-size: 2rem;
+  line-height: 1.4;
 }
 .hero-subheading span {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: normal;
 }
 .hero-text {
