@@ -227,16 +227,16 @@ body {
   margin-left: 2.2rem;
 }
 .company-name {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   color: #cd8376;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
 }
 .logo-name {
-  font-size: 2.4rem;
+  font-size: 2rem;
   color: var(--color-accent);
   font-family: "Great Vibes", sans-serif;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
 }
 .nav-list {
   list-style: none;
