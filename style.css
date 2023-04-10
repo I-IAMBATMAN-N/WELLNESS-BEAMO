@@ -59,6 +59,7 @@ body {
   right: 2.4rem;
   transition: 1s ease;
   margin-top: 0.8rem;
+  opacity: 100%;
 }
 .mobile-menu-icon {
   font-size: 4.4rem;
@@ -186,6 +187,7 @@ body {
 }
 .main-header.intro .main-nav {
   right: -100%;
+  opacity: 0;
 }
 .main-header.intro .logo {
   margin: auto;
