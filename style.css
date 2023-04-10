@@ -58,6 +58,7 @@ body {
   position: absolute;
   right: 2.4rem;
   transition: 1s ease;
+  margin-top: 0.8rem;
 }
 .mobile-menu-icon {
   font-size: 4.4rem;
@@ -72,6 +73,12 @@ body {
   box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.25);
 }
 /* GENERAL stylings */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  gap: 9.6rem;
+}
 .section {
   width: 100%;
   max-width: 120rem;
@@ -81,6 +88,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 4.8rem;
+  gap: 8rem;
   padding-top: 12.5rem;
   position: relative;
   overflow: visible;
@@ -99,9 +107,11 @@ body {
   align-self: flex-start;
   display: block;
   /* text-shadow: 0.8rem 0.8rem 0.8rem rgba(0, 0, 0, 0.25); */
-  padding-left: 1.2rem;
+  padding-left: 1.6rem;
   padding-bottom: 1.2rem;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.6rem;
+  /* font-weight: normal; */
+  text-transform: uppercase;
   /* text-transform: uppercase; */
   /* transform: translate(0, 75%); */
   /* border-top-right-radius: 1000rem;
@@ -620,16 +630,20 @@ body {
   justify-content: space-between;
   flex: 1 0 0;
 
-  padding-right: 4.2rem;
+  padding-right: 5.5rem;
 
   font-size: 1.6rem;
   line-height: 1.5;
   letter-spacing: 0.2rem;
 }
+.treatment-card.large .treatment-info {
+  padding: 0;
+  padding-right: 12rem;
+}
 .treatment-heading {
   font-size: 6.2rem;
   font-family: "Great Vibes";
-  letter-spacing: 0.4rem;
+  letter-spacing: 0.2rem;
   font-weight: normal;
   color: var(--color-accent);
   position: absolute;
@@ -659,11 +673,14 @@ body {
 .treatment-time span {
   font-family: "Great Vibes";
   font-size: 4.6rem;
+
+  letter-spacing: 0.1rem;
+
   display: inline-block;
-  letter-spacing: -0.2rem;
+  /* letter-spacing: -0.2rem; */
 }
 .treatment-time span::first-letter {
-  margin-left: 0.6rem;
+  /* margin-left: 0.6rem; */
 }
 .treatment-price {
   font-family: "Great Vibes";
@@ -672,12 +689,12 @@ body {
   background-color: var(--color-accent);
 
   line-height: 1;
-  letter-spacing: -0.8rem;
 
   padding: 0 3.2rem;
   padding-top: 1.2rem;
-  padding-right: 4.8rem;
+  padding-right: 3.2rem;
 
+  letter-spacing: -0.6rem;
   text-align: center;
 
   border-bottom-left-radius: 2rem;
@@ -703,10 +720,6 @@ body {
   box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.25); */
 }
 
-.treatment-card.large .treatment-info {
-  padding: 0;
-  padding-right: 12rem;
-}
 .treatment-card.large .treatment-description {
   padding: 2.4rem;
   padding-right: 1.2rem;
@@ -962,12 +975,12 @@ body {
   }
   .treatment-container {
   }
-  .wrapper {
+  /* .wrapper {
     display: flex;
     flex-direction: column;
     overflow: visible;
     gap: 24.6rem;
-  }
+  } */
   .treatment-card {
     flex-direction: column;
 
