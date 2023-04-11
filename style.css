@@ -75,10 +75,15 @@ body {
 }
 /* GENERAL stylings */
 .wrapper {
+  overflow: visible;
+  display: none;
+}
+.wrapper.active {
   display: flex;
   flex-direction: column;
-  overflow: visible;
   gap: 9.6rem;
+}
+.wrapper {
 }
 .section {
   width: 100%;
@@ -321,9 +326,9 @@ body {
 .treatment-card.optional .treatment-price {
   font-size: 3rem;
 }
-.treatment-card.optional .treatment-price span {
+/* .treatment-card.optional .treatment-price span {
   font-size: 9.8rem;
-}
+} */
 .treatment-options {
   width: 100%;
   margin-top: 3.2rem;
@@ -456,7 +461,7 @@ body {
   box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.25);
 }
 .service-container:last-child {
-  background-image: url(images/Wellness_Massagen/pexels-ornella-delfino-8460603.jpg);
+  background-image: url(images/Wellness_Massagen/Upanasveda\ -\ Rückenmassage.jpeg);
 }
 .service-link {
   display: inline-block;
@@ -667,15 +672,22 @@ body {
   padding-left: 3.2rem;
 }
 .treatment-footer {
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  padding-left: 3.2rem;
+  align-items: flex-end; */
+  /* padding-left: 3.2rem; */
+  position: relative;
   margin-top: auto;
+
+  width: 100%;
+  height: 100%;
 }
 .treatment-time {
   font-size: 1.6rem;
   letter-spacing: 0.2rem;
+  position: absolute;
+  left: 3.2rem;
+  bottom: 0;
 }
 .treatment-time span {
   font-family: "Great Vibes";
@@ -690,8 +702,12 @@ body {
   /* margin-left: 0.6rem; */
 }
 .treatment-price {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
   font-family: "Great Vibes";
-  font-size: 9.4rem;
+  /* font-size: 9.4rem; */
   color: var(--color-white);
   background-color: var(--color-accent);
 
@@ -706,6 +722,13 @@ body {
 
   border-bottom-left-radius: 2rem;
   border-top-left-radius: 2rem;
+}
+.treatment-price,
+.treatment-price span {
+  font-size: 9.6rem;
+}
+.treatment-price span {
+  display: inline-block;
 }
 .treatment-price::first-letter {
   font-size: 3rem;
