@@ -43,8 +43,119 @@
     ></script>
     <!-- CUSTOM STYLES and SCRIPTS -->
     <link rel="stylesheet" href="style.css" />
-    <style></style>
+    <style>
+      .sec-nav {
+        width: 100%;
+        max-width: 100rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .sec-nav--list {
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 4.8rem;
+        width: 100%;
+      }
+      .sec-nav--item {
+        /* min-height: 15rem; */
+        aspect-ratio: 1/1;
+        text-align: center;
+
+        width: 100%;
+        height: 100%;
+
+        /* border: 0.2rem solid var(--color-accent); */
+        /* background-color: var(--color-accent); */
+
+        border-radius: 2rem;
+      }
+      .sec-nav--item {
+        background-image: url(images/Wellness_Massagen/Ayurvedische_Massagen/abhyanga.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .sec-nav--item:nth-child(2) {
+        background-image: url(images/Wellness_Massagen/AdobeStock_59059204.jpeg);
+      }
+      .sec-nav--item:nth-child(3) {
+        background-image: url(images/Wellness_Massagen/stones-oil-grey-towel.jpg);
+      }
+      .sec-nav--item:nth-child(4) {
+        background-image: url(images/Wellness_Massagen/Ayurvedische_Massagen/upanasveda.jpg);
+      }
+      .sec-nav--item .sec-nav--link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .sec-nav--link {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+
+        font-family: "Merriweather", serif;
+        font-size: 3.6rem;
+        text-transform: uppercase;
+        line-height: 1.2;
+        letter-spacing: 0.2rem;
+        text-decoration: none;
+        font-weight: bold;
+
+        color: var(--color-white);
+        color: var(--color-accent);
+
+        background-color: var(--color-white-opacity);
+
+        padding: 2.4rem;
+      }
+      .sec-nav--link span {
+        font-size: 2rem;
+        text-transform: none;
+      }
+      .start-btn {
+        position: fixed;
+        bottom: 3.2rem;
+        right: 4.8rem;
+        background-color: var(--color-accent);
+        padding: 1.2rem;
+        border-radius: 2rem;
+      }
+      .start-btn--icon {
+        font-size: 4.4rem;
+        color: var(--color-white);
+      }
+      @media (max-width: 48em) {
+        .sec-nav--list {
+          grid-template-columns: 1fr;
+          grid-gap: 8rem;
+        }
+        .sec-nav--link {
+          font-size: 3rem;
+        }
+        .sec-nav--link span {
+          font-size: 2rem;
+        }
+        .treatment-footer {
+          position: initial;
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-between;
+          padding-left: 3.2rem;
+        }
+        .treatment-time {
+          position: initial;
+        }
+        .treatment-price {
+          position: initial;
+        }
+      }
+    </style>
     <script defer src="script.js"></script>
+    <script defer src="slider.js"></script>
     <title>BEAMO</title>
   </head>
   <body>
@@ -86,7 +197,313 @@
         </nav>
       </div>
     </header>
-    <div class="wellness-container"></div>
+    <div class="wellness-container">
+      <seciton class="section lg">
+        <nav class="sec-nav">
+          <ul class="sec-nav--list">
+            <li class="sec-nav--item active">
+              <a href="#ayurvedische" class="sec-nav--link">Ayurvedische</a>
+            </li>
+
+            <li class="sec-nav--item">
+              <a href="#kräuterstempel" class="sec-nav--link"
+                >Relax Kräuterstempel</a
+              >
+            </li>
+            <li class="sec-nav--item">
+              <a href="#aromaöl" class="sec-nav--link">Aromaöl</a>
+            </li>
+            <li class="sec-nav--item">
+              <a href="#thai-energie" class="sec-nav--link">Thai-Energie</a>
+            </li>
+          </ul>
+        </nav>
+      </seciton>
+      <div id="ayurvedische" class="wrapper">
+        <section class="section treatment">
+          <h2 class="section-heading">Ayuverdische</h2>
+          <div class="treatment-slider medium">
+            <article class="treatment-card medium">
+              <h3 class="treatment-heading">Upanasveda</h3>
+              <section class="treatment-info">
+                <p class="treatment-description">
+                  Entspannende Massagegriffe und großflächige Ausstreichungen
+                  lösen Verspannungen im Nacken, der Schulter und entlang der
+                  Wirbelsäule.
+                </p>
+                <footer class="treatment-footer">
+                  <p class="treatment-time">ca. <span>30</span> Min.</p>
+                  <p class="treatment-price">€39</p>
+                </footer>
+              </section>
+              <img
+                src="/images/Wellness_Massagen/Ayurvedische_Massagen/upanasveda.jpg"
+                alt=""
+                class="treatment-image"
+              />
+            </article>
+            <article class="treatment-card medium">
+              <h3 class="treatment-heading">Padabhyanga</h3>
+              <section class="treatment-info">
+                <p class="treatment-description">
+                  Padabhyanga ist eine äußerst wohltuende Fußmassage, die eine
+                  revitalisierende und kräftigende Wirkung auf den ganzen
+                  Organismus hat. Diese Fuß- und Beinmassage vermittelt ein
+                  Gefühl tiefer Entspannung.
+                </p>
+                <footer class="treatment-footer">
+                  <p class="treatment-time">ca. <span>30</span> Min.</p>
+                  <p class="treatment-price">€47</p>
+                </footer>
+              </section>
+              <img
+                src="/images/Wellness_Massagen/Ayurvedische_Massagen/padabyhanga.jpg"
+                alt=""
+                class="treatment-image"
+              />
+            </article>
+            <article class="treatment-card medium">
+              <h3 class="treatment-heading">Mukabhyanga</h3>
+              <section class="treatment-info">
+                <p class="treatment-description">
+                  Mukabhyanga ist eine wohltuende indische Kopf- Gesicht- und
+                  Nackenmassage bis in den Oberkörperbereich hinein. Der um die
+                  Seele legende Duft der Öle lockert ganz individuell innere so
+                  auch äußere Verspannungen, vitalisiert und entspannt.
+                </p>
+                <footer class="treatment-footer">
+                  <p class="treatment-time">ca. <span>45</span> Min.</p>
+                  <p class="treatment-price">€52</p>
+                </footer>
+              </section>
+              <img
+                src="/images/Wellness_Massagen/Ayurvedische_Massagen/mukabhyanga.jpg"
+                alt=""
+                class="treatment-image"
+              />
+            </article>
+
+            <article class="treatment-card medium">
+              <h3 class="treatment-heading">Abhyanga</h3>
+              <section class="treatment-info">
+                <p class="treatment-description">
+                  Abhyanga ist das stimmungsvolle Zauberwort für eine sinnliche
+                  Ayurveda-Ölmassage. Sanfte Streicheleinheiten, die mental und
+                  physisch entspannen. Der ganze Körper wird in wohltuend warmes
+                  Öl gehüllt, das ausgleicht, kräftigt und angenehm duftet.
+                </p>
+                <footer class="treatment-footer">
+                  <p class="treatment-time">ca. <span>60</span> Min.</p>
+                  <p class="treatment-price">€79</p>
+                </footer>
+              </section>
+              <img
+                src="/images/Wellness_Massagen/Ayurvedische_Massagen/abhyanga.jpg"
+                alt=""
+                class="treatment-image"
+              />
+            </article>
+            <div class="slider-controls">
+              <ion-icon
+                name="chevron-back-outline"
+                class="slider-btn"
+              ></ion-icon>
+              <div class="slider-dots"></div>
+              <ion-icon
+                name="chevron-forward-outline"
+                class="slider-btn"
+              ></ion-icon>
+            </div>
+          </div>
+        </section>
+        <!--  -->
+      </div>
+      <div id="kräuterstempel" class="wrapper">
+        <section class="section treatment">
+          <h2 class="section-heading">Kräuterstempel</h2>
+          <div class="treatment-slider medium">
+            <article class="treatment-card large optional">
+              <h3 class="treatment-heading">Kräuterstempel</h3>
+              <section class="treatment-info">
+                <p class="treatment-description">
+                  Genießen Sie die angenehme Wärme der asiatischen Massage.
+                  Verspannungen werden durch schnelle und sanfte Bewegungen mit
+                  heißen Ingwer-Lemongrass- Kräuterstempeln gelöst. Die
+                  Entschlackung und Fettverbrennung wird angeregt und die
+                  Neubildung der Hautzellen aktiviert. Die Wirkung der
+                  Inhaltsstoffe von Ingwer und Lemongrass regen den Stoffwechsel
+                  an, das Immunsystem und das körpereigene Repair-System werden
+                  gestärkt. Die einzigartige chinesische Rezeptur der Kräuter in
+                  Verbindung mit dieser Massagetechnik wirkt entspannend auf
+                  Körper und Seele.
+                </p>
+                <p class="treatment-options">
+                  <span>Classic</span>
+                  <span>Länger</span>
+                </p>
+                <div class="options-controls">
+                  <ion-icon
+                    name="chevron-back-outline"
+                    class="slider-btn"
+                  ></ion-icon>
+                  <ion-icon
+                    name="chevron-forward-outline"
+                    class="slider-btn"
+                  ></ion-icon>
+                </div>
+                <footer class="treatment-footer">
+                  <p class="treatment-time">ca. <span>20</span> Min.</p>
+                  <p class="treatment-price">€<span>24</span><span>29</span></p>
+                </footer>
+              </section>
+              <img
+                src="/images/Wellness_Massagen/AdobeStock_59059204.jpeg"
+                alt=""
+                class="treatment-image"
+              />
+            </article>
+          </div>
+        </section>
+      </div>
+      <div id="aromaöl" class="wrapper">
+        <section class="section treatment"></section>
+        <div class="treatment-slider medium">
+          <article class="treatment-card medium optional">
+            <h3 class="treatment-heading">Aromaöl</h3>
+            <section class="treatment-info">
+              <p class="treatment-description">
+                Durch eine Aroma-Öl Massage ist es möglich, tief zu entspannen
+                und neue Kraft & Vitalität für Körper, Geist und Seele zu
+                schöpfen. Wohlfühlen & Entspannen. Eine entspannende
+                Aromaöl-Massage um Verspannungen zu lösen. Geben Sie sich ganz
+                dem wohligen Gefühl der Entspannung hin.
+              </p>
+              <p class="treatment-options">
+                <span>Classic</span>
+                <span>Länger</span>
+              </p>
+              <div class="options-controls">
+                <ion-icon
+                  name="chevron-back-outline"
+                  class="slider-btn"
+                ></ion-icon>
+                <ion-icon
+                  name="chevron-forward-outline"
+                  class="slider-btn"
+                ></ion-icon>
+              </div>
+              <footer class="treatment-footer">
+                <p class="treatment-time">ca. <span>20</span> Min.</p>
+                <p class="treatment-price">€<span>24</span><span>29</span></p>
+              </footer>
+            </section>
+            <img
+              src="/images/Wellness_Massagen/stones-oil-grey-towel.jpg"
+              alt=""
+              class="treatment-image"
+            />
+          </article>
+        </div>
+      </div>
+      <div id="thai-energie" class="wrapper">
+        <section class="section lg">
+          <article class="service-description">
+            <header class="service-heading">Thai - Energie</header>
+            <p class="service-text">
+              Die Thai - Energie Massage ist eine vor allem in Thailand weit
+              verbreitete Behandlungsmethode. Durch die Thaimassage werden
+              Energiepunkte des Körpers stimuliert, die Vitalität wird
+              gesteigert und ein tiefer Zustand der Entspannung wird erreicht.
+              Die Wirkung ist tiefgreifender als bei einer herkömmlichen
+              klassischen Massage. Energie Blockaden und somit körperliche
+              Verspannungen und innere Anspannung können durch das Behandeln der
+              Energielinien gelöst werden. Über diese Energielinien, auf denen
+              wichtige Akupressurpunkte liegen, wird der Mensch mit
+              Lebensenergie versorgt
+            </p>
+          </article>
+        </section>
+        <section class="section treatment">
+          <div class="treatment-slider medium">
+            <article class="treatment-card medium">
+              <h3 class="treatment-heading">Ganzkörper Massage</h3>
+              <section class="treatment-info">
+                <p class="treatment-description">
+                  Die authentische Thailändische Massage, die nicht nur Wellness
+                  sein will, kombiniert Akupressur, Dehnung, Energiearbeit . um
+                  energetische Blockaden zu lösen Die spricht zehn spezielle
+                  Energielinien an, auf denen sich wiederum wichtige
+                  Akkupressurpunkte finden. Durch festen Druck der speziellen 10
+                  Energielinien werden diese dazu angeregt, den Körper mit neuer
+                  Lebensenergie zu versorgen. Die Energiepunkte des Körpers
+                  werden stimuliert, die Vitalität wird gesteigert und ein
+                  tiefer Zustand der Entspannung wird erreicht.
+                </p>
+                <footer class="treatment-footer">
+                  <p class="treatment-time">ca. <span>70</span> Min.</p>
+                  <p class="treatment-price">€79</p>
+                </footer>
+              </section>
+              <img
+                src="/images/Dermazeutische_Behandlungen/courperose.jpg"
+                alt=""
+                class="treatment-image"
+              />
+            </article>
+            <article class="treatment-card medium">
+              <h3 class="treatment-heading">Fuß- & Bein Massage</h3>
+              <section class="treatment-info">
+                <p class="treatment-description">
+                  Bei dieser Anwendung werden die Füße stimuliert, die
+                  Wadenmuskulatur und Bänder werden gedehnt und gelockert.
+                </p>
+                <footer class="treatment-footer">
+                  <p class="treatment-time">ca. <span>45</span> Min.</p>
+                  <p class="treatment-price">€</p>
+                </footer>
+              </section>
+              <img
+                src="/images/Dermazeutische_Behandlungen/courperose.jpg"
+                alt=""
+                class="treatment-image"
+              />
+            </article>
+            <article class="treatment-card medium">
+              <h3 class="treatment-heading">Fuß- & Bein Massage</h3>
+              <section class="treatment-info">
+                <p class="treatment-description">
+                  Die Thai-Energie Kopf-, Gesicht- und Nackenmassage stimuliert
+                  kontinuierlich die Energie von Kopf, Gesicht und Ohren und
+                  fördert so die ruhige Entspannung und Glückseligkeit von Geist
+                  und Seele.
+                </p>
+                <footer class="treatment-footer">
+                  <p class="treatment-time">ca. <span>30</span> Min.</p>
+                  <p class="treatment-price">€</p>
+                </footer>
+              </section>
+              <img
+                src="/images/Dermazeutische_Behandlungen/courperose.jpg"
+                alt=""
+                class="treatment-image"
+              />
+            </article>
+            <div class="slider-controls">
+              <ion-icon
+                name="chevron-back-outline"
+                class="slider-btn"
+              ></ion-icon>
+              <div class="slider-dots"></div>
+              <ion-icon
+                name="chevron-forward-outline"
+                class="slider-btn"
+              ></ion-icon>
+            </div>
+          </div>
+        </section>
+        <!--  -->
+      </div>
+    </div>
     <footer class="main-footer section lg">
       <section id="kontakt" class="section">
         <section class="contacts">
@@ -179,5 +596,8 @@
         <section class="map"></section>
       </section>
     </footer>
+    <a href="#" class="start-btn"
+      ><ion-icon name="chevron-up-outline" class="start-btn--icon"></ion-icon
+    ></a>
   </body>
 </html>
