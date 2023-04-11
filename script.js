@@ -148,20 +148,70 @@ sections.forEach((section) => {
   observer.observe(section);
 });
 
-// const secNavItems = document.querySelectorAll(".sec-nav--item");
-// const wrappers = document.querySelectorAll(".wrapper");
+const services = document.querySelectorAll(".wrapper");
 
-// secNavItems.forEach((navItem) => {
-//   navItem.addEventListener("click", function (event) {
-//     if (event.target.closest(".sec-nav--item")) {
-//       //
-//       secNavItems.forEach((item) => {
-//         if (item.classList.contains("active")) {
-//           item.classList.remove("active");
-//         }
-//       });
-//       console.log(event.target);
-//       event.target.closest(".sec-nav--item").classList.add("active");
-//     }
-//   });
-// });
+console.log(services);
+services.forEach((service) => {
+  // service.classList.add("active");
+  // service.style.display = "none";
+});
+
+const secNavItems = document.querySelectorAll(".sec-nav--item");
+const wrappers = document.querySelectorAll(".wrapper");
+
+secNavItems.forEach((navItem, index) => {
+  navItem.addEventListener("click", function (event) {
+    services.forEach((service, serviceIndex) => {
+      if (service.classList.contains("active")) {
+        service.classList.remove("active");
+      }
+      if (serviceIndex === index) {
+        // service.style.display = "block";
+
+        service.classList.add("active");
+        setTimeout(() => {
+          service.classList.add("pad-right");
+        }, 2000);
+
+        console.log(service);
+        if (window.innerWidth > 768) {
+          const treatmentSlider =
+            document.querySelectorAll(".treatment-slider");
+
+          treatmentSlider.forEach((slider) => {
+            const treatmentPrice = slider.querySelector(".treatment-price");
+
+            let text = treatmentPrice.innerText;
+
+            treatmentPrice.innerText = text;
+            let cardHeight = slider.children[0].getBoundingClientRect().height;
+            let headerHeight =
+              slider.children[0].children[0].getBoundingClientRect().height;
+
+            slider.style.height = `${cardHeight + headerHeight + 100}px`;
+            // console.log("-\n", slider.children[0].getBoundingClientRect().height);
+            // console.log(
+            //   "-\n",
+            //   slider.children[0].children[0].getBoundingClientRect().height
+            // );
+            // console.log(slider.children);
+            // slider.style.backgroundColor = "red";
+            // slider.style.height = `${slider.children[1].getBoundingClientRect().height}`;
+          });
+        }
+      }
+    });
+
+    console.log(index);
+    // if (event.target.closest(".sec-nav--item")) {
+    //   //
+    //   secNavItems.forEach((item) => {
+    //     if (item.classList.contains("active")) {
+    //       item.classList.remove("active");
+    //     }
+    //   });
+    //   console.log(event.target);
+    //   event.target.closest(".sec-nav--item").classList.add("active");
+    // }
+  });
+});
