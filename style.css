@@ -29,8 +29,8 @@ sizes
   --color-grey: #4c4b4b;
   --color-accent: #6e825f;
   --color-white: #fff9f9;
-  --color-white-oppacity: rgba(255, 249, 249, 0.5);
-  --color-white-oppacity-2: rgba(255, 249, 249, 0.75);
+  --color-white-opacity: rgba(255, 249, 249, 0.5);
+  --color-white-opacity-2: rgba(255, 249, 249, 0.75);
 }
 * {
   margin: 0;
@@ -181,7 +181,7 @@ body {
 .main-header {
   position: fixed;
   width: 100%;
-  background-color: var(--color-white-oppacity);
+  background-color: var(--color-white-opacity);
   z-index: 1;
 }
 .main-header.intro .container {
@@ -208,6 +208,7 @@ body {
   padding: 1.2rem 2.4rem;
 
   height: 12rem;
+  width: 100%;
   transition: height 1s ease;
   position: relative;
 }
@@ -455,13 +456,14 @@ body {
 
   background-image: url(images/Dermazeutische_Behandlungen/ultra-sensitiv.jpg);
   background-size: 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
   box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.25);
 }
 .service-container:last-child {
-  background-image: url(images/Wellness_Massagen/Upanasveda\ -\ Rückenmassage.jpeg);
+  background-image: url(images/Wellness_Massagen/Ayurvedische_Massagen/upanasveda.jpg);
 }
 .service-link {
   display: inline-block;
@@ -478,7 +480,7 @@ body {
   font-size: 4.6rem;
   color: var(--color-accent);
 
-  background-color: var(--color-white-oppacity);
+  background-color: var(--color-white-opacity);
 }
 .service-container:hover,
 .service-link:hover {
@@ -681,6 +683,8 @@ body {
 
   width: 100%;
   height: 100%;
+
+  min-height: 10rem;
 }
 .treatment-time {
   font-size: 1.6rem;
@@ -898,6 +902,7 @@ body {
   }
   .section {
     padding: 0 2.4rem;
+    padding-top: 16rem;
     min-height: 100vh;
     gap: 0;
   }
@@ -957,9 +962,9 @@ body {
   .section.hero {
     background-image: linear-gradient(
       to right,
-      var(--color-white-oppacity-2),
-      var(--color-white-oppacity-2),
-      var(--color-white-oppacity-2),
+      var(--color-white-opacity-2),
+      var(--color-white-opacity-2),
+      var(--color-white-opacity-2),
       rgba(255, 255, 255, 0)
     );
   }
