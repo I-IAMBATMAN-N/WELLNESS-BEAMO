@@ -580,6 +580,9 @@ body {
 .contact-logo .logo-name {
   font-size: 2.8rem;
 }
+.required-links {
+  gap: 0.4rem;
+}
 .required-link {
   color: var(--color-accent);
   font-weight: bold;
@@ -606,12 +609,12 @@ body {
   max-width: 100rem;
   margin: 0 auto;
 }
-
 .treatment-card.medium {
   display: flex;
 
   position: relative;
   background-color: var(--color-primary);
+  background-color: var(--color-white);
   border-top-left-radius: 2rem;
   border-bottom-left-radius: 2rem;
 
