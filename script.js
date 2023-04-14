@@ -130,8 +130,15 @@ const obsOptions = {
 };
 
 const observer = new IntersectionObserver(obsCallback, obsOptions);
-
-let time = 3000;
+let time = 0;
+if (
+  document.title === "BEAMO | Wellness Massagen" ||
+  document.title === "BEAMO | Beauty"
+) {
+  time = 1000;
+} else {
+  time = 3000;
+}
 
 function obsCallback(entries, observer) {
   entries.forEach((entry) => {
@@ -150,7 +157,7 @@ sections.forEach((section) => {
 
 const services = document.querySelectorAll(".wrapper");
 
-console.log(services);
+// console.log(services);
 services.forEach((service) => {
   // service.classList.add("active");
   // service.style.display = "none";
