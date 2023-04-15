@@ -52,11 +52,14 @@ body {
 }
 .main-nav {
   flex: 0 0 60%;
+
   display: flex;
   align-items: center;
   width: fit-content;
+
   position: absolute;
   right: 2.4rem;
+
   transition: 1s ease;
   margin-top: 0.8rem;
   opacity: 100%;
@@ -71,7 +74,7 @@ body {
 }
 .section img {
   border-radius: 1000rem;
-  box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.25);
+  box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
 }
 /* GENERAL stylings */
 .wrapper {
@@ -83,76 +86,55 @@ body {
   flex-direction: column;
   gap: 9.6rem;
 }
-.wrapper {
-}
 .section {
   width: 100%;
   max-width: 120rem;
-  margin: 0 auto;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 4.8rem;
   gap: 8rem;
-  padding-top: 12.5rem;
+
   position: relative;
-  overflow: visible;
+
+  margin: 0 auto;
+  padding-top: 12.5rem;
   margin-bottom: 4.8rem;
 
   transition: opacity 2s ease;
+  overflow: visible;
 }
 .lg {
   height: 100vh;
 }
 .section-heading {
+  align-self: flex-start;
+  display: block;
+
   font-size: 6.2rem;
   font-family: "Merriweather";
   color: var(--color-accent);
   text-align: left;
-  align-self: flex-start;
-  display: block;
-  /* text-shadow: 0.8rem 0.8rem 0.8rem rgba(0, 0, 0, 0.25); */
+  letter-spacing: 0.2rem;
+
   padding-left: 1.6rem;
   padding-bottom: 1.2rem;
-  letter-spacing: 0.2rem;
-  /* font-weight: normal; */
-  /* text-transform: uppercase; */
-  /* text-transform: uppercase; */
-  /* transform: translate(0, 75%); */
-  /* border-top-right-radius: 1000rem;
-  border-bottom-right-radius: 1000rem; */
-  /* border-bottom: 0.2rem solid var(--color-accent); */
 }
 .article {
+  width: 100%;
+  max-width: 100rem;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  max-width: 100rem;
-  /* height: 100%; */
   gap: 8rem;
+
   padding: 2.4rem;
 }
 .article section {
   flex: 1 0 0;
 }
-/* .treatment-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-} */
-/* -BACKGROUNDS for SECTION */
-/* .section.hero::before,
-.section.about::before {
-  content: "";
-  display: inline-block;
-
-  width: 500rem;
-  aspect-ratio: 5/2;
-  position: absolute;
-} */
 .section.hero::before {
   top: -85%;
   left: -500rem;
@@ -177,17 +159,21 @@ body {
 .hidden {
   opacity: 0%;
 }
-/**/
 .main-header {
-  position: fixed;
   width: 100%;
+
+  position: fixed;
+
   background-color: var(--color-white-opacity);
   z-index: 1;
 }
 .main-header.intro .container {
-  justify-content: center;
   height: 100vh;
+
+  justify-content: center;
+
   position: relative;
+
   margin: 0 auto;
 }
 .main-header.intro .main-nav {
@@ -195,22 +181,26 @@ body {
   opacity: 0;
 }
 .main-header.intro .logo {
-  margin: auto;
   left: 50%;
+
+  margin: auto;
   transform: translate(-50%, 0) scale(3);
 }
 .main-header .container {
+  width: 100%;
+  max-width: 120rem;
+  height: 12rem;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  position: relative;
+
   margin: 0 auto;
-  max-width: 120rem;
   padding: 1.2rem 2.4rem;
 
-  height: 12rem;
-  width: 100%;
   transition: height 1s ease;
-  position: relative;
 }
 /*  -LOGO- */
 .logo {
@@ -218,10 +208,12 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
-  gap: 0.4rem;
+
   position: absolute;
   left: 2.4rem;
+
+  gap: 0.4rem;
+  text-decoration: none;
 
   transition: 1s ease;
 }
@@ -246,112 +238,52 @@ body {
 }
 .nav-list {
   list-style: none;
+
   display: flex;
   align-items: center;
   gap: 6.4rem;
+
   font-size: 1.8rem;
-  /* font-weight: bold; */
   font-family: "Raleway", serif;
 }
 .nav-link {
+  text-align: center;
   text-decoration: none;
   color: var(--color-grey);
   text-transform: uppercase;
   letter-spacing: 0.1rem;
+
+  position: relative;
 }
-.slider-controls {
-  width: fit-content;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 3.2rem;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transform: translate(50%, 0%);
-}
-.slider-btn {
-  color: var(--color-accent);
-  font-size: 3.6rem;
-}
-.slider-btn {
-  transition: 1s;
-  cursor: pointer;
-}
-.slider-btn:first-child:hover {
-  transform: translate(-25%, 0) scale(1.5);
-}
-.slider-btn:last-child:hover {
-  transform: translate(25%, 0) scale(1.5);
-}
-.slider-dots {
-  display: flex;
-  flex: 1 0 0;
-  align-items: center;
-  height: fit-content;
-  gap: 3.2rem;
-  justify-content: space-evenly;
-}
-.slider-dot {
-  width: 1.2rem;
-  height: 1.2rem;
-  border-radius: 50%;
-  border: 0.2rem solid var(--color-accent);
-  transition: 0.4s;
-}
-.slider-dot.active {
+.nav-link.active::after {
+  content: "";
+  display: inline-block;
+
+  height: 0.4rem;
   width: 2.4rem;
-  height: 2.4rem;
-  background-color: var(--color-accent);
-}
-.treatment-slider {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  margin: auto auto;
-  overflow: visible;
-}
-.treatment-card {
-  border-radius: 2rem;
-  width: 100%;
-  max-width: 90rem;
-}
-.treatment-slider .treatment-card.medium,
-.treatment-slider .treatment-card.large {
+
   position: absolute;
-  right: 50%;
-  top: 50%;
-  transform: translate(50%, -50%);
-  /* transition: transform 1.5s; */
+  left: 0;
+  bottom: -0.8rem;
+
+  background-color: var(--color-accent);
+  border-radius: 100rem;
 }
-.treatment-card.optional .treatment-price {
-  font-size: 3rem;
-}
-/* .treatment-card.optional .treatment-price span {
-  font-size: 9.8rem;
-} */
-.treatment-options {
-  width: 100%;
-  margin-top: 3.2rem;
-  padding-left: 3.2rem;
-}
-.options-controls {
-  padding-left: 3.2rem;
-  display: flex;
-  align-items: center;
-}
+
 .hero {
-  position: relative;
   justify-content: center;
+  gap: 6.4rem;
+
   position: relative;
+
   font-weight: bold;
   letter-spacing: 0.1rem;
-  gap: 6.4rem;
 }
 .hero-heading {
-  font-size: 4.4rem;
-  color: var(--color-accent);
   font-family: "Merriweather";
+  font-size: 4.4rem;
+  line-height: 1.4;
+  color: var(--color-accent);
 }
 .hero-heading span {
   font-size: 2.2rem;
@@ -378,31 +310,35 @@ body {
 }
 .img-container::before {
   content: "";
-  position: absolute;
-  width: 40rem;
+  width: 38rem;
   aspect-ratio: 1/1;
+
+  position: absolute;
+  top: -3.2rem;
+  left: 50%;
+
+  background-color: var(--color-accent);
   border-radius: 100rem;
   transform: translate(-50%, 0);
-  top: -4.6rem;
-  left: 50%;
-  background-color: var(--color-accent);
+
   z-index: -1;
 }
 .socials {
   width: 40%;
-  padding: 1rem 2.4rem;
+
   align-self: flex-start;
   display: flex;
   align-items: center;
   justify-content: end;
+  gap: 8rem;
+
   background-color: var(--color-accent);
-  /* position: absolute;
-  left: 0;
-  bottom: 15rem; */
+
+  padding: 1rem 2.4rem;
+
   border-top-right-radius: 100rem;
   border-bottom-right-radius: 100rem;
-  gap: 8rem;
-  box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.25);
+  box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
 }
 .social-icon {
   color: var(--color-white);
@@ -414,8 +350,8 @@ body {
   line-height: 1.6;
 }
 .about-text span {
-  font-size: 2.4rem;
   font-family: "Merriweather";
+  font-size: 2.4rem;
   color: var(--color-accent);
   font-weight: bold;
 }
@@ -424,28 +360,37 @@ body {
   font-size: 7.4rem;
   font-weight: normal;
   text-shadow: 0.8rem 0.8rem 0.8rem rgba(0, 0, 0, 0.25);
+
+  text-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
 }
 .about .img-container::before {
   content: "";
-  position: absolute;
+
   width: 130%;
   aspect-ratio: 1/1;
-  border-radius: 100rem;
-  transform: translate(-50%, 0);
+
+  position: absolute;
   top: -5rem;
   left: 50%;
+
+  border-radius: 100rem;
+  transform: translate(-50%, 0);
   background-color: var(--color-accent);
+
   z-index: -1;
 }
+/* SERVICES SECTION ---------------------------------------- */
 .services {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 9.6rem;
+
   font-family: "Merriweather", serif;
 }
 .services-container {
   width: 100%;
+
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -461,9 +406,10 @@ body {
   background-repeat: no-repeat;
 
   box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.25);
+  box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
 }
 .service-container:last-child {
-  background-image: url(images/Wellness_Massagen/Ayurvedische_Massagen/upanasveda.jpg);
+  background-image: url(images/Wellness_Massagen/Ayurvedische_Massagen/Upanasveda\ -\ Rückenmassage.jpg);
 }
 .service-link {
   display: inline-block;
@@ -490,7 +436,7 @@ body {
 .service-container:hover {
   box-shadow: 2.2rem 2.2rem 2.2rem rgba(0, 0, 0, 0.25);
 }
-/* FOOTER */
+/* FOOTER ---------------------------------------- */
 .contacts,
 .contact-card,
 .contact-section,
@@ -508,64 +454,67 @@ body {
   flex: 1 0 0;
   width: 100%;
   max-width: 100rem;
+
   flex-direction: row;
-  gap: 3.2rem;
   justify-content: space-between;
+  gap: 3.2rem;
 }
 .contact-card {
   flex: 1 0 0;
-  font-family: "Merriweather", serif;
   height: 44rem;
-  background-color: var(--color-accent);
-  border-radius: 2rem;
+
   gap: 1.6rem;
+
+  font-family: "Merriweather", serif;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  color: var(--color-white);
+
   padding: 1.8rem;
   padding-bottom: 4.8rem;
-  text-align: center;
-  color: var(--color-white);
+
+  border-radius: 2rem;
+  background-color: var(--color-accent);
   box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.25);
-  letter-spacing: 0.2rem;
+  box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
 }
 .contact-card:nth-child(2) {
   background-color: var(--color-white);
   color: var(--color-grey);
 }
 .contact-heading {
-  font-size: 5.2rem;
   font-family: "Great Vibes";
+  font-size: 5.2rem;
   font-weight: normal;
 }
 .contact-card:nth-child(2) .contact-heading {
   color: var(--color-accent);
 }
-
 .contact-card:nth-child(2) .contact-link {
   color: var(--color-grey);
 }
-.contact-card:nth-child(2) .contact-icon {
-  color: var(--color-accent);
-}
 .contact-text {
-  font-size: 2rem;
   font-family: "Raleway", serif;
+  font-size: 2rem;
   line-height: 1.5;
 }
 .contact-section {
   flex: 1 0 0;
+
   justify-content: center;
   gap: 1.6rem;
 }
 .contact-link {
-  color: var(--color-white);
-  text-decoration: none;
   font-size: 2rem;
+  text-decoration: none;
+  color: var(--color-white);
 }
 .contact-icon {
-  color: var(--color-accent);
-  color: var(--color-white);
-  /* background-color: var(--color-white); */
   font-size: 2.4rem;
+  color: var(--color-white);
+
   padding: 0.4rem;
+
   border-radius: 50%;
 }
 .contact-logo {
@@ -584,18 +533,20 @@ body {
   gap: 0.4rem;
 }
 .required-link {
-  color: var(--color-accent);
-  font-weight: bold;
   font-size: 2rem;
+  font-weight: bold;
+
+  color: var(--color-accent);
 }
 .service-description {
   width: 100%;
   max-width: 100rem;
 }
 .service-heading {
-  font-size: 4.4rem;
   font-family: "Merriweather", serif;
+  font-size: 4.4rem;
   color: var(--color-accent);
+
   margin-bottom: 4.8rem;
 }
 .service-text {
@@ -604,216 +555,16 @@ body {
   letter-spacing: 0.2rem;
   line-height: 1.6;
 }
-.treatment-cards {
-  width: 100%;
-  max-width: 100rem;
-  margin: 0 auto;
-}
-.treatment-card.medium {
-  display: flex;
-
-  position: relative;
-  background-color: var(--color-primary);
-  background-color: var(--color-white);
-  border-top-left-radius: 2rem;
-  border-bottom-left-radius: 2rem;
-
-  min-height: 42rem;
-
-  box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.25);
-}
-.treatment-card.large {
-  display: flex;
-
-  position: relative;
-
-  border-top-left-radius: 2rem;
-  border-bottom-left-radius: 2rem;
-
-  min-height: 54rem;
-  height: fit-content;
-
-  width: 100%;
-
-  background-color: var(--color-accent);
-  box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.25);
-}
-.treatment-info {
-  display: flex;
-  flex-direction: column;
-  /* justify-content: space-between; */
-  flex: 1 0 0;
-
-  padding-right: 5.5rem;
-
-  font-size: 1.6rem;
-  line-height: 1.5;
-  letter-spacing: 0.2rem;
-}
-.treatment-card.large .treatment-info {
-  padding: 0;
-  padding-right: 12rem;
-}
-.treatment-heading {
-  font-size: 6.2rem;
-  font-family: "Great Vibes";
-  letter-spacing: 0.2rem;
-  font-weight: normal;
-  color: var(--color-accent);
-  position: absolute;
-  left: 0;
-  top: 0;
-  transform: translate(-12%, -110%);
-  /* text-shadow: 0.8rem 0.8rem 0.8rem rgba(0, 0, 0, 0.25); */
-}
-.treatment-heading span {
-  font-size: 3.6rem;
-}
-.treatment-description {
-  width: 100%;
-  padding-right: 3rem;
-
-  padding-top: 3.2rem;
-  padding-left: 3.2rem;
-}
-.treatment-footer {
-  /* display: flex;
-  justify-content: space-between;
-  align-items: flex-end; */
-  /* padding-left: 3.2rem; */
-  position: relative;
-  margin-top: auto;
-
-  width: 100%;
-  height: 100%;
-
-  min-height: 10rem;
-}
-.treatment-time {
-  font-size: 1.6rem;
-  letter-spacing: 0.2rem;
-  position: absolute;
-  left: 3.2rem;
-  bottom: 0;
-}
-.treatment-time span {
-  font-family: "Great Vibes";
-  font-size: 4.6rem;
-
-  letter-spacing: 0.1rem;
-
-  display: inline-block;
-  /* letter-spacing: -0.2rem; */
-}
-.treatment-time span::first-letter {
-  /* margin-left: 0.6rem; */
-}
-.treatment-price {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-
-  font-family: "Great Vibes";
-  /* font-size: 9.4rem; */
-  color: var(--color-white);
-  background-color: var(--color-accent);
-
-  line-height: 1;
-
-  padding: 0 3.2rem;
-  padding-top: 1.2rem;
-  padding-right: 3.2rem;
-
-  letter-spacing: -0.6rem;
-  text-align: center;
-
-  border-bottom-left-radius: 2rem;
-  border-top-left-radius: 2rem;
-}
-.treatment-price,
-.treatment-price span {
-  font-size: 9.6rem;
-}
-.treatment-price span {
-  display: inline-block;
-}
-.treatment-price::first-letter {
-  font-size: 3rem;
-  margin-right: 1.2rem;
-}
-.treatment-card.medium img,
-.treatment-card.large img {
-  border-radius: 2rem;
-
-  max-width: 35.3rem;
-  margin: auto 0;
-  transform: scale(1.32);
-  filter: grayscale(0.2);
-
-  /* position: absolute;
-  right: 0;
-  top: 50%;
-
-  box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.25); */
-}
-
-.treatment-card.large .treatment-description {
-  padding: 2.4rem;
-  padding-right: 1.2rem;
-  padding-left: 4rem;
-
-  background-color: var(--color-primary);
-
-  border-top-left-radius: 2rem;
-  border-bottom-left-radius: 2rem;
-}
-.treatment-card.large .treatment-footer {
-  padding-left: 4rem;
-
-  color: var(--color-white);
-}
-.treatment-card.large img {
-  transform: scale(1.7);
-}
-.treatment-benefits {
-  list-style: none;
-
-  padding: 2.4rem;
-  padding-left: 4rem;
-  padding-bottom: 0;
-
-  color: var(--color-white);
-}
-.benefit-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.6rem;
-}
-.benefit-icon {
-  font-size: 2.4rem;
-}
-
 /*   FONT SIZE SYSTEM (px)
   10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
   SPACING SYSTEM (px)
   2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
 
 /* 
-  
-  
 */
 @media (max-width: 71.5em) {
   html {
     font-size: 56.25%;
-  }
-  .treatment-card.large img {
-    transform: scale(1.6);
-  }
-  .treatment-card.medium img {
-    transform: scale(1.2);
-  }
-  .treatment-card.large .treatment-info {
-    padding-right: 10rem;
   }
 }
 @media (max-width: 61.25em) {
@@ -824,12 +575,6 @@ body {
     flex-direction: column;
     gap: 3.2rem;
   }
-  /* .treatment-card.large img {
-    transform: scale(1.45);
-  } */
-  .treatment-card.large .treatment-info {
-    padding-right: 9.6rem;
-  }
   .hero .img-container,
   .about .img-container {
     flex: 0 0 30%;
@@ -838,12 +583,13 @@ body {
   .about .img-container::before {
     width: 120%;
     height: 120%;
+
     top: 50%;
     left: 50%;
+
     transform: translate(-50%, -50%);
   }
 }
-
 /* 880 px */
 @media (max-width: 55em) {
   html {
@@ -859,6 +605,7 @@ body {
   .lg {
     height: auto;
   }
+  /* MAIN HEADER ---------------------------------------- */
   .main-header {
     background-color: var(--color-white);
   }
@@ -875,9 +622,11 @@ body {
   .main-nav.active {
     width: 100%;
     height: 100vh;
+
     bottom: -100vh;
-    background-color: var(--color-white);
     right: 0;
+
+    background-color: var(--color-white);
     transition: 0s;
   }
   .main-nav.active .mobile-menu-icon {
@@ -889,16 +638,16 @@ body {
   }
   .main-nav .nav-list {
     display: none;
+
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     gap: 3.2rem;
-    letter-spacing: 0rem;
+
     font-size: 3.6rem;
+    letter-spacing: 0rem;
   }
-  /* .mobile-menu-icon:first-child {
-    display: inline-block;
-  } */
+  /* SECTIONS ---------------------------------------- */
   .section.hero::before,
   .section.about::before {
     display: none;
@@ -909,51 +658,13 @@ body {
     min-height: 100vh;
     gap: 0;
   }
-  .slider-controls {
-    display: none;
-  }
-  .slider-btn:first-child:hover {
-    transform: translate(0, 0) scale(1);
-  }
-  .slider-btn:last-child:hover {
-    transform: translate(0, 0) scale(1);
-  }
-  .treatment-slider {
-    height: 100%;
-    padding-top: 15.4rem;
+  .section.hero,
+  .section.about {
+    position: relative;
   }
   .section-heading {
     position: initial;
     padding-left: 0;
-  }
-  .treatment-container {
-    display: flex;
-    flex-direction: column;
-    gap: 12.8rem;
-  }
-  .treatment-slider .treatment-card.medium,
-  .treatment-slider .treatment-card.large {
-    position: relative;
-    left: 0;
-    bottom: 0;
-    transform: translate(0, 0);
-  }
-  .treatment-card.medium {
-    min-height: 0rem;
-  }
-  .treatment-slider {
-    height: fit-content;
-    min-height: 0rem;
-    display: flex;
-    flex-direction: column;
-    gap: 24.6rem;
-    align-items: center;
-    overflow: visible;
-  }
-  .treatment-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 124px;
   }
   .section.hero,
   .section.about {
@@ -970,10 +681,6 @@ body {
       var(--color-white-opacity-2),
       rgba(255, 255, 255, 0)
     );
-  }
-  .hero,
-  .about {
-    position: relative;
   }
   .article.hero {
     flex: 1 0 0;
@@ -999,85 +706,29 @@ body {
     height: 110%;
   }
   .hero .img-container {
+    width: 50%;
+
     position: absolute;
-    right: 0;
     top: 50%;
+    right: 0;
+
     transform: translate(0, -50%);
     z-index: -1;
-    width: 50%;
   }
+  /* SERVICES SECTION ---------------------------------------- */
   .services-container {
-    flex-direction: column;
-    gap: 4.8rem;
     height: 100%;
     width: 100%;
+
+    flex-direction: column;
+    gap: 4.8rem;
   }
   .service-container {
     flex: 0 0 40%;
     width: 100%;
     max-width: 75rem;
   }
-  .treatment-container {
-  }
-  /* .wrapper {
-    display: flex;
-    flex-direction: column;
-    overflow: visible;
-    gap: 24.6rem;
-  } */
-  .treatment-card {
-    flex-direction: column;
-
-    width: 100%;
-    max-width: 60rem;
-
-    position: initial;
-    margin: 0 auto;
-  }
-  .treatment-card.medium {
-    flex-direction: column;
-  }
-  .treatment-heading {
-    transform: translate(0, -110%);
-  }
-  .treatment-card.large img,
-  .treatment-card.medium img {
-    aspect-ratio: 1/1;
-    width: 100%;
-    max-width: 60rem;
-    margin: 0 auto;
-
-    transform: scale(1);
-  }
-
-  .treatment-info,
-  .treatment-time {
-    font-size: 2rem;
-  }
-  .treatment-price {
-    font-size: 9.8rem;
-  }
-  .treatment-card.medium .treatment-info {
-    padding-right: 0;
-  }
-  .treatment-card.medium .treatment-description,
-  .treatment-card.large .treatment-description {
-    border-radius: 2rem;
-  }
-  .treatment-card.large .treatment-info {
-    padding: 0;
-    padding-right: 0;
-  }
-  .treatment-card.large .treatment-footer {
-    padding-right: 3.2rem;
-  }
-  .treatment-footer {
-    padding-top: 2.4rem;
-  }
-  .treatment-price {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 2rem;
-  }
+  /* FOOTER SECTION ---------------------------------------- */
   .contacts {
     flex-direction: column;
   }
@@ -1088,8 +739,9 @@ body {
   }
   .contact-heading {
     font-size: 6.2rem;
-    padding: 1.2rem 0;
     letter-spacing: 0.4rem;
+
+    padding: 1.2rem 0;
   }
   .contact-text,
   .contact-link {

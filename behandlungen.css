@@ -1,0 +1,691 @@
+.sec-nav {
+  width: 100%;
+  max-width: 100rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sec-nav--list {
+  list-style: none;
+
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 4.8rem;
+
+  padding: 0 2.4rem;
+}
+.sec-nav--item {
+  aspect-ratio: 1/1;
+
+  text-align: center;
+
+  border-radius: 2rem;
+}
+.sec-nav--item {
+  background-image: url(images/Dermazeutische_Behandlungen/ultra-sensitiv.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+
+  box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.12);
+  box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
+}
+.sec-nav--item:nth-child(2) {
+  background-image: url(images/Wellness_Behandlungen/beauty-and-more-1.jpg);
+}
+.sec-nav--item:nth-child(3) {
+  background-image: url(images/Hand&Fußpflege/fusspflege-wellness.jpg);
+}
+.sec-nav--item:nth-child(4) {
+  background-image: url(images/Zusatzprogramme/Zusatzprogramm.jpg);
+}
+.sec-nav--item .sec-nav--link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+}
+.sec-nav--link {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+
+  font-family: "Merriweather", serif;
+  font-size: 3.6rem;
+  text-transform: uppercase;
+  line-height: 1.2;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--color-accent);
+
+  background-color: var(--color-white-opacity);
+
+  padding: 2.4rem;
+}
+.start-btn {
+  position: fixed;
+  bottom: 3.2rem;
+  right: 4.8rem;
+  background-color: var(--color-accent);
+  padding: 1.2rem;
+  border-radius: 2rem;
+}
+.start-btn--icon {
+  font-size: 4.4rem;
+  color: var(--color-white);
+}
+.slider-controls {
+  width: fit-content;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3.2rem;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  transform: translate(50%, 0%);
+}
+.slider-btn {
+  color: var(--color-accent);
+  font-size: 3.6rem;
+
+  transition: 1s;
+  cursor: pointer;
+}
+.slider-btn:first-child:hover {
+  transform: translate(-25%, 0) scale(1.5);
+}
+.slider-btn:last-child:hover {
+  transform: translate(25%, 0) scale(1.5);
+}
+.slider-dots {
+  flex: 1 0 0;
+  height: fit-content;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 3.2rem;
+}
+.slider-dot {
+  width: 1.2rem;
+  height: 1.2rem;
+
+  border-radius: 50%;
+  border: 0.2rem solid var(--color-accent);
+  transition: 0.4s;
+}
+.slider-dot.active {
+  width: 2.4rem;
+  height: 2.4rem;
+
+  background-color: var(--color-accent);
+}
+.treatment-slider {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+
+  margin: auto auto;
+  overflow: visible;
+}
+#additional .section {
+  height: auto;
+  min-height: 100vh;
+}
+.additional-table {
+  width: 100%;
+  max-width: 90rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  font-size: 2rem;
+  margin-bottom: 4.8rem;
+  letter-spacing: 0.1rem;
+
+  padding: 3.2rem 4.8rem;
+
+  border-bottom-right-radius: 2rem;
+  border-top-left-radius: 2rem;
+  box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.25);
+}
+/* TREATMENTS -----------------------------------------*/
+.treatment-slider {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+
+  margin: auto auto;
+  overflow: visible;
+}
+.treatment-card {
+  width: 100%;
+  max-width: 90rem;
+
+  border-radius: 2rem;
+}
+.treatment-slider .treatment-card.medium,
+.treatment-slider .treatment-card.large {
+  position: absolute;
+  right: 50%;
+  top: 50%;
+
+  transform: translate(50%, -50%);
+}
+.treatment-card.optional .treatment-price {
+  font-size: 3rem;
+}
+.treatment-options {
+  width: 100%;
+
+  margin-top: 3.2rem;
+  padding-left: 3.2rem;
+}
+.options-controls {
+  display: flex;
+  align-items: center;
+
+  padding-left: 3.2rem;
+}
+.treatment-card {
+  width: 100%;
+  max-width: 90rem;
+
+  border-radius: 2rem;
+}
+.treatment-slider .treatment-card.medium,
+.treatment-slider .treatment-card.large {
+  position: absolute;
+  right: 50%;
+  top: 50%;
+
+  transform: translate(50%, -50%);
+}
+.treatment-card.optional .treatment-price {
+  font-size: 3rem;
+}
+
+.treatment-options {
+  width: 100%;
+
+  margin-top: 3.2rem;
+  padding-left: 3.2rem;
+}
+.options-controls {
+  display: flex;
+  align-items: center;
+
+  padding-left: 3.2rem;
+}
+.treatment-cards {
+  width: 100%;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+.treatment-card {
+  display: flex;
+
+  position: relative;
+  background-color: var(--color-primary);
+  background-color: var(--color-white);
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+
+  min-height: 42rem;
+  height: fit-content;
+
+  width: 100%;
+
+  box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
+}
+.treatment-card.large {
+  min-height: 54rem;
+
+  background-color: var(--color-accent);
+}
+.treatment-card.medium img,
+.treatment-card.large img {
+  max-width: 35.3rem;
+
+  margin: auto 0;
+
+  border-radius: 2rem;
+  transform: scale(1.32);
+  filter: grayscale(0.2);
+}
+.treatment-card.large img {
+  transform: scale(1.7);
+}
+.treatment-info {
+  flex: 1 0 0;
+
+  display: flex;
+  flex-direction: column;
+
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  line-height: 1.5;
+
+  padding-right: 5.5rem;
+}
+.treatment-card.large .treatment-info {
+  padding: 0;
+  padding-right: 12rem;
+}
+.treatment-heading {
+  font-size: 6.2rem;
+  font-family: "Great Vibes";
+  letter-spacing: 0.2rem;
+  font-weight: normal;
+  color: var(--color-accent);
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-12%, -110%);
+}
+.treatment-heading span {
+  font-size: 3.6rem;
+}
+.treatment-description {
+  width: 100%;
+  padding-right: 3rem;
+
+  padding-top: 3.2rem;
+  padding-left: 3.2rem;
+}
+.treatment-card.large .treatment-description {
+  padding: 2.4rem;
+  padding-right: 1.2rem;
+  padding-left: 4rem;
+
+  background-color: var(--color-primary);
+
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+.treatment-footer {
+  position: relative;
+  margin-top: auto;
+
+  width: 100%;
+  height: 100%;
+
+  min-height: 10rem;
+}
+.treatment-card.large .treatment-footer {
+  padding-left: 4rem;
+
+  color: var(--color-white);
+}
+.treatment-time {
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  position: absolute;
+  left: 3.2rem;
+  bottom: 0;
+}
+.treatment-time span {
+  display: inline-block;
+
+  font-family: "Great Vibes";
+  font-size: 4.6rem;
+  letter-spacing: 0.1rem;
+}
+.treatment-price::first-letter {
+  font-size: 3rem;
+  margin-right: 1.2rem;
+}
+.treatment-price {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  font-family: "Great Vibes";
+  /* font-size: 9.4rem; */
+  color: var(--color-white);
+  background-color: var(--color-accent);
+
+  letter-spacing: -0.6rem;
+  text-align: center;
+  line-height: 1;
+
+  padding: 0 3.2rem;
+  padding-top: 1.2rem;
+  padding-right: 3.2rem;
+
+  border-bottom-left-radius: 2rem;
+  border-top-left-radius: 2rem;
+}
+.treatment-price,
+.treatment-price span {
+  font-size: 9.6rem;
+}
+.treatment-benefits {
+  list-style: none;
+
+  padding: 2.4rem;
+  padding-left: 4rem;
+  padding-bottom: 0;
+
+  color: var(--color-white);
+}
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+.benefit-icon {
+  font-size: 2.4rem;
+}
+.additional-table tbody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.additional-table tbody tr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.additional-table td:nth-child(2) {
+  text-align: right;
+}
+.additional-table--header {
+  font-size: 3.2rem;
+  text-align: left;
+  color: var(--color-accent);
+}
+/* QUERIES -----------------------------------------*/
+
+/* 1144px */
+@media (max-width: 71.5em) {
+  .treatment-card.large img {
+    transform: scale(1.6);
+  }
+  .treatment-card.medium img {
+    transform: scale(1.2);
+  }
+  .treatment-card.large .treatment-info {
+    padding-right: 10rem;
+  }
+}
+/* 980px */
+@media (max-width: 61.25em) {
+  .treatment-card.large .treatment-info {
+    padding-right: 9.6rem;
+  }
+}
+/* 768px */
+@media (max-width: 48em) {
+  .sec-nav--list {
+    grid-template-columns: 1fr;
+    grid-gap: 8rem;
+  }
+  .sec-nav--link span {
+    font-size: 2rem;
+  }
+  .slider-controls {
+    width: fit-content;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3.2rem;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    transform: translate(50%, 0%);
+  }
+  .slider-btn {
+    color: var(--color-accent);
+    font-size: 3.6rem;
+
+    transition: 1s;
+    cursor: pointer;
+  }
+  .slider-btn:first-child:hover {
+    transform: translate(-25%, 0) scale(1.5);
+  }
+  .slider-btn:last-child:hover {
+    transform: translate(25%, 0) scale(1.5);
+  }
+  .slider-dots {
+    flex: 1 0 0;
+    height: fit-content;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 3.2rem;
+  }
+  .slider-dot {
+    width: 1.2rem;
+    height: 1.2rem;
+
+    border-radius: 50%;
+    border: 0.2rem solid var(--color-accent);
+    transition: 0.4s;
+  }
+  .slider-dot.active {
+    width: 2.4rem;
+    height: 2.4rem;
+
+    background-color: var(--color-accent);
+  }
+  .slider-controls {
+    display: none;
+  }
+  .slider-btn:first-child:hover {
+    transform: translate(0, 0) scale(1);
+  }
+  .slider-btn:last-child:hover {
+    transform: translate(0, 0) scale(1);
+  }
+  .slider-controls {
+    width: fit-content;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3.2rem;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    transform: translate(50%, 0%);
+  }
+  .slider-btn {
+    color: var(--color-accent);
+    font-size: 3.6rem;
+
+    transition: 1s;
+    cursor: pointer;
+  }
+  .slider-btn:first-child:hover {
+    transform: translate(-25%, 0) scale(1.5);
+  }
+  .slider-btn:last-child:hover {
+    transform: translate(25%, 0) scale(1.5);
+  }
+  .slider-dots {
+    flex: 1 0 0;
+    height: fit-content;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 3.2rem;
+  }
+  .slider-dot {
+    width: 1.2rem;
+    height: 1.2rem;
+
+    border-radius: 50%;
+    border: 0.2rem solid var(--color-accent);
+    transition: 0.4s;
+  }
+  .slider-dot.active {
+    width: 2.4rem;
+    height: 2.4rem;
+
+    background-color: var(--color-accent);
+  }
+  .treatment-slider {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+
+    margin: auto auto;
+    overflow: visible;
+  }
+  .treatment-card {
+    width: 100%;
+    max-width: 90rem;
+
+    border-radius: 2rem;
+  }
+  .treatment-slider .treatment-card.medium,
+  .treatment-slider .treatment-card.large {
+    position: absolute;
+    right: 50%;
+    top: 50%;
+
+    transform: translate(50%, -50%);
+  }
+  .treatment-card.optional .treatment-price {
+    font-size: 3rem;
+  }
+
+  .treatment-options {
+    width: 100%;
+
+    margin-top: 3.2rem;
+    padding-left: 3.2rem;
+  }
+  .options-controls {
+    display: flex;
+    align-items: center;
+
+    padding-left: 3.2rem;
+  }
+  .treatment-slider {
+    height: 100%;
+    padding-top: 15.4rem;
+  }
+  .section-heading {
+    position: initial;
+    padding-left: 0;
+  }
+  .treatment-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12.8rem;
+  }
+  .treatment-slider .treatment-card.medium,
+  .treatment-slider .treatment-card.large {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    transform: translate(0, 0);
+  }
+  .treatment-card.medium {
+    min-height: 0rem;
+  }
+  .treatment-slider {
+    height: fit-content;
+    min-height: 0rem;
+    display: flex;
+    flex-direction: column;
+    gap: 24.6rem;
+    align-items: center;
+    overflow: visible;
+  }
+  .treatment-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 124px;
+  }
+  .treatment-card {
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 60rem;
+
+    position: initial;
+    margin: 0 auto;
+  }
+  .treatment-card.medium {
+    flex-direction: column;
+  }
+  .treatment-heading {
+    transform: translate(0, -110%);
+  }
+  .treatment-card.large img,
+  .treatment-card.medium img {
+    aspect-ratio: 1/1;
+    width: 100%;
+    max-width: 60rem;
+    margin: 0 auto;
+
+    transform: scale(1);
+  }
+  .treatment-info,
+  .treatment-time {
+    font-size: 2rem;
+  }
+  .treatment-price {
+    font-size: 9.8rem;
+  }
+  .treatment-card.medium .treatment-info {
+    padding-right: 0;
+  }
+  .treatment-card.medium .treatment-description,
+  .treatment-card.large .treatment-description {
+    border-radius: 2rem;
+  }
+  .treatment-card.large .treatment-info {
+    padding: 0;
+    padding-right: 0;
+  }
+  .treatment-card.large .treatment-footer {
+    padding-right: 3.2rem;
+  }
+  .treatment-footer {
+    position: initial;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    padding-left: 3.2rem;
+    padding-top: 2.4rem;
+  }
+  .treatment-time {
+    position: initial;
+  }
+  .treatment-price {
+    position: initial;
+  }
+  .treatment-price {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 2rem;
+  }
+}

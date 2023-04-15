@@ -43,34 +43,8 @@
     ></script>
     <!-- CUSTOM STYLES and SCRIPTS -->
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="behandlungen.css"></link>
     <style>
-      .sec-nav {
-        width: 100%;
-        max-width: 100rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .sec-nav--list {
-        list-style: none;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 4.8rem;
-        width: 100%;
-      }
-      .sec-nav--item {
-        /* min-height: 15rem; */
-        aspect-ratio: 1/1;
-        text-align: center;
-
-        width: 100%;
-        height: 100%;
-
-        /* border: 0.2rem solid var(--color-accent); */
-        /* background-color: var(--color-accent); */
-
-        border-radius: 2rem;
-      }
       .sec-nav--item {
         background-image: url(images/Wellness_Massagen/Ayurvedische_Massagen/abhyanga.jpg);
         background-size: cover;
@@ -85,73 +59,6 @@
       }
       .sec-nav--item:nth-child(4) {
         background-image: url(images/Wellness_Massagen/Ayurvedische_Massagen/Upanasveda\ -\ Rückenmassage.jpg);
-      }
-      .sec-nav--item .sec-nav--link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-      }
-      .sec-nav--link {
-        display: inline-block;
-        width: 100%;
-        height: 100%;
-
-        font-family: "Merriweather", serif;
-        font-size: 3.6rem;
-        text-transform: uppercase;
-        line-height: 1.2;
-        letter-spacing: 0.2rem;
-        text-decoration: none;
-        font-weight: bold;
-
-        color: var(--color-white);
-        color: var(--color-accent);
-
-        background-color: var(--color-white-opacity);
-
-        padding: 2.4rem;
-      }
-      .sec-nav--link span {
-        font-size: 2rem;
-        text-transform: none;
-      }
-      .start-btn {
-        position: fixed;
-        bottom: 3.2rem;
-        right: 4.8rem;
-        background-color: var(--color-accent);
-        padding: 1.2rem;
-        border-radius: 2rem;
-      }
-      .start-btn--icon {
-        font-size: 4.4rem;
-        color: var(--color-white);
-      }
-      @media (max-width: 48em) {
-        .sec-nav--list {
-          grid-template-columns: 1fr;
-          grid-gap: 8rem;
-        }
-        .sec-nav--link {
-          font-size: 3rem;
-        }
-        .sec-nav--link span {
-          font-size: 2rem;
-        }
-        .treatment-footer {
-          position: initial;
-          display: flex;
-          align-items: flex-end;
-          justify-content: space-between;
-          padding-left: 3.2rem;
-        }
-        .treatment-time {
-          position: initial;
-        }
-        .treatment-price {
-          position: initial;
-        }
       }
     </style>
     <script defer src="script.js"></script>
@@ -179,9 +86,7 @@
               <a href="treatments.html" class="nav-link">Behandlungen</a>
             </li>
             <li class="nav-item">
-              <a href="wellness-massages.html" class="nav-link active"
-                >Wellness-massagen</a
-              >
+              <a href="wellness-massages.html" class="nav-link active">Wellness-massagen</a>
             </li>
             <li class="nav-item">
               <a href="#kontakt" class="nav-link">Kontakt</a>
@@ -364,7 +269,7 @@
               <img
                 width="353"
                 height="353"
-                src="/images/Wellness_Massagen/AdobeStock_59059204.jpeg"
+                src="/images/Wellness_Massagen/Kräuterstempel.jpg"
                 alt=""
                 class="treatment-image"
               />
@@ -375,7 +280,7 @@
       <div id="aromaöl" class="wrapper">
         <section class="section treatment"></section>
         <div class="treatment-slider medium">
-          <article class="treatment-card medium optional">
+          <article class="treatment-card medium">
             <h3 class="treatment-heading">Aromaöl</h3>
             <section class="treatment-info">
               <p class="treatment-description">
@@ -442,7 +347,7 @@
               <img
                 width="353"
                 height="353"
-                src="/images/Dermazeutische_Behandlungen/courperose.jpg"
+                src="/images/Wellness_Massagen/Thai Energie Massage.jpg"
                 alt=""
                 class="treatment-image"
               />
@@ -465,13 +370,13 @@
               <img
                 width="353"
                 height="353"
-                src="/images/Dermazeutische_Behandlungen/courperose.jpg"
+                src="/images/Wellness_Massagen/Thai Energie Massage.jpg"
                 alt=""
                 class="treatment-image"
               />
             </article>
             <article class="treatment-card medium">
-              <h3 class="treatment-heading">Fuß- & Bein Massage</h3>
+              <h3 class="treatment-heading">Kopf-, Gesicht- & Nacken</h3>
               <section class="treatment-info">
                 <p class="treatment-description">
                   Die Thai-Energie Kopf-, Gesicht- und Nackenmassage stimuliert
@@ -489,7 +394,7 @@
               <img
                 width="353"
                 height="353"
-                src="/images/Dermazeutische_Behandlungen/courperose.jpg"
+                src="/images/Wellness_Massagen/Thai Energie Massage.jpg"
                 alt=""
                 class="treatment-image"
               />
