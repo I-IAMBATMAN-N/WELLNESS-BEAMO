@@ -1,40 +1,3 @@
-.sec-nav {
-  width: 100%;
-  max-width: 100rem;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.sec-nav--list {
-  list-style: none;
-
-  width: 100%;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 4.8rem;
-
-  padding: 0 2.4rem;
-}
-.sec-nav--item {
-  aspect-ratio: 1/1;
-
-  text-align: center;
-
-  border-radius: 2rem;
-}
-.sec-nav--item {
-  background-image: url(images/Dermazeutische_Behandlungen/ultra-sensitiv.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  overflow: hidden;
-
-  box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.12);
-  box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
-}
 .sec-nav--item:nth-child(2) {
   background-image: url(images/Wellness_Behandlungen/beauty-and-more-1.jpg);
 }
@@ -43,31 +6,6 @@
 }
 .sec-nav--item:nth-child(4) {
   background-image: url(images/Zusatzprogramme/Zusatzprogramm.jpg);
-}
-.sec-nav--item .sec-nav--link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.6rem;
-}
-.sec-nav--link {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-
-  font-family: "Merriweather", serif;
-  font-size: 3.6rem;
-  text-transform: uppercase;
-  line-height: 1.2;
-  letter-spacing: 0.2rem;
-  text-decoration: none;
-  font-weight: bold;
-  color: var(--color-accent);
-
-  background-color: var(--color-white-opacity);
-
-  padding: 2.4rem;
 }
 .start-btn {
   position: fixed;
