@@ -717,8 +717,6 @@ body {
     padding-top: 16rem;
     min-height: 100vh;
     gap: 0;
-
-    overflow: hidden;
   }
   .section.hero,
   .section.about {
@@ -769,7 +767,7 @@ body {
     /* width: 50%; */
     position: absolute;
     top: 50%;
-    right: 0;
+    left: 5.5rem;
 
     transform: translate(0, -50%);
     z-index: -1;
