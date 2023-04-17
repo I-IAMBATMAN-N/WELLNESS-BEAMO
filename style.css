@@ -759,6 +759,10 @@ body {
   .hero-text {
     width: 100%;
   }
+  .hero .img-container::before {
+    width: 115%;
+    height: 115%;
+  }
   .about .img-container::before {
     width: 110%;
     height: 110%;
