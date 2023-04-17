@@ -164,7 +164,7 @@ body {
 
   position: fixed;
 
-  background-color: var(--color-white-opacity);
+  background-color: var(--color-white-opacity-2);
   z-index: 1;
 }
 .main-header.intro .container {
@@ -221,7 +221,7 @@ body {
   cursor: pointer;
 }
 .logo img {
-  max-width: 8.2rem;
+  max-width: 8rem;
   margin-left: 2.2rem;
 }
 .company-name {
@@ -255,7 +255,7 @@ body {
 
   position: relative;
 }
-.nav-link.active::after {
+/* .nav-link.active::after {
   content: "";
   display: inline-block;
 
@@ -267,9 +267,9 @@ body {
   bottom: -0.8rem;
 
   background-color: var(--color-accent);
-  border-radius: 100rem;
+  border-radius: 100rem; 
 }
-
+*/
 .hero {
   justify-content: center;
   gap: 6.4rem;
