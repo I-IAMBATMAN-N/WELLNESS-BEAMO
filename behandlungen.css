@@ -100,6 +100,32 @@
   box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.25);
 }
 /* TREATMENTS -----------------------------------------*/
+.service-description {
+  width: 100%;
+  max-width: 100rem;
+}
+.service-heading {
+  font-family: "Merriweather", serif;
+  font-size: 4.4rem;
+  color: var(--color-accent);
+
+  margin-bottom: 4.8rem;
+}
+.service-heading span {
+  font-size: 2.4rem;
+}
+.service-text {
+  font-size: 2.4rem;
+  font-weight: normal;
+  letter-spacing: 0.2rem;
+  line-height: 1.6;
+}
+.service-text strong {
+  font-family: "Merriweather";
+  font-size: 2.4rem;
+  color: var(--color-accent);
+  font-weight: bold;
+}
 .treatment-card {
   width: 100%;
   max-width: 90rem;
@@ -146,7 +172,6 @@
 .treatment-card.optional .treatment-price {
   font-size: 3rem;
 }
-
 .treatment-options {
   width: 100%;
 
@@ -359,13 +384,6 @@
 }
 /* 768px */
 @media (max-width: 48em) {
-  .sec-nav--list {
-    grid-template-columns: 1fr;
-    grid-gap: 8rem;
-  }
-  .sec-nav--link span {
-    font-size: 2rem;
-  }
   .slider-controls {
     width: fit-content;
 

@@ -116,7 +116,7 @@ body {
   font-family: "Merriweather";
   color: var(--color-accent);
   text-align: left;
-  letter-spacing: 0.2rem;
+  /* letter-spacing: 0.2rem; */
 
   padding-left: 1.6rem;
   padding-bottom: 1.2rem;
@@ -610,23 +610,7 @@ body {
 
   color: var(--color-accent);
 }
-.service-description {
-  width: 100%;
-  max-width: 100rem;
-}
-.service-heading {
-  font-family: "Merriweather", serif;
-  font-size: 4.4rem;
-  color: var(--color-accent);
 
-  margin-bottom: 4.8rem;
-}
-.service-text {
-  font-size: 2.4rem;
-  font-weight: normal;
-  letter-spacing: 0.2rem;
-  line-height: 1.6;
-}
 /*   FONT SIZE SYSTEM (px)
   10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
   SPACING SYSTEM (px)
@@ -718,6 +702,10 @@ body {
 
     font-size: 3.6rem;
     letter-spacing: 0rem;
+  }
+  .sec-nav--list {
+    grid-template-columns: 1fr;
+    grid-gap: 8rem;
   }
   /* SECTIONS ---------------------------------------- */
   .section.hero::before,
