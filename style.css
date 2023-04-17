@@ -734,11 +734,7 @@ body {
     padding: 0;
   }
   .section.hero {
-    background-image: linear-gradient(
-      to right,
-      var(--color-white-opacity-2),
-      var(--color-white-opacity-2)
-    );
+    background-color: var(--color-white-opacity-2);
   }
   .article.hero {
     flex: 1 0 0;
