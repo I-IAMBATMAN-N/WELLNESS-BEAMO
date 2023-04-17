@@ -737,9 +737,7 @@ body {
     background-image: linear-gradient(
       to right,
       var(--color-white-opacity-2),
-      var(--color-white-opacity-2),
-      var(--color-white-opacity-2),
-      rgba(255, 255, 255, 0)
+      var(--color-white-opacity-2)
     );
   }
   .article.hero {
@@ -759,15 +757,14 @@ body {
     margin-bottom: 4.8rem;
   }
   .hero-text {
-    width: 75%;
+    width: 100%;
   }
   .about .img-container::before {
     width: 110%;
     height: 110%;
   }
   .hero .img-container {
-    width: 50%;
-
+    /* width: 50%; */
     position: absolute;
     top: 50%;
     right: 0;
