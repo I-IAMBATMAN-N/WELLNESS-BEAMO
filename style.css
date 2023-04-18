@@ -229,6 +229,7 @@ body {
   color: #cd8376;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
+  font-weight: bold;
 }
 .logo-name {
   font-size: 2rem;
@@ -588,6 +589,9 @@ body {
   padding: 0.4rem;
 
   border-radius: 50%;
+}
+.contact-card:nth-child(2) .contact-icon {
+  color: var(--color-accent);
 }
 .contact-logo {
   display: flex;
