@@ -131,10 +131,7 @@ const obsOptions = {
 
 const observer = new IntersectionObserver(obsCallback, obsOptions);
 let time = 0;
-if (
-  document.title === "BEAMO | Wellness Massagen" ||
-  document.title === "BEAMO | Beauty"
-) {
+if (document.title !== "Schönheits- und Wellnessmassagen | BEAMO") {
   time = 1000;
 } else {
   time = 3000;
