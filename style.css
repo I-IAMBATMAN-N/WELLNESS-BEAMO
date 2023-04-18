@@ -106,7 +106,7 @@ body {
   overflow: visible;
 }
 .lg {
-  height: 100vh;
+  min-height: 100vh;
 }
 .section-heading {
   align-self: flex-start;
@@ -444,7 +444,7 @@ body {
 
   padding: 2.4rem;
 
-  background-color: var(--color-white-opacity);
+  background-color: var(--color-white-opacity-2);
   border-radius: 2rem;
 }
 .sec-nav--item:hover,
