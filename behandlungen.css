@@ -537,8 +537,20 @@
     padding-top: 15.4rem;
   }
   .section-heading {
-    position: initial;
+    position: relative;
     padding-left: 0;
+  }
+  .section-heading span {
+    font-family: "Raleway", sans-serif;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 1.8rem;
+    color: var(--color-grey);
+    transform: translateY(0.4rem);
+
+    position: absolute;
+    bottom: 0;
   }
   .treatment-container {
     display: flex;
