@@ -192,7 +192,7 @@ secNavItems.forEach((navItem, index) => {
                 if (index !== 0) {
                   price.style.paddingRight = "3rem";
                 } else {
-                  price.style.paddingRight = "10rem";
+                  price.style.paddingRight = "9rem";
                 }
               });
             }
