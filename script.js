@@ -178,16 +178,25 @@ secNavItems.forEach((navItem, index) => {
         }, 2000);
 
         console.log(service);
+
         if (window.innerWidth > 768) {
           const treatmentSlider =
             document.querySelectorAll(".treatment-slider");
 
-          treatmentSlider.forEach((slider) => {
-            const treatmentPrice = slider.querySelector(".treatment-price");
-
-            let text = treatmentPrice.innerText;
-
-            treatmentPrice.innerText = text;
+          console.log("treatment-slider", treatmentSlider.length);
+          treatmentSlider.forEach((slider, index) => {
+            const treatmentPrices = slider.querySelectorAll(".treatment-price");
+            if (checkBrowser() === "firefox") {
+              treatmentPrices.forEach((price) => {
+                // console.log(index);
+                if (index !== 0) {
+                  price.style.paddingRight = "3rem";
+                } else {
+                  price.style.paddingRight = "10rem";
+                }
+              });
+            }
+            // treatmentPrice.innerText = text;
             let cardHeight = slider.children[0].getBoundingClientRect().height;
             let headerHeight =
               slider.children[0].children[0].getBoundingClientRect().height;
@@ -206,7 +215,7 @@ secNavItems.forEach((navItem, index) => {
       }
     });
 
-    console.log(index);
+    // console.log(index);
     // if (event.target.closest(".sec-nav--item")) {
     //   //
     //   secNavItems.forEach((item) => {
@@ -219,3 +228,50 @@ secNavItems.forEach((navItem, index) => {
     // }
   });
 });
+
+// console.log(navigator);
+
+function checkBrowser() {
+  let userAgent = navigator.userAgent;
+  let browserName;
+
+  if (userAgent.match(/chrome|chromium|crios/i)) {
+    browserName = "chrome";
+  } else if (userAgent.match(/firefox|fxios/i)) {
+    browserName = "firefox";
+  } else if (userAgent.match(/safari/i)) {
+    browserName = "safari";
+  } else if (userAgent.match(/opr\//i)) {
+    browserName = "opera";
+  } else if (userAgent.match(/edg/i)) {
+    browserName = "edge";
+  } else {
+    browserName = "No browser detection";
+  }
+  return browserName;
+}
+
+console.log(checkBrowser());
+// optionsPrices.forEach((price) => {
+//   console.log(price);
+// });
+
+class Thermostat {
+  constructor(f) {
+    this._temperature = (5 / 9) * (f - 32);
+  }
+  get temperature() {
+    return this._temperature;
+  }
+  set temperature(c) {
+    this._temperature = c;
+  }
+}
+// Only change code above this line
+
+const thermos = new Thermostat(76); // Setting in Fahrenheit scale
+let temp = thermos.temperature;
+console.log(temp); // 24.44 in Celsius
+thermos.temperature = 26;
+temp = thermos.temperature;
+console.log(temp); // 26 in Celsius
