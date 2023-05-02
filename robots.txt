@@ -1,0 +1,3 @@
+User-Agent: *
+
+Sitemap: https://wellness-beamo.de/Beamo_sitemap.xml
