@@ -165,19 +165,22 @@ const wrappers = document.querySelectorAll(".wrapper");
 
 secNavItems.forEach((navItem, index) => {
   navItem.addEventListener("click", function (event) {
+    console.log("this", this, "event", event.target);
     services.forEach((service, serviceIndex) => {
       if (service.classList.contains("active")) {
         service.classList.remove("active");
       }
       if (serviceIndex === index) {
         // service.style.display = "block";
-
         service.classList.add("active");
-        setTimeout(() => {
-          service.classList.add("pad-right");
-        }, 2000);
+        // setTimeout(() => {
+        //   service.classList.add("pad-right");
+        // }, 2000);
+        console.log("service", service);
 
-        console.log(service);
+        const treatmentPrices = service.querySelectorAll(".treatment-price");
+
+        console.log("treatmentPrices", treatmentPrices);
 
         if (window.innerWidth > 768) {
           const treatmentSlider =
@@ -185,23 +188,33 @@ secNavItems.forEach((navItem, index) => {
 
           console.log("treatment-slider", treatmentSlider.length);
           treatmentSlider.forEach((slider, index) => {
-            const treatmentPrices = slider.querySelectorAll(".treatment-price");
-            if (checkBrowser() === "firefox") {
-              treatmentPrices.forEach((price) => {
-                // console.log(index);
-                if (index !== 0) {
-                  price.style.paddingRight = "3rem";
-                } else {
-                  price.style.paddingRight = "9rem";
-                }
-              });
-            }
-            // treatmentPrice.innerText = text;
+            // const treatmentPrices = slider.querySelectorAll(".treatment-price");
             let cardHeight = slider.children[0].getBoundingClientRect().height;
             let headerHeight =
               slider.children[0].children[0].getBoundingClientRect().height;
 
             slider.style.height = `${cardHeight + headerHeight + 100}px`;
+
+            // console.log("treatmentPrices", treatmentPrices);
+            if (checkBrowser() === "firefox") {
+              if (treatmentPrices.length > 1) {
+                treatmentPrices.forEach((price) => {
+                  if (index !== 0) {
+                    price.style.paddingRight = "3rem";
+                  } else {
+                    price.style.paddingRight = "9rem";
+                  }
+                });
+              } else {
+                if (index !== 0) {
+                  treatmentPrices[0].style.paddingRight = "3rem";
+                } else {
+                  treatmentPrices[0].style.paddingRight = "9rem";
+                }
+              }
+            }
+            // treatmentPrice.innerText = text;
+
             // console.log("-\n", slider.children[0].getBoundingClientRect().height);
             // console.log(
             //   "-\n",
