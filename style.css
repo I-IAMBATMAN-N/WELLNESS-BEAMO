@@ -123,7 +123,6 @@ body {
   font-family: "Merriweather";
   color: var(--color-accent);
   text-align: left;
-  /* letter-spacing: 0.2rem; */
 
   position: relative;
 
@@ -137,7 +136,7 @@ body {
   letter-spacing: 0.2rem;
   font-size: 1.8rem;
   color: var(--color-grey);
-  transform: translateY(0.4rem);
+  transform: translateY(0.8rem);
 
   position: absolute;
   bottom: 0;
