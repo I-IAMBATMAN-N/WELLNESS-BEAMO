@@ -130,14 +130,15 @@ body {
   padding-bottom: 1.2rem;
 }
 .section-heading span {
-  font-family: "Raleway", sans-serif;
   display: inline-block;
+
+  font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   font-size: 1.8rem;
   color: var(--color-grey);
-  transform: translateY(0.8rem);
 
+  transform: translateY(0.8rem);
   position: absolute;
   bottom: 0;
 }
