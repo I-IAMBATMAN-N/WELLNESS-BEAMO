@@ -103,22 +103,44 @@
 .service-description {
   width: 100%;
   max-width: 100rem;
+
+  font-size: 2.4rem;
+  font-weight: normal;
+  letter-spacing: 0.2rem;
+  line-height: 1.6;
+}
+.service-description ul {
+  list-style: none;
+  font-size: inherit;
+}
+.service-description ul li {
+  display: flex;
+  align-items: center;
+}
+.service-description .benefit-icon {
+  color: var(--color-accent);
+  font-size: 3rem;
+  padding-right: 0.4rem;
 }
 .service-heading {
   font-family: "Merriweather", serif;
   font-size: 4.4rem;
   color: var(--color-accent);
 
-  margin-bottom: 4.8rem;
+  margin-bottom: 1.2rem;
 }
 .service-heading span {
   font-size: 2.4rem;
 }
-.service-text {
-  font-size: 2.4rem;
-  font-weight: normal;
-  letter-spacing: 0.2rem;
-  line-height: 1.6;
+.service-text:nth-child(3) {
+  font-weight: bold;
+  color: var(--color-accent);
+  font-size: 3rem;
+  line-height: 1.2;
+
+  margin-top: 1.2rem;
+  padding-top: 1.2rem;
+  margin-bottom: 0.8rem;
 }
 .service-text strong {
   font-family: "Merriweather";
