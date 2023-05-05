@@ -263,12 +263,9 @@ function checkBrowser() {
   }
   return browserName;
 }
-
-console.log(checkBrowser());
 // optionsPrices.forEach((price) => {
 //   console.log(price);
 // });
-
 class Thermostat {
   constructor(f) {
     this._temperature = (5 / 9) * (f - 32);
@@ -288,3 +285,21 @@ console.log(temp); // 24.44 in Celsius
 thermos.temperature = 26;
 temp = thermos.temperature;
 console.log(temp); // 26 in Celsius
+
+const certImgs = document.querySelectorAll(".certificate-img");
+const mainHeader = document.querySelector(".main-header");
+
+certImgs.forEach((img) => {
+  img.classList.add("scale");
+  img.addEventListener("click", function (event) {
+    mainHeader.style.transition = ".3s ease";
+    mainHeader.style.opacity = "0%";
+    if (this.classList.contains("view")) {
+      this.classList.remove("view");
+      mainHeader.style.opacity = "100%";
+    } else {
+      this.classList.add("view");
+      this.classList.remove("scale");
+    }
+  });
+});
