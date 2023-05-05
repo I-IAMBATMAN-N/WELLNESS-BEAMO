@@ -111,9 +111,9 @@ optionalControls.forEach((control) => {
 });
 
 //Start header animation
-// setTimeout(() => {
-//   document.querySelector(".main-header").classList.remove("intro");
-// }, 2000);
+setTimeout(() => {
+  document.querySelector(".main-header").classList.remove("intro");
+}, 2000);
 
 //Add hidden class for each section (will be removed in future in order to animate)
 const sections = document.querySelectorAll(".section");
