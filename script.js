@@ -11,7 +11,7 @@ const mainNav = document.querySelector(".main-nav");
 
 const navLinks = document.querySelectorAll(".nav-item");
 
-if (window.innerWidth > 768) {
+if (window.innerWidth < 768) {
   menuIcons.forEach((icon) =>
     icon.addEventListener("click", function () {
       menuIcons.forEach((icon) => {
