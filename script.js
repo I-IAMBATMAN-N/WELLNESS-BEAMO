@@ -8,7 +8,6 @@ const menuIcons = document.querySelectorAll(".mobile-menu-icon");
 const mainNav = document.querySelector(".main-nav");
 
 /*---------------------------------------- Hamburger Menu Function ----------------------------------------*/
-
 menuIcons.forEach((icon) =>
   icon.addEventListener("click", function (event) {
     menuIcons.forEach((icon) => {

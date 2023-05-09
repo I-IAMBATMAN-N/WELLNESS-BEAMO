@@ -1,9 +1,8 @@
 "use strict";
 
 const sliderContainers = document.querySelectorAll(".treatment-slider");
-
 /* ---------------------------------------- setSlides function ----------------------------------------
-- default styling for slides
+- default (onload) styling for slides
 - 
 */
 function setSlides() {
@@ -36,10 +35,9 @@ setSlides();
 /* ---------------------------------------- setHeight function ----------------------------------------
 - sets height fgor slider-container
 - container has position: absolute property (container does not adjust height accordingly)
-
 */
 
-function setHeight(service) {
+function setHeightAndPadding(service) {
   const treatmentSlider = document.querySelectorAll(".treatment-slider");
   //
   treatmentSlider.forEach((slider, index) => {
@@ -69,8 +67,6 @@ function setHeight(service) {
     }
   });
 }
-//
-// setHeight();
 
 /* ---------------------------------------- DEFAULT SLIDER STYLINGS ---------------------------------------- */
 function checkBrowser() {
@@ -111,7 +107,7 @@ secNavItems.forEach((navItem, index) => {
         service.classList.add("active");
         //
         if (window.innerWidth > 768) {
-          setHeight(service);
+          setHeightAndPadding(service);
         }
       }
     });
