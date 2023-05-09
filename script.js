@@ -8,14 +8,27 @@ const menuIcons = document.querySelectorAll(".mobile-menu-icon");
 const mainNav = document.querySelector(".main-nav");
 
 /*---------------------------------------- Hamburger Menu Function ----------------------------------------*/
-menuIcons.forEach((icon) =>
-  icon.addEventListener("click", function (event) {
-    menuIcons.forEach((icon) => {
-      icon.classList.toggle("active");
+
+const navLinks = document.querySelectorAll(".nav-item");
+
+if (window.innerWidth > 768) {
+  menuIcons.forEach((icon) =>
+    icon.addEventListener("click", function () {
+      menuIcons.forEach((icon) => {
+        icon.classList.toggle("active");
+      });
+      mainNav.classList.toggle("active");
+    })
+  );
+  navLinks.forEach((navLink) => {
+    navLink.addEventListener("click", function () {
+      menuIcons.forEach((icon) => {
+        icon.classList.toggle("active");
+      });
+      mainNav.classList.toggle("active");
     });
-    mainNav.classList.toggle("active");
-  })
-);
+  });
+}
 
 /*---------------------------------------- Certificate Images Function ----------------------------------------*/
 const certImgs = document.querySelectorAll(".certificate-img");
