@@ -896,6 +896,12 @@ h3 {
   .contact-logo .logo-name {
     font-size: 3.6rem;
   }
+  .contact-card .required-link {
+    font-size: 2.4rem;
+  }
+  .contact-card .socials .social-icon {
+    font-size: 5.2rem;
+  }
 }
 @media (max-width: 36em) {
   html {
