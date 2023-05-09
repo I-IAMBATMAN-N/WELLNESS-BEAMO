@@ -1,8 +1,13 @@
 "use strict";
+/*---------------------------------------- Header Start Animation ----------------------------------------*/
+setTimeout(() => {
+  document.querySelector(".main-header").classList.remove("intro");
+}, 2000);
 
 const menuIcons = document.querySelectorAll(".mobile-menu-icon");
-// const navList = document.querySelector(".nav-list");
 const mainNav = document.querySelector(".main-nav");
+
+/*---------------------------------------- Hamburger Menu Function ----------------------------------------*/
 
 menuIcons.forEach((icon) =>
   icon.addEventListener("click", function (event) {
@@ -13,109 +18,27 @@ menuIcons.forEach((icon) =>
   })
 );
 
-/*-------------------------------------------------------------------------------------------------------*/
-let currOption = 0;
+/*---------------------------------------- Certificate Images Function ----------------------------------------*/
+const certImgs = document.querySelectorAll(".certificate-img");
+const mainHeader = document.querySelector(".main-header");
 
-const optionalControls = document.querySelectorAll(
-  ".options-controls .slider-btn"
-);
-
-const options = document.querySelectorAll(
-  ".treatment-card.optional .treatment-options"
-);
-
-const optionsPrices = document.querySelectorAll(
-  ".treatment-card.optional .treatment-price"
-);
-
-options.forEach((options) => {
-  options.querySelectorAll("span").forEach((span, index) => {
-    if (index === currOption) {
-      span.style.display = "inline-block";
-    } else if (index !== currOption) {
-      span.style.display = "none";
+certImgs.forEach((img) => {
+  img.classList.add("scale");
+  img.addEventListener("click", function (event) {
+    mainHeader.style.transition = ".3s ease";
+    mainHeader.style.opacity = "0%";
+    if (this.classList.contains("view")) {
+      this.classList.remove("view");
+      mainHeader.style.opacity = "100%";
+    } else {
+      this.classList.add("view");
+      this.classList.remove("scale");
     }
   });
 });
-
-optionsPrices.forEach((optionsPrice) => {
-  optionsPrice.querySelectorAll("span").forEach((span, index) => {
-    if (index === currOption) {
-      span.style.display = "inline-block";
-    } else if (index !== currOption) {
-      span.style.display = "none";
-    }
-  });
-});
-
-// options.forEach((option, index) => {
-//   if (index === currOption) {
-//     option.style.display = "inline-block";
-//   } else if (index !== currOption) {
-//     option.style.display = "none";
-//   }
-// });
-
-// optionsPrices.forEach((optionPrice, index) => {
-//   if (index === currOption) {
-//     optionPrice.style.display = "block";
-//   } else if (index !== currOption) {
-//     optionPrice.style.display = "none";
-//   }
-// });
-
-optionalControls.forEach((control) => {
-  let currOption = 0;
-  control.addEventListener("click", function (event) {
-    //
-    const treatmentCardOptions = event.target
-      .closest(".treatment-card")
-      .children[1].children[1].querySelectorAll("span");
-    const optionPrices = event.target
-      .closest(".treatment-card")
-      .children[1].children[3].children[1].querySelectorAll("span");
-    //
-    if (event.target.name === "chevron-forward-outline") {
-      if (currOption === treatmentCardOptions.length - 1) {
-        currOption = 0;
-        console.log(currOption);
-      } else if (currOption !== treatmentCardOptions.length - 1) {
-        currOption++;
-        console.log(currOption);
-      }
-    } else if (event.target.name === "chevron-back-outline") {
-      if (currOption === 0) {
-        currOption = treatmentCardOptions.length - 1;
-        console.log(currOption);
-      } else if (currOption !== 0) {
-        currOption--;
-        console.log(currOption);
-      }
-    }
-
-    treatmentCardOptions.forEach((option, index) => {
-      if (index === currOption) {
-        option.style.display = "inline-block";
-      } else if (index !== currOption) {
-        option.style.display = "none";
-      }
-    });
-    optionPrices.forEach((optionPrice, index) => {
-      if (index === currOption) {
-        optionPrice.style.display = "inline-block";
-      } else if (index !== currOption) {
-        optionPrice.style.display = "none";
-      }
-    });
-  });
-});
-
-//Start header animation
-setTimeout(() => {
-  document.querySelector(".main-header").classList.remove("intro");
-}, 2000);
-
-//Add hidden class for each section (will be removed in future in order to animate)
+/*---------------------------------------- Hidden Class Function ---------------------------------------- 
+- Add hidden class for each section (will be removed in future)
+*/
 const sections = document.querySelectorAll(".section");
 
 sections.forEach((section, index) => {
@@ -123,7 +46,9 @@ sections.forEach((section, index) => {
     index > 0 ? section.classList.add("hidden") : "";
 });
 
-//On scroll animated display of sections
+/*---------------------------------------- Hidden Class Function ---------------------------------------- 
+- remove hidden class on scroll
+*/
 const obsOptions = {
   root: null,
   threshold: 0.4,
@@ -144,162 +69,9 @@ function obsCallback(entries, observer) {
         entry.target.classList.remove("hidden");
       }, time);
       time = 0;
-      // console.log(time);
     }
   });
 }
 sections.forEach((section) => {
   observer.observe(section);
-});
-
-const services = document.querySelectorAll(".wrapper");
-
-// console.log(services);
-services.forEach((service) => {
-  // service.classList.add("active");
-  // service.style.display = "none";
-});
-
-const secNavItems = document.querySelectorAll(".sec-nav--item");
-const wrappers = document.querySelectorAll(".wrapper");
-
-secNavItems.forEach((navItem, index) => {
-  navItem.addEventListener("click", function (event) {
-    console.log("this", this, "event", event.target);
-    services.forEach((service, serviceIndex) => {
-      if (service.classList.contains("active")) {
-        service.classList.remove("active");
-      }
-      if (serviceIndex === index) {
-        // service.style.display = "block";
-        service.classList.add("active");
-        // setTimeout(() => {
-        //   service.classList.add("pad-right");
-        // }, 2000);
-        console.log("service", service);
-
-        const treatmentPrices = service.querySelectorAll(".treatment-price");
-
-        console.log("treatmentPrices", treatmentPrices);
-
-        if (window.innerWidth > 768) {
-          const treatmentSlider =
-            document.querySelectorAll(".treatment-slider");
-
-          console.log("treatment-slider", treatmentSlider.length);
-          treatmentSlider.forEach((slider, index) => {
-            // const treatmentPrices = slider.querySelectorAll(".treatment-price");
-            let cardHeight = slider.children[0].getBoundingClientRect().height;
-            let headerHeight =
-              slider.children[0].children[0].getBoundingClientRect().height;
-
-            slider.style.height = `${cardHeight + headerHeight + 100}px`;
-
-            // console.log("treatmentPrices", treatmentPrices);
-            if (checkBrowser() === "firefox") {
-              if (treatmentPrices.length > 1) {
-                treatmentPrices.forEach((price) => {
-                  if (index !== 0) {
-                    price.style.paddingRight = "3rem";
-                  } else {
-                    price.style.paddingRight = "9rem";
-                  }
-                });
-              } else {
-                if (index !== 0) {
-                  treatmentPrices[0].style.paddingRight = "3rem";
-                } else {
-                  treatmentPrices[0].style.paddingRight = "9rem";
-                }
-              }
-            }
-            // treatmentPrice.innerText = text;
-
-            // console.log("-\n", slider.children[0].getBoundingClientRect().height);
-            // console.log(
-            //   "-\n",
-            //   slider.children[0].children[0].getBoundingClientRect().height
-            // );
-            // console.log(slider.children);
-            // slider.style.backgroundColor = "red";
-            // slider.style.height = `${slider.children[1].getBoundingClientRect().height}`;
-          });
-        }
-      }
-    });
-
-    // console.log(index);
-    // if (event.target.closest(".sec-nav--item")) {
-    //   //
-    //   secNavItems.forEach((item) => {
-    //     if (item.classList.contains("active")) {
-    //       item.classList.remove("active");
-    //     }
-    //   });
-    //   console.log(event.target);
-    //   event.target.closest(".sec-nav--item").classList.add("active");
-    // }
-  });
-});
-
-// console.log(navigator);
-
-function checkBrowser() {
-  let userAgent = navigator.userAgent;
-  let browserName;
-
-  if (userAgent.match(/chrome|chromium|crios/i)) {
-    browserName = "chrome";
-  } else if (userAgent.match(/firefox|fxios/i)) {
-    browserName = "firefox";
-  } else if (userAgent.match(/safari/i)) {
-    browserName = "safari";
-  } else if (userAgent.match(/opr\//i)) {
-    browserName = "opera";
-  } else if (userAgent.match(/edg/i)) {
-    browserName = "edge";
-  } else {
-    browserName = "No browser detection";
-  }
-  return browserName;
-}
-// optionsPrices.forEach((price) => {
-//   console.log(price);
-// });
-class Thermostat {
-  constructor(f) {
-    this._temperature = (5 / 9) * (f - 32);
-  }
-  get temperature() {
-    return this._temperature;
-  }
-  set temperature(c) {
-    this._temperature = c;
-  }
-}
-// Only change code above this line
-
-const thermos = new Thermostat(76); // Setting in Fahrenheit scale
-let temp = thermos.temperature;
-console.log(temp); // 24.44 in Celsius
-thermos.temperature = 26;
-temp = thermos.temperature;
-console.log(temp); // 26 in Celsius
-
-const certImgs = document.querySelectorAll(".certificate-img");
-const mainHeader = document.querySelector(".main-header");
-
-certImgs.forEach((img) => {
-  img.classList.add("scale");
-  img.addEventListener("click", function (event) {
-    mainHeader.style.transition = ".3s ease";
-    mainHeader.style.opacity = "0%";
-    if (this.classList.contains("view")) {
-      this.classList.remove("view");
-      mainHeader.style.opacity = "100%";
-    } else {
-      this.classList.add("view");
-      this.classList.remove("scale");
-    }
-  });
 });
