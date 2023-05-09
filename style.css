@@ -179,7 +179,7 @@ h3 {
 .article section {
   flex: 1 0 0;
 }
-.section::before {
+.section.lg::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -193,10 +193,10 @@ h3 {
 
   z-index: -1;
 }
-.section:nth-child(even)::before {
+.section.lg:nth-child(even)::before {
   transform: translate(-85rem, 0);
 }
-.section:nth-child(odd)::before {
+.section.lg:nth-child(odd)::before {
   transform: translate(85rem, 0);
 }
 /*  -HEADER- */
