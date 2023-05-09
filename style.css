@@ -728,6 +728,9 @@ h3 {
     height: auto;
   }
   /* MAIN HEADER ---------------------------------------- */
+  .section::before {
+    display: none;
+  }
   .main-header {
     background-color: var(--color-white);
   }
