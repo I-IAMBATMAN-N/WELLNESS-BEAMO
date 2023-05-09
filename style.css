@@ -728,7 +728,7 @@ h3 {
     height: auto;
   }
   /* MAIN HEADER ---------------------------------------- */
-  .section::before {
+  .section.lg::before {
     display: none;
   }
   .main-header {
@@ -777,10 +777,6 @@ h3 {
     grid-gap: 8rem;
   }
   /* SECTIONS ---------------------------------------- */
-  .section.hero::before,
-  .section.about::before {
-    display: none;
-  }
   .section {
     padding: 0 2.4rem;
     padding-top: 16rem;
