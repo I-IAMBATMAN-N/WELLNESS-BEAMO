@@ -179,25 +179,25 @@ h3 {
 .article section {
   flex: 1 0 0;
 }
-.section.hero::before {
-  top: -85%;
-  left: -500rem;
-  border-radius: 70rem;
-
-  transform: translate(22%, 0) rotate(35deg);
-  z-index: -2;
-  background-color: var(--color-primary);
-}
-.section.about::before {
+.section::before {
+  content: "";
+  display: inline-block;
   position: absolute;
 
-  bottom: -112.7%;
-  left: 30%;
+  width: 200%;
+  aspect-ratio: 2/0.99;
+
   border-radius: 70rem;
 
   background-color: var(--color-primary);
 
-  z-index: -2;
+  z-index: -1;
+}
+.section:nth-child(even)::before {
+  transform: translate(-85rem, 0);
+}
+.section:nth-child(odd)::before {
+  transform: translate(85rem, 0);
 }
 /*  -HEADER- */
 .hidden {
