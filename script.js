@@ -54,8 +54,11 @@ certImgs.forEach((img) => {
 const sections = document.querySelectorAll(".section");
 
 sections.forEach((section, index) => {
-  if (!section.classList.contains("treatment"))
-    index > 0 ? section.classList.add("hidden") : "";
+  if (window.innerWidth > 768) {
+    if (!section.classList.contains("section"))
+      // index > 0 ? section.classList.add("hidden") : "";
+      section.classList.add("hidden");
+  }
 });
 
 /*---------------------------------------- Hidden Class Function ---------------------------------------- 
@@ -69,18 +72,20 @@ const obsOptions = {
 const observer = new IntersectionObserver(obsCallback, obsOptions);
 let time = 0;
 if (document.title !== "Schönheits- und Wellnessmassagen | BEAMO") {
-  time = 1000;
+  time = 2000;
 } else {
   time = 3000;
 }
 
 function obsCallback(entries, observer) {
   entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      setTimeout(() => {
-        entry.target.classList.remove("hidden");
-      }, time);
-      time = 0;
+    if (window.innerWidth > 768) {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.remove("hidden");
+        }, time);
+        time = 0;
+      }
     }
   });
 }
