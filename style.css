@@ -33,13 +33,16 @@ sizes
 * {
   margin: 0;
   padding: 0;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
   box-sizing: border-box;
 
   /* Solving selecting issue */
 }
 html {
   font-size: 62.5%;
-  box-sizing: border-box;
   font-family: "Raleway", sans-serif;
   background-color: var(--color-white);
   color: var(--color-grey);
@@ -48,6 +51,8 @@ html {
 }
 body {
   width: 100%;
+
+  -ms-overflow-x: hidden;
   overflow-x: hidden;
 
   font-size: 1.6rem;
@@ -64,6 +69,10 @@ body {
   position: absolute;
   right: 2.4rem;
 
+  -webkit-transition: 1s ease;
+  -moz-transition: 1s ease;
+  -ms-transition: 1s ease;
+  -o-transition: 1s ease;
   transition: 1s ease;
   margin-top: 0.8rem;
   opacity: 100%;
@@ -77,7 +86,13 @@ body {
   display: none;
 }
 .section img {
+  -webkit-border-radius: 1000rem;
+  -moz-border-radius: 1000rem;
+  -ms-border-radius: 1000rem;
+  -o-border-radius: 1000rem;
   border-radius: 1000rem;
+  -webkit-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
   box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
 }
 /* GENERAL stylings */
@@ -106,10 +121,16 @@ body {
   padding-top: 12.5rem;
   margin-bottom: 4.8rem;
 
+  -webkit-transition: opacity 2s ease;
+  -moz-transition: opacity 2s ease;
+  -ms-transition: opacity 2s ease;
+  -o-transition: opacity 2s ease;
   transition: opacity 2s ease;
   overflow: visible;
 }
 .lg {
+  height: auto !important;
+  height: 100vh;
   min-height: 100vh;
 }
 .section-heading {
@@ -117,7 +138,7 @@ body {
   display: block;
 
   font-size: 6.2rem;
-  font-family: "Merriweather";
+  font-family: "Merriweather", serif;
   color: var(--color-accent);
   text-align: left;
 
@@ -161,7 +182,12 @@ h3 {
   font-size: 1.8rem;
   color: var(--color-grey);
 
-  transform: translateY(0.8rem);
+  -webkit-transform: translatey(0.8rem);
+  -moz-transform: translatey(0.8rem);
+  -ms-transform: translatey(0.8rem);
+  -o-transform: translatey(0.8rem);
+  transform: translatey(0.8rem);
+
   position: absolute;
   bottom: 0;
 }
@@ -187,6 +213,10 @@ h3 {
   width: 200%;
   aspect-ratio: 2/0.99;
 
+  -webkit-border-radius: 70rem;
+  -moz-border-radius: 70rem;
+  -ms-border-radius: 70rem;
+  -o-border-radius: 70rem;
   border-radius: 70rem;
 
   background-color: var(--color-primary);
@@ -194,14 +224,26 @@ h3 {
   z-index: -1;
 }
 .section.lg:nth-child(even)::before {
+  -webkit-transform: translate(-85rem, 0);
+  -moz-transform: translate(-85rem, 0);
+  -ms-transform: translate(-85rem, 0);
+  -o-transform: translate(-85rem, 0);
   transform: translate(-85rem, 0);
 }
 .section.lg:nth-child(odd)::before {
+  -webkit-transform: translate(85rem, 0);
+  -moz-transform: translate(85rem, 0);
+  -ms-transform: translate(85rem, 0);
+  -o-transform: translate(85rem, 0);
   transform: translate(85rem, 0);
 }
 /*  -HEADER- */
 .hidden {
+  -khtml-opacity: 0%;
+  -moz-opacity: 0%;
   opacity: 0%;
+  filter: alpha(opacity=NaN);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=NaN)";
 }
 .main-header {
   width: 100%;
@@ -222,12 +264,20 @@ h3 {
 }
 .main-header.intro .main-nav {
   right: -100%;
+  -khtml-opacity: 0;
+  -moz-opacity: 0;
   opacity: 0;
+  filter: alpha(opacity=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 }
 .main-header.intro .logo {
   left: 50%;
 
   margin: auto;
+  -webkit-transform: translate(-50%, 0) scale(3);
+  -moz-transform: translate(-50%, 0) scale(3);
+  -ms-transform: translate(-50%, 0) scale(3);
+  -o-transform: translate(-50%, 0) scale(3);
   transform: translate(-50%, 0) scale(3);
 }
 .main-header .container {
@@ -244,6 +294,10 @@ h3 {
   margin: 0 auto;
   padding: 1.2rem 2.4rem;
 
+  -webkit-transition: height 1s ease;
+  -moz-transition: height 1s ease;
+  -ms-transition: height 1s ease;
+  -o-transition: height 1s ease;
   transition: height 1s ease;
 }
 /*  -LOGO- */
@@ -259,6 +313,10 @@ h3 {
   gap: 0.4rem;
   text-decoration: none;
 
+  -webkit-transition: 1s ease;
+  -moz-transition: 1s ease;
+  -ms-transition: 1s ease;
+  -o-transition: 1s ease;
   transition: 1s ease;
 }
 .logo:hover {
@@ -364,6 +422,11 @@ h3 {
 
   background-color: var(--color-accent);
   border-radius: 100rem;
+
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
 
   z-index: -1;
@@ -381,9 +444,24 @@ h3 {
 
   padding: 1rem 2.4rem;
 
+  -webkit-border-top-right-radius: 100rem;
+  -moz-border-top-right-radius: 100rem;
+  -ms-border-top-right-radius: 100rem;
+  -o-border-top-right-radius: 100rem;
   border-top-right-radius: 100rem;
+
+  -webkit-border-bottom-right-radius: 100rem;
   border-bottom-right-radius: 100rem;
+  -moz-border-radius-bottomright: 100rem; /* FF 1.0 - 12.0 */
+
+  -webkit-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
   box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
+
+  filter: progid:DXImageTransform.Microsoft.dropshadow(
+    OffX=0, OffY=0, Color='black', Positive='false'
+); /* IE 5.5 */
+  border-collapse: separate; /* Required by IE 9 */
 }
 .contact-card .socials {
   display: flex;
@@ -433,7 +511,12 @@ h3 {
   left: 50%;
 
   border-radius: 100rem;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
+
   background-color: var(--color-accent);
 
   z-index: -1;
@@ -465,16 +548,32 @@ h3 {
 
   text-align: center;
 
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
   border-radius: 2rem;
 }
 .sec-nav--item {
   background-image: url(images/Dermazeutische_Behandlungen/ultra-sensitiv.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
+
   background-position: center;
   background-repeat: no-repeat;
 
   box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
   box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
+
+  filter: progid:DXImageTransform.Microsoft.dropshadow(
+    OffX=0, OffY=0, Color='black', Positive='false'
+); /* IE 5.5 */
+  border-collapse: separate; /* Required by IE 9 */
 }
 .sec-nav--item:last-child {
   background-image: url(images/Wellness_Massagen/Ayurvedische_Massagen/Upanasveda\ -\ Rückenmassage.jpg);
@@ -503,11 +602,19 @@ h3 {
   padding: 2.4rem;
 
   background-color: var(--color-white-opacity-2);
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
   border-radius: 2rem;
 }
 .sec-nav--item:hover,
 .sec-nav--link:hover {
   transition: 1s ease;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
   transform: scale(1.1);
 }
 .services {
@@ -607,8 +714,14 @@ h3 {
 
   border-radius: 2rem;
   background-color: var(--color-accent);
-  box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
   box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
+
+  filter: progid:DXImageTransform.Microsoft.dropshadow(
+   OffX=0, OffY=0, Color='black', Positive='false'
+); /* IE 5.5 */
+  border-collapse: separate; /* Required by IE 9 */
 }
 .contact-card:nth-child(2) {
   background-color: var(--color-white);
@@ -709,6 +822,10 @@ h3 {
     top: 50%;
     left: 50%;
 
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
 }
@@ -752,6 +869,10 @@ h3 {
     right: 0;
 
     background-color: var(--color-white);
+    -webkit-transition: 0s;
+    -moz-transition: 0s;
+    -ms-transition: 0s;
+    -o-transition: 0s;
     transition: 0s;
   }
   .main-nav.active .mobile-menu-icon {
@@ -780,6 +901,8 @@ h3 {
   .section {
     padding: 0 2.4rem;
     padding-top: 16rem;
+    height: auto !important; /* @see: http://css-tricks.com/snippets/css/cross-browser-min-height/ */
+    height: 100vh;
     min-height: 100vh;
     gap: 0;
   }
@@ -837,6 +960,10 @@ h3 {
     top: 50%;
     left: 50%;
 
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 
     z-index: -1;
@@ -846,7 +973,14 @@ h3 {
     display: block;
 
     margin: 0 auto;
+    -webkit-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
     box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
+
+    filter: progid:DXImageTransform.Microsoft.dropshadow(
+    OffX=0, OffY=0, Color='black', Positive='false'
+); /* IE 5.5 */
+    border-collapse: separate; /* Required by IE 9 */
   }
   /* SERVICES SECTION ---------------------------------------- */
   .services-container {
