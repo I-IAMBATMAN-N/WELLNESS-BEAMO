@@ -247,6 +247,7 @@ h3 {
 }
 .main-header {
   width: 100%;
+  height: fit-content;
 
   position: fixed;
 
@@ -331,7 +332,7 @@ h3 {
 .logo:hover {
   cursor: pointer;
 }
-.logo img {
+.logo-img {
   max-width: 8rem;
   margin-left: 2.2rem;
 }
@@ -1045,7 +1046,11 @@ h3 {
   html {
     font-size: 41%;
   }
-  .logo-img {
+  .main-header .container {
+    height: 7rem;
+  }
+
+  .main.header .logo-img {
     display: none;
   }
 }

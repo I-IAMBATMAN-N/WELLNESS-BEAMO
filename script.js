@@ -1,7 +1,10 @@
 "use strict";
+
+const mainHeader = document.querySelector(".main-header");
+
 /*---------------------------------------- Header Start Animation ----------------------------------------*/
 setTimeout(() => {
-  document.querySelector(".main-header").classList.remove("intro");
+  mainHeader.classList.remove("intro");
 }, 2000);
 
 const menuIcons = document.querySelectorAll(".mobile-menu-icon");
@@ -32,7 +35,6 @@ if (window.innerWidth < 768) {
 
 /*---------------------------------------- Certificate Images Function ----------------------------------------*/
 const certImgs = document.querySelectorAll(".certificate-img");
-const mainHeader = document.querySelector(".main-header");
 
 certImgs.forEach((img) => {
   img.classList.add("scale");
