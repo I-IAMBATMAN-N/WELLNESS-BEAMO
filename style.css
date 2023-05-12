@@ -1046,10 +1046,6 @@ h3 {
   html {
     font-size: 41%;
   }
-  .main-header .container {
-    height: 7rem;
-  }
-
   .main.header .logo-img {
     display: none;
   }
