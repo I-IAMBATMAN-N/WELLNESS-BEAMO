@@ -284,11 +284,11 @@ h3 {
   left: 50%;
 
   margin: auto;
-  -webkit-transform: translate(-50%, 0) scale(3);
-  -moz-transform: translate(-50%, 0) scale(3);
-  -ms-transform: translate(-50%, 0) scale(3);
-  -o-transform: translate(-50%, 0) scale(3);
-  transform: translate(-50%, 0) scale(3);
+  -webkit-transform: translate(-50%, 0) scale(2.5);
+  -moz-transform: translate(-50%, 0) scale(2.5);
+  -ms-transform: translate(-50%, 0) scale(2.5);
+  -o-transform: translate(-50%, 0) scale(2.5);
+  transform: translate(-50%, 0) scale(2.5);
 }
 .main-header .container {
   -webkit-transition: height 1s ease;
@@ -1052,12 +1052,15 @@ h3 {
   html {
     font-size: 41%;
   }
+  .main-header.intro .logo {
+    text-align: center;
+  }
   .logo {
     text-align: left;
     gap: 0;
   }
-  .main-header:not(.intro) .logo-name,
-  .main-header:not(.intro) .company-name {
+  .logo-name,
+  .company-name {
     width: 100%;
   }
   .company-name {
