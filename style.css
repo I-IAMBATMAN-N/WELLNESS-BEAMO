@@ -942,6 +942,7 @@ h3 {
   }
   .section.hero {
     /* background-color: var(--color-white-opacity-2); */
+    gap: 6.4rem;
   }
   .article.hero {
     flex: 1 0 0;
