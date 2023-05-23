@@ -284,11 +284,11 @@ h3 {
   left: 50%;
 
   margin: auto;
-  -webkit-transform: translate(-50%, 0) scale(2.5);
-  -moz-transform: translate(-50%, 0) scale(2.5);
-  -ms-transform: translate(-50%, 0) scale(2.5);
-  -o-transform: translate(-50%, 0) scale(2.5);
-  transform: translate(-50%, 0) scale(2.5);
+  -webkit-transform: translate(-50%, 0) scale(5);
+  -moz-transform: translate(-50%, 0) scale(5);
+  -ms-transform: translate(-50%, 0) scale(5);
+  -o-transform: translate(-50%, 0) scale(5);
+  transform: translate(-50%, 0) scale(5);
 }
 .main-header .container {
   -webkit-transition: height 1s ease;
@@ -478,14 +478,14 @@ h3 {
   width: fit-content;
   background-color: var(--color-white);
   box-shadow: none;
-  gap: 3.2rem;
+  gap: 8rem;
 
   /* justify-content: space-between; */
 }
 .contact-card .socials .social-icon {
   color: var(--color-accent);
 
-  font-size: 3.2rem;
+  font-size: 3.6rem;
 }
 .social-icon {
   color: var(--color-white);
@@ -865,6 +865,13 @@ h3 {
   .main-header .container {
     justify-content: center;
   }
+  .main-header.intro .logo {
+    -webkit-transform: translate(-50%, 0) scale(2.5);
+    -moz-transform: translate(-50%, 0) scale(2.5);
+    -ms-transform: translate(-50%, 0) scale(2.5);
+    -o-transform: translate(-50%, 0) scale(2.5);
+    transform: translate(-50%, 0) scale(2.5);
+  }
   .mobile-menu-icon.active {
     display: inline-block;
   }
@@ -911,6 +918,7 @@ h3 {
   /* SECTIONS ---------------------------------------- */
   .section {
     padding: 0 2.4rem;
+    padding-top: 15rem;
     height: auto !important; /* @see: http://css-tricks.com/snippets/css/cross-browser-min-height/ */
 
     gap: 0;
@@ -933,12 +941,14 @@ h3 {
     padding-top: 12.5rem;
   }
   .section.hero {
-    background-color: var(--color-white-opacity-2);
+    /* background-color: var(--color-white-opacity-2); */
   }
   .article.hero {
     flex: 1 0 0;
     width: 100%;
     height: auto;
+
+    flex-direction: column;
 
     position: relative;
 
@@ -949,11 +959,23 @@ h3 {
     flex-direction: column;
   }
   .socials {
-    width: fit-content;
+    /* width: fit-content; */
+    width: 100%;
+    border-radius: 0rem;
     align-self: flex-start;
     margin-bottom: 4.8rem;
+
+    justify-content: space-evenly;
+
+    padding: 2.4rem;
+
+    box-shadow: none;
+  }
+  .social-icon {
+    font-size: 7.4rem;
   }
   .hero-text {
+    align-self: flex-start;
     width: 100%;
   }
   .hero .img-container::before {
@@ -967,28 +989,44 @@ h3 {
     /* width: 50%; */
     width: 100%;
 
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    order: -1;
 
-    -webkit-transform: translate(-50%, -50%);
+    /* position: absolute;
+    top: 0%;
+    left: 50%; */
+
+    /* -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+
+    /* -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0); */
 
     z-index: -1;
   }
-  .hero .img-container img {
+  .hero .hero-img:first-child {
+    display: none;
+  }
+  .hero .hero-img {
     display: block;
 
     width: 100%;
     height: 100%;
 
     margin: 0 auto;
-    -webkit-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
+
+    /* -webkit-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
-    box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
+    box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25); */
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
 
     border-radius: 0rem;
 
