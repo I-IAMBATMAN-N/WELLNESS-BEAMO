@@ -961,6 +961,7 @@ h3 {
   }
   .article.about {
     flex-direction: column;
+    gap: 12.4rem;
   }
   .socials {
     /* width: fit-content; */
