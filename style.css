@@ -902,6 +902,7 @@ h3 {
   .main-nav.active .nav-list {
     height: 40%;
     display: flex;
+    font-family: "Merriweather", serif;
   }
   .main-nav .nav-list {
     display: none;
@@ -913,6 +914,9 @@ h3 {
 
     font-size: 3.6rem;
     letter-spacing: 0rem;
+  }
+  .nav-link {
+    color: var(--color-accent);
   }
   .sec-nav--list {
     grid-template-columns: 1fr;
