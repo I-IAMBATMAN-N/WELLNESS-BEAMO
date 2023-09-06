@@ -570,15 +570,18 @@ h3 {
   border-radius: 2rem;
 }
 .sec-nav--item {
-  background-image: url(images/Dermazeutische_Behandlungen/ultra-sensitiv.jpg);
-  -webkit-background-size: cover;
+  /* background-image: url(images/Dermazeutische_Behandlungen/ultra-sensitiv.jpg); */
+  /* -webkit-background-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+
+  position: relative;
+  overflow: hidden;
 
   box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.12);
   -webkit-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
@@ -589,6 +592,18 @@ h3 {
     OffX=0, OffY=0, Color='black', Positive='false'
 ); /* IE 5.5 */
   border-collapse: separate; /* Required by IE 9 */
+}
+.sec-nav--item img {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  border-radius: 0;
+
+  z-index: -1;
 }
 .sec-nav--item .sec-nav--link {
   display: flex;
