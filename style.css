@@ -590,6 +590,9 @@ h3 {
 ); /* IE 5.5 */
   border-collapse: separate; /* Required by IE 9 */
 }
+.sec-nav--item:last-child {
+  background-image: url(images/Wellness_Massagen/Ayurvedische_Massagen/Upanasveda\ -\ Rückenmassage.jpg);
+}
 .sec-nav--item .sec-nav--link {
   display: flex;
   flex-direction: column;
