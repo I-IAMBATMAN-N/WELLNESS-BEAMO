@@ -1,11 +1,11 @@
 .sec-nav--item:nth-child(2) {
-  background-image: url(images/Wellness_Behandlungen/beauty-and-more-1.jpg);
+  background-image: url(images/Wellness_Behandlungen/beauty-and-more-1.webp);
 }
 .sec-nav--item:nth-child(3) {
   background-image: url(images/Hand&Fußpflege/fusspflege-wellness.jpg);
 }
 .sec-nav--item:nth-child(4) {
-  background-image: url(images/Zusatzprogramme/Zusatzprogramm.jpg);
+  background-image: url(images/Zusatzprogramme/Zusatzprogramm.webp);
 }
 .start-btn {
   position: fixed;
