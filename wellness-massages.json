@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Upanasveda",
+    "category": "Ayurvedische",
+    "description": "Entspannende Massagegriffe und großflächige Ausstreichungen lösen Verspannungen im Nacken, der Schulter und entlang der Wirbelsäule.",
+    "duration": 30,
+    "price": 39,
+    "currency": "€"
+  },
+  {
+    "name": "Padabhyanga",
+    "category": "Ayurvedische",
+    "description": "Padabhyanga ist eine äußerst wohltuende Fußmassage, die eine revitalisierende und kräftigende Wirkung auf den ganzen Organismus hat. Diese Fuß- und Beinmassage vermittelt ein Gefühl tiefer Entspannung.",
+    "duration": 30,
+    "price": 47,
+    "currency": "€"
+  },
+  {
+    "name": "Mukabhyanga",
+    "category": "Ayurvedische",
+    "description": "Mukabhyanga ist eine wohltuende indische Kopf- Gesicht- und Nackenmassage bis in den Oberkörperbereich hinein. Der um die Seele legende Duft der Öle lockert ganz individuell innere so auch äußere Verspannungen, vitalisiert und entspannt.",
+    "duration": 45,
+    "price": 52,
+    "currency": "€"
+  },
+  {
+    "name": "Abhyanga",
+    "category": "Ayurvedische",
+    "description": "Abhyanga ist das stimmungsvolle Zauberwort für eine sinnliche Ayurveda-Ölmassage. Sanfte Streicheleinheiten, die mental und physisch entspannen. Der ganze Körper wird in wohltuend warmes Öl gehüllt, das ausgleicht, kräftigt und angenehm duftet.",
+    "duration": 60,
+    "price": 79,
+    "currency": "€"
+  },
+  {
+    "name": "Kräuterstempel",
+    "category": "Relax Kräuterstempel",
+    "description": "Genießen Sie die angenehme Wärme der asiatischen Massage. Verspannungen werden durch schnelle und sanfte Bewegungen mit heißen Ingwer-Lemongrass- Kräuterstempeln gelöst. Die Entschlackung und Fettverbrennung wird angeregt und die Neubildung der Hautzellen aktiviert. Die einzigartige chinesische Rezeptur der Kräuter in Verbindung mit dieser Massagetechnik wirkt entspannend auf Körper und Seele.",
+    "duration": 20,
+    "price": 69,
+    "currency": "€"
+  },
+  {
+    "name": "Aromaöl",
+    "category": "Relax Kräuterstempel",
+    "description": "Durch eine Aroma-Öl Massage ist es möglich, tief zu entspannen und neue Kraft & Vitalität für Körper, Geist und Seele zu schöpfen. Wohlfühlen & Entspannen. Eine entspannende Aromaöl-Massage um Verspannungen zu lösen. Geben Sie sich ganz dem wohligen Gefühl der Entspannung hin.",
+    "duration": 60,
+    "price": 69,
+    "currency": "€"
+  },
+  {
+    "name": "Ganzkörper Massage",
+    "category": "Thai - Energie",
+    "description": "Die authentische Thailändische Massage, die nicht nur Wellness sein will, kombiniert Akupressur, Dehnung, Energiearbeit . um energetische Blockaden zu lösen Die spricht zehn spezielle Energielinien an, auf denen sich wiederum wichtige Akkupressurpunkte finden. Durch festen Druck der speziellen 10 Energielinien werden diese dazu angeregt, den Körper mit neuer Lebensenergie zu versorgen. Die Energiepunkte des Körpers werden stimuliert, die Vitalität wird gesteigert und ein tiefer Zustand der Entspannung wird erreicht.",
+    "duration": 70,
+    "price": 79,
+    "currency": "€"
+  },
+  {
+    "name": "Fuß- & Bein Massage",
+    "category": "Thai - Energie",
+    "description": "Bei dieser Anwendung werden die Füße stimuliert, die Wadenmuskulatur und Bänder werden gedehnt und gelockert. Die Energiepunkte des Körpers werden stimuliert, die Vitalität wird gesteigert und ein tiefer Zustand der Entspannung wird erreicht.",
+    "duration": 45,
+    "price": 49,
+    "currency": "€"
+  },
+  {
+    "name": "Kopf-, Gesicht- & Nacken",
+    "category": "Thai - Energie",
+    "description": "Die Thai-Energie Kopf-, Gesicht- und Nackenmassage stimuliert kontinuierlich die Energie von Kopf, Gesicht und Ohren und fördert so die ruhige Entspannung und Glückseligkeit von Geist und Seele.Die Energiepunkte des Körpers werden stimuliert, die Vitalität wird gesteigert und ein tiefer Zustand der Entspannung wird erreicht.",
+    "duration": 30,
+    "price": 42,
+    "currency": "€"
+  }
+]

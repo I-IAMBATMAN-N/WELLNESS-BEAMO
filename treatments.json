@@ -1,0 +1,207 @@
+[
+  {
+    "name": "Beauty Intensiv",
+    "category": "Kosmetische",
+    "description": "Eine umfassende Anti-Aging Pflege mit Schisandraextrakt die Kollagensynthese steigert und verbessert nachhaltig die Elastizität und Straffheit der Haut. Wertvolle Pflanzenöle und ein Vitaminkomplex versorgen Ihre Haut mit Feuchtigkeit. Für ein natürliches Plus an Feuchtigkeit, Spannkraft und jugendlicher Ausstrahlung.",
+    "duration": 70,
+    "price": 79,
+    "currency": "€"
+  },
+  {
+    "name": "Energy Treatment",
+    "category": "Kosmetische",
+    "description": "Eine energiespendende Gesichts- & Dekolleté Behandlung mit entspannender Thai-Energie Gesichtsmassage und intensiv pflegenden Wirkstoffen für vitales Aussehen. Es hilft Ihnen neue Frische zu tanken und die Energiespeicher aufzuladen. Ihre Haut wirkt straffer, entspannter und Ihr Körper voller neuer Energie.",
+    "duration": 70,
+    "price": 79,
+    "currency": "€"
+  },
+  {
+    "name": "Unreine Haut",
+    "category": "Kosmetische",
+    "description": "Sehr oft beginnen die Hautprobleme bereits in der Jugend, doch ist unreine Haut nicht nur eine Frage des Alters. Die ausgewählten Pflegeprodukte sind besonders auf die unreine Haut ausgerichtet. Sie wirken den Unreinheiten entgegen und beinhalten wirksame Inhaltsstoffe so auch pflegende Wirkstoffe. Die Komposition aus Kräuterextrakten pflegt die Haut weich und geschmeidig und verleiht ihr ein klares, frisches Aussehen.",
+    "duration": 70,
+    "price": 79,
+    "currency": "€"
+  },
+  {
+    "name": "Rückenbehandlung bei unreiner Haut",
+    "category": "Kosmetische",
+    "description": "Der Rücken ist der Bereich unseres Körpers, der einen großen Anteil an Talgdrüsen aufweist. Unsere Rückenbehandlung normalisiert die problematische Rückenpartie. Unreine Haut wird gründlich ausgereinigt manuell oder mittels Mikrodermabrasion. Ein Wirkstoffkonzentrat und eine beruhigende Maske entspannt und beruhigt die Haut. Das Resultat der Behandlung ist ein schöner, gepflegter Rücken der sich sehen lassen kann.",
+    "duration": 30,
+    "price": 45,
+    "currency": "€"
+  },
+  {
+    "name": "Men Relax",
+    "category": "Kosmetische",
+    "description": "Unsere Men Relax Behandlung beinhaltet eine entspannende Gesichtsbehandlung mit Reinigung, Relax Gesicht- und Kopfmassage. Darüber hinaus verfeinern und straffen wir Ihre Haut mit Microdermabrasion sicher und schonend. Genuss und Entspannung pur.",
+    "duration": 70,
+    "price": 79,
+    "currency": "€"
+  },
+  {
+    "name": "Teenie Behandlung",
+    "category": "Kosmetische",
+    "description": "Beauty Girl und Jung Man Behandlung (bis 18 Jahre) Diese spezielle Behandlung für junge Teenie Haut beinhaltet Tiefenreinigung für die jugendliche Problemhaut, Peeling kurze entspannende Gesichtsmassage und entzündungshemmende Packung.  Eine kleine Einführung zur Heimpflege schließt diese Behandlung ab.",
+    "duration": 35,
+    "price": 42,
+    "currency": "€"
+  },
+  {
+    "name": "Microdermabrasion",
+    "category": "Dermazeutische",
+    "description": "Die Mikrodermabrasion ist ein sanftes und schmerzfreies Verfahren der Hautabschleifung, das zur Verfeinerung und Glättung der Haut eingesetzt wird. Mithilfe feinster Diamantaufsätze wird die oberste Hautschicht bei dieser Behandlungsmethode gezielt mechanisch abgetragen, ohne das umliegende Gewebe dabei zu verletzten.",
+    "perks": [
+      "Reduzierung von Falten und Pigmentstörungen",
+      "Behandlung von großporiger, unreine Haut",
+      "Verfeinerung des Hautbildes",
+      "Zellaktivierung"
+    ],
+    "duration": 70,
+    "price": 82,
+    "currency": "€",
+    "rating": "Top 1"
+  },
+  {
+    "name": "Fruit Apeel",
+    "category": "Dermazeutische",
+    "description": "Das Fruchtsäurepeeling ist eine dermazeutische Behandlung auf höchstem Niveau. \n\n Die Fruchtsäurebehandlung verbessert u. a. folgende Hautprobleme und beugt diese gleichzeitig vor:",
+    "perks": [
+      "Feuchtigkeitsdefizite",
+      "Alterungserscheinungen",
+      "Sonnenschädigungen",
+      "Überpigmentierungen",
+      "Altersflecken",
+      "feinen Linien und Falten",
+      "unreine Haut",
+      "Aknenarben"
+    ],
+    "duration": 60,
+    "price": 89,
+    "currency": "€",
+    "rating": "Top 2"
+  },
+  {
+    "name": "Mesoporation",
+    "category": "Dermazeutische",
+    "description": "Bei der Mesoporation handelt es sich um eine hocheffektive und intensive Behandlungsmethode zur Hautverjüngung und Faltenbehandlung um Wirkstoffe in tiefere Hautschichten zu transportieren.",
+    "perks": [
+      "Glättung und Verjüngung des Hautbilds",
+      "Erhöhung des Hautvolumens",
+      "Straffung Hals und Dekolleté",
+      "Verminderung von Falten und Linien"
+    ],
+    "duration": 70,
+    "price": 105,
+    "currency": "€",
+    "rating": "Top 3"
+  },
+  {
+    "name": "Courperose",
+    "category": "Dermazeutische",
+    "description": "Gezielt gegen rote Äderchen für jede Haut mit Teleangieektasien, Couperose oder Haut, die zu erweiterten Äderchen neigt, haben wir die Lösung! Couperose Reducing trainiert Ihre Gefäße und stärkt sie. Das Ergebnis ist ein gleichmäßiges, strahlendes Hautbil",
+    "duration": 70,
+    "price": 85,
+    "currency": "€"
+  },
+  {
+    "name": "Pigmentstörungen",
+    "category": "Dermazeutische",
+    "description": "Um diesen Hautsituationen gezielt entgegenzuwirken, hat CNC cosmetic eine innovative White Secreat Produktlinie mit hochdosierten Inhaltsstoffen und einer einzigartigen Komposition auserwählter Wirkstoff Highlights entwickelt. Das Ziel ist Hyperpigmentierungen sichtbar auszugleichen, einen ebenmäßigen Teint zu schenken, Ihre Haut mit der notwendigen Feuchtigkeit zu versorgen und sie gleichzeitig vor weiteren Hyperpigmentierungen zu schützen.",
+    "duration": 70,
+    "price": 85,
+    "currency": "€"
+  },
+  {
+    "name": "Ultra Sensitiv",
+    "category": "Dermazeutische",
+    "description": "Eine Behandlung die für ultra sensible, allergische und empfindliche Haut geeignet ist, innovative Pflege mit hautidentischer Grundlage. CNC cosmetic entwickelte eine Pflegeserie auf der Grundlage hautidentischer Komponenten und einer einzigartigen Rezepturformulierung, die selbst für die hochsensible, allergische und empfindliche Haut geeignet ist.",
+    "duration": 70,
+    "price": 85,
+    "currency": "€"
+  },
+  {
+    "name": "Hydromarine",
+    "category": "Dermazeutische",
+    "description": "Ihre Haut spannt, ist trocken, leicht spröde. Mit unserer Hydromarine Behandlung wird Ihre Haut mit den Kräften des Meeres versorgt. Mit Perlen und Algen für ein 24h Depot an Feuchtigkeit, weniger Falten und geliftete Gesichtskonturen mit einem nachhaltigen Anti-Aging Faktor. Tauchen Sie mit uns in die Welt des Meeres und genießen Sie unsere verwöhnende Behandlung.",
+    "duration": 70,
+    "price": 85,
+    "currency": "€"
+  },
+  {
+    "name": "Beauty & More 1",
+    "category": "Wellness",
+    "description": "Den Alltag vergessen und sich verwöhnen lassen. Beauty & More 1 beinhaltet eine entspannende Teilkörpermassage, klassische Kosmetikbehandlung für Ihr Gesicht, Hals und Dekolleté inkl. einer verwöhnenden Fußmassage.",
+    "duration": 90,
+    "price": 125,
+    "currency": "€"
+  },
+  {
+    "name": "Beauty & More 2",
+    "category": "Wellness",
+    "description": "Ihr Verwöhntrip für Körper, Geist und Seele beinhaltet eine entspannende Ganzkörpermassage. Ihr Gesicht, Hals & Dekoletté werden mit einer saisonalen Kosmetikbehandlung verwöhnt.",
+    "duration": 120,
+    "price": 145,
+    "currency": "€"
+  },
+  {
+    "name": "Fußpflege classic",
+    "category": "Fußpflege",
+    "description": "Fußbad, kürzen der Nägel, Behandlung der Nagel- und Hornhaut, kurze Fußmassage.",
+    "duration": 20,
+    "price": 27,
+    "currency": "€"
+  },
+  {
+    "name": "Fußpflege Intensiv",
+    "category": "Fußpflege",
+    "description": "Fussbad, kürzen der Nägel, Behandlung der Nagel- und Hornhaut, Entfernung der Hühneraugen und Nagellack.",
+    "options": [
+      {
+        "classic": { "duration": 20, "price": 31 },
+        "Fußpflege inkl. UV Abschlusslack": { "duration": 20, "price": 34 },
+        "Nagelspange ‍": { "duration": 20, "price": 25 },
+        "Fußpflege mit Frenchlackierung ‍": { "duration": 20, "price": 36 }
+      }
+    ],
+    "currency": "€"
+  },
+  {
+    "name": "Fußpflege Wellness",
+    "category": "Fußpflege",
+    "description": "Fußpflege intensiv mit verwöhnenden und entspannenden ayurvedischer Fuß-Bein-Massage.",
+    "duration": 50,
+    "price": 59,
+    "currency": "€"
+  },
+  {
+    "name": "Haarentferung mit Zuckerpaste",
+    "category": "Zusatzprogramme",
+    "options": [
+      { "name": "Oberlippe", "price": 15 },
+      { "name": "Oberlippe, Kinn", "price": 19 },
+      { "name": "Oberlippe, Kinn, Wangen", "price": 25 },
+      { "name": "Achseln", "price": 15 },
+      { "name": "Arme ohne Achseln", "price": 25 },
+      { "name": "Unterschenkel mit Knie", "price": "ab 29" },
+      { "name": "Oberschenkel ohne Knie", "price": "ab 25" },
+      { "name": "Beine komplett", "price": "ab 42" },
+      { "name": "Bikini klassisch", "price": "ab 25" },
+      { "name": "Männerbrust", "price": "ab 35" },
+      { "name": "Männerbauch", "price": "ab 25" },
+      { "name": "Männerrücken", "price": "ab 49" }
+    ],
+    "currency": "€"
+  },
+  {
+    "name": "Individuelle Ergänzungen ohne Gesichtsbehandlung",
+    "category": "Zusatzprogramme",
+    "options": [
+      { "name": "Korrektur der Augenbrauen", "price": 12 },
+      { "name": "Färbung der Augenbrauen", "price": 10 },
+      { "name": "Färbung der Wimpern", "price": 12 },
+      { "name": "Korrektur & Färbung der Augenbrauen", "price": 19 }
+    ],
+    "currency": "€"
+  }
+]
