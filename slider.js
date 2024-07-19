@@ -5,6 +5,7 @@ const sliderContainers = document.querySelectorAll(".treatment-slider");
 - default (onload) styling for slides
 - 
 */
+
 function setSlides() {
   sliderContainers.forEach((sliderContainer) => {
     let counter = 0;
@@ -52,14 +53,14 @@ function setHeightAndPadding(service) {
       if (treatmentPrices.length > 1) {
         treatmentPrices.forEach((price) => {
           if (index !== 0) {
-            price.style.paddingRight = "3rem";
+            price.style.paddingRight = "4rem";
           } else {
             price.style.paddingRight = "9rem";
           }
         });
       } else {
         if (index !== 0) {
-          treatmentPrices[0].style.paddingRight = "3rem";
+          treatmentPrices[0].style.paddingRight = "4rem";
         } else {
           treatmentPrices[0].style.paddingRight = "9rem";
         }
@@ -242,3 +243,9 @@ optionalControls.forEach((control) => {
     });
   });
 });
+
+// =======================================================================================================================================================
+// =======================================================================================================================================================
+// =======================================================================================================================================================
+// =======================================================================================================================================================
+// =======================================================================================================================================================
