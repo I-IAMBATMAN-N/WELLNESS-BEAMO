@@ -119,7 +119,7 @@ body {
 
   margin: 0 auto;
   padding-top: 12.5rem;
-  margin-bottom: 4.8rem;
+  /* margin-bottom: 4.8rem; */
 
   -webkit-transition: opacity 2s ease;
   -moz-transition: opacity 2s ease;
@@ -205,7 +205,7 @@ h3 {
 .article section {
   flex: 1 0 0;
 }
-.section.lg::before {
+/* .section.lg::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -236,6 +236,53 @@ h3 {
   -ms-transform: translate(85rem, 0);
   -o-transform: translate(85rem, 0);
   transform: translate(85rem, 0);
+} */
+.wellness-container > *,
+.treatment-container > * {
+  position: relative;
+}
+.section.hero::before,
+.section.about::before,
+.section.services::before,
+.section.about::after,
+.treatment-container > *::before,
+.wellness-container > *::before,
+.main-footer::before {
+  content: "";
+
+  display: block;
+
+  width: 100vw;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+
+  background-repeat: no-repeat;
+
+  z-index: -1;
+}
+.section.hero::before {
+  background-image: url(images/backgrounds/background-bottom.svg);
+  background-position: bottom;
+}
+.section.about::before {
+  background-image: url(images/backgrounds/background-top.svg);
+  background-position: top;
+}
+.section.services::before {
+  background-image: url(images/backgrounds/background-bottom.svg);
+  background-position: bottom;
+}
+.treatment-container > *:nth-child(1)::before,
+.wellness-container > *:nth-child(1)::before {
+  background-image: url(images/backgrounds/background-bottom.svg);
+  background-position: bottom;
+}
+.wrapper::before {
+  background-image: url(images/backgrounds/background-top.svg);
+  background-position: top;
 }
 /*  -HEADER- */
 .hidden {
@@ -244,6 +291,14 @@ h3 {
   opacity: 0%;
   filter: alpha(opacity=NaN);
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=NaN)";
+}
+.main-footer.background-bottom::before {
+  background-image: url(images/backgrounds/background-bottom.svg);
+  background-position: bottom;
+}
+.main-footer:not(.background-bottom)::before {
+  background-image: url(images/backgrounds/background-top.svg);
+  background-position: top;
 }
 .main-header {
   width: 100%;

@@ -93,9 +93,13 @@ function checkBrowser() {
 /*------------------------------------------------ .sec-nav FUNCTION -------------------------------------------------------*/
 const secNavItems = document.querySelectorAll(".sec-nav--item");
 const services = document.querySelectorAll(".wrapper");
+const mainFooter = document.querySelector(".main-footer");
 
 secNavItems.forEach((navItem, index) => {
   navItem.addEventListener("click", function (event) {
+    if (!mainFooter.classList.contains("background-bottom")) {
+      mainFooter.classList.add("background-bottom");
+    }
     //
     services.forEach((service, serviceIndex) => {
       //

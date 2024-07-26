@@ -96,3 +96,11 @@ function obsCallback(entries, observer) {
 sections.forEach((section) => {
   observer.observe(section);
 });
+
+document
+  .querySelectorAll(".sec-nav--item")
+  .forEach((element) =>
+    element.addEventListener("click", () =>
+      document.querySelector(".main-footer").classList.add("background-top")
+    )
+  );
