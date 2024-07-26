@@ -209,9 +209,6 @@
   -o-transform: translate(50%, -50%);
   transform: translate(50%, -50%);
 }
-.treatment-card.optional .treatment-price {
-  font-size: 3rem;
-}
 .treatment-options {
   width: 100%;
 
@@ -427,7 +424,7 @@
   color: var(--color-white);
   background-color: var(--color-accent);
 
-  letter-spacing: -0.6rem;
+  /* letter-spacing: -0.6rem; */
   text-align: center;
   line-height: 1;
 
@@ -448,6 +445,10 @@
 .treatment-price,
 .treatment-price span {
   font-size: 9.6rem;
+  letter-spacing: 0.2rem;
+}
+.treatment-price span {
+  margin-left: 0.2rem;
 }
 .treatment-benefits {
   list-style: none;
