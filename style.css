@@ -306,7 +306,9 @@ h3 {
 
   position: fixed;
 
-  background-color: var(--color-white-opacity-2);
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(8rem);
+
   z-index: 1;
 
   -webkit-transition: background-color 1s ease;
