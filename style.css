@@ -403,6 +403,8 @@ h3 {
   color: var(--color-accent);
   font-family: "Great Vibes", sans-serif;
   letter-spacing: 0.1rem;
+
+  transform: translateY(-0.4rem);
 }
 .nav-list {
   list-style: none;
