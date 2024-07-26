@@ -18,7 +18,7 @@ function setSlides() {
     if (dotContainer) dotContainer.innerHTML = ``;
 
     const slides = sliderContainer.querySelectorAll(".treatment-card");
-    console.log("slides", slides);
+    // console.log("slides", slides);
 
     if (window.innerWidth > 768) {
       //
