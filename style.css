@@ -427,21 +427,26 @@ h3 {
 
   position: relative;
 }
-/* .nav-link.active::after {
+.nav-link.active {
+  position: relative;
+}
+.nav-link.active::before {
   content: "";
+
   display: inline-block;
 
-  height: 0.4rem;
-  width: 2.4rem;
-
   position: absolute;
+
   left: 0;
-  bottom: -0.8rem;
+  bottom: -0.2rem;
+
+  width: 2.4rem;
+  height: 0.2rem;
+
+  border-radius: 10rem;
 
   background-color: var(--color-accent);
-  border-radius: 100rem; 
 }
-*/
 .hero {
   justify-content: center;
   gap: 6.4rem;
