@@ -41,22 +41,22 @@
   color: var(--color-accent);
   font-size: 3.6rem;
 
-  transition: 1s;
+  transition: 0.3s;
   cursor: pointer;
 }
 .slider-btn:first-child:hover {
-  -webkit-transform: translate(-25%, 0) scale(1.5);
-  -moz-transform: translate(-25%, 0) scale(1.5);
-  -ms-transform: translate(-25%, 0) scale(1.5);
-  -o-transform: translate(-25%, 0) scale(1.5);
-  transform: translate(-25%, 0) scale(1.5);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
 }
 .slider-btn:last-child:hover {
-  -webkit-transform: translate(25%, 0) scale(1.5);
-  -moz-transform: translate(25%, 0) scale(1.5);
-  -ms-transform: translate(25%, 0) scale(1.5);
-  -o-transform: translate(25%, 0) scale(1.5);
-  transform: translate(25%, 0) scale(1.5);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
 }
 .slider-dots {
   flex: 1 0 0;
@@ -219,7 +219,33 @@
   display: flex;
   align-items: center;
 
+  margin-top: 1.2rem;
+
   padding-left: 3.2rem;
+
+  gap: 1.2rem;
+}
+.options-controls .slider-dots {
+  flex: 0 0 fit-content;
+  gap: 1.2rem;
+}
+
+.options-controls .slider-dot {
+  width: 0.8rem;
+  height: 0.8rem;
+
+  border: solid 0.1rem var(--color-accent);
+}
+.options-controls .slider-dot.active {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.options-controls .slider-btn {
+  font-size: 2.4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .treatment-card {
   width: 100%;
