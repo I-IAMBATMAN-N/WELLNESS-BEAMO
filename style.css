@@ -91,9 +91,9 @@ body {
   -ms-border-radius: 1000rem;
   -o-border-radius: 1000rem;
   border-radius: 1000rem;
-  -webkit-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
-  box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.15);
+  box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.15);
 }
 /* GENERAL stylings */
 .wrapper {
@@ -534,9 +534,9 @@ h3 {
   border-bottom-right-radius: 100rem;
   -moz-border-radius-bottomright: 100rem;*/ /* FF 1.0 - 12.0 */
 
-  -webkit-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
-  box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.15);
+  box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.15);
 
   filter: progid:DXImageTransform.Microsoft.dropshadow(
     OffX=0, OffY=0, Color='black', Positive='false'
@@ -555,9 +555,9 @@ h3 {
 
 /* background-image: linear-gradient(to left, var(--color-accent), #efd8d1); */
 
-/* -webkit-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
-  box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25); */
+/* -webkit-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.15);
+  box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.15); */
 
 /* -webkit-border-top-right-radius: 100rem;
   -moz-border-top-right-radius: 100rem;
@@ -624,9 +624,9 @@ h3 {
   font-family: "Great Vibes";
   font-size: 7.4rem;
   font-weight: normal;
-  text-shadow: 0.8rem 0.8rem 0.8rem rgba(0, 0, 0, 0.25);
+  text-shadow: 0.8rem 0.8rem 0.8rem rgba(0, 0, 0, 0.15);
 
-  text-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
+  text-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.15);
 }
 .about .img-container::before {
   content: "";
@@ -694,9 +694,9 @@ h3 {
   background-repeat: no-repeat;
 
   box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.12);
-  -webkit-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
-  box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.15);
+  box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.15);
 
   filter: progid:DXImageTransform.Microsoft.dropshadow(
     OffX=0, OffY=0, Color='black', Positive='false'
@@ -770,8 +770,8 @@ h3 {
   background-position: center;
   background-repeat: no-repeat;
 
-  box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.25);
-  box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
+  box-shadow: 2rem 2rem 2rem rgba(0, 0, 0, 0.15);
+  box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.15);
 }
 .service-container:last-child {
   background-image: url(images/Wellness_Massagen/Ayurvedische_Massagen/Upanasveda\ -\ Rückenmassage.jpg);
@@ -799,7 +799,7 @@ h3 {
   transition: 1s ease;
 }
 .service-container:hover {
-  box-shadow: 2.2rem 2.2rem 2.2rem rgba(0, 0, 0, 0.25);
+  box-shadow: 2.2rem 2.2rem 2.2rem rgba(0, 0, 0, 0.15);
 }
 */
 /* FOOTER ---------------------------------------- */
@@ -842,9 +842,9 @@ h3 {
 
   border-radius: 2rem;
   background-color: var(--color-accent);
-  -webkit-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
-  box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.15);
+  box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.15);
 
   filter: progid:DXImageTransform.Microsoft.dropshadow(
    OffX=0, OffY=0, Color='black', Positive='false'
@@ -1146,9 +1146,9 @@ h3 {
 
     margin: 0 auto;
 
-    /* -webkit-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
-    -moz-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25);
-    box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.25); */
+    /* -webkit-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.15);
+    box-shadow: 2.5rem 2.5rem 5rem rgba(0, 0, 0, 0.15); */
 
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
