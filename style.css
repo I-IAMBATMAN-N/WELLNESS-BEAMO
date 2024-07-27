@@ -1197,6 +1197,9 @@ h3 {
     max-width: 75rem;
   }
   /* FOOTER SECTION ---------------------------------------- */
+  .main-footer {
+    padding-bottom: 19rem;
+  }
   .contacts {
     flex-direction: column;
   }
@@ -1257,5 +1260,8 @@ h3 {
   }
   .main-header .logo-img {
     display: none;
+  }
+  .main-footer {
+    padding-bottom: 8rem;
   }
 }
