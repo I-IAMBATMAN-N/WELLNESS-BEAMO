@@ -244,7 +244,6 @@ h3 {
 .section.hero::before,
 .section.about::before,
 .section.services::before,
-.section.about::after,
 .treatment-container > *::before,
 .wellness-container > *::before,
 .main-footer::before {
@@ -490,11 +489,11 @@ h3 {
 }
 .img-container::before {
   content: "";
-  width: 38rem;
+  width: 120%;
   aspect-ratio: 1/1;
 
   position: absolute;
-  top: -3.2rem;
+  top: -8%;
   left: 50%;
 
   background-color: var(--color-accent);
