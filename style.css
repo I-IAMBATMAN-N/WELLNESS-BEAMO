@@ -933,6 +933,12 @@ h3 {
   2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
 /* 
 */
+
+@media (min-width: 50em) and (max-width: 64em) {
+  .socials {
+    margin-left: 2.4rem;
+  }
+}
 @media (max-width: 71.5em) {
   html {
     font-size: 56.25%;
