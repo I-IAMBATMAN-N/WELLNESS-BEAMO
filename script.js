@@ -12,7 +12,23 @@ const mainNav = document.querySelector(".main-nav");
 
 /*---------------------------------------- Hamburger Menu Function ----------------------------------------*/
 
-const navLinks = document.querySelectorAll(".nav-item");
+const navLinks = document.querySelectorAll(".nav-link");
+if (window.innerWidth > 768) {
+  navLinks.forEach((navLink) => {
+    navLink.addEventListener("click", function () {
+      // reset navLinks
+      navLinks.forEach((navLink) => {
+        if (navLink.classList.contains("active"))
+          navLink.classList.remove("active");
+      });
+
+      // set to active
+      navLink.classList.add("active");
+    });
+  });
+}
+
+const navItems = document.querySelectorAll(".nav-item");
 
 if (window.innerWidth < 768) {
   menuIcons.forEach((icon) =>
@@ -23,7 +39,7 @@ if (window.innerWidth < 768) {
       mainNav.classList.toggle("active");
     })
   );
-  navLinks.forEach((navLink) => {
+  navItems.forEach((navLink) => {
     navLink.addEventListener("click", function () {
       menuIcons.forEach((icon) => {
         icon.classList.toggle("active");
