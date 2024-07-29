@@ -214,8 +214,18 @@ const mainFooter = document.querySelector(".main-footer");
 secNavItems.forEach((navItem, index) => {
   navItem.addEventListener("click", function (event) {
     //
+    const { target } = event;
+    // console.log("target", target);
 
-    setTimeout(() => setSlides(), 200);
+    const secNavInnerText = target
+      .closest(".sec-nav--link")
+      .innerText.toLowerCase();
+    console.log("secNavInnerText", secNavInnerText);
+
+    if (secNavInnerText !== "Zusatzprogramme".toLowerCase()) {
+      setTimeout(() => setSlides(), 200);
+    }
+
     if (!mainFooter.classList.contains("background-bottom")) {
       mainFooter.classList.add("background-bottom");
     }
@@ -230,7 +240,10 @@ secNavItems.forEach((navItem, index) => {
         //
         service.classList.add("active");
         //
-        if (window.innerWidth > 768) {
+        if (
+          window.innerWidth > 768 &&
+          secNavInnerText !== "Zusatzprogramme".toLowerCase()
+        ) {
           setHeightAndPadding(service);
         }
       }
