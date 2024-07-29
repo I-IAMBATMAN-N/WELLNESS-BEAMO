@@ -493,11 +493,12 @@ h3 {
   aspect-ratio: 1/1;
 
   position: absolute;
-  top: -8%;
+  top: -7%;
   left: 50%;
 
   background-color: var(--color-accent);
-  border-radius: 100rem;
+
+  border-radius: 50%;
 
   -webkit-transform: translate(-50%, 0);
   -moz-transform: translate(-50%, 0);
