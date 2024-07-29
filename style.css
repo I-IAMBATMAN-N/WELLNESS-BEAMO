@@ -426,10 +426,7 @@ h3 {
 
   position: relative;
 }
-.nav-link.active {
-  position: relative;
-}
-.nav-link.active::before {
+.nav-link::before {
   content: "";
 
   display: inline-block;
@@ -439,12 +436,22 @@ h3 {
   left: 0;
   bottom: -0.2rem;
 
-  width: 2.4rem;
+  width: 0rem;
   height: 0.2rem;
 
   border-radius: 10rem;
 
   background-color: var(--color-accent);
+
+  transition: 0.3s ease;
+}
+.nav-link:hover,
+.nav-link.active {
+  position: relative;
+}
+.nav-link:hover::before,
+.nav-link.active::before {
+  width: 2.4rem;
 }
 .hero {
   justify-content: center;
