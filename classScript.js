@@ -1,11 +1,9 @@
 "use strict";
 
 const mainHeader = document.querySelector(".main-header");
-
-const menuIcons = document.querySelectorAll(".mobile-menu-icon");
 const mainNav = document.querySelector(".main-nav");
-
 const navLinks = document.querySelectorAll(".nav-item");
+const menuIcons = document.querySelectorAll(".mobile-menu-icon");
 
 const sections = document.querySelectorAll(".section");
 
@@ -22,7 +20,6 @@ class App {
 
     this.sections = document.querySelectorAll(".section");
   }
-
   removeHeaderWithDelay() {
     setTimeout(() => {
       this.mainHeader.classList.remove("intro");
@@ -54,7 +51,6 @@ class App {
       });
     }
   }
-
   addHiddenClass() {
     this.sections.forEach((section, index) => {
       if (window.innerWidth > 768) {
