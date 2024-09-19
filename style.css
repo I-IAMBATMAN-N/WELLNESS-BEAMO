@@ -310,6 +310,10 @@ h3 {
   background-image: url(images/backgrounds/background-top.svg);
   background-position: top;
 }
+.main-footer:not(.background-bottom)::before {
+  background-image: url(images/backgrounds/background-top.svg);
+  background-position: top;
+}
 /*  -HEADER- */
 .hidden {
   -khtml-opacity: 0%;
@@ -321,10 +325,6 @@ h3 {
 .main-footer.background-bottom::before {
   background-image: url(images/backgrounds/background-bottom.svg);
   background-position: bottom;
-}
-.main-footer:not(.background-bottom)::before {
-  background-image: url(images/backgrounds/background-top.svg);
-  background-position: top;
 }
 .main-header {
   width: 100%;
@@ -1163,12 +1163,22 @@ h3 {
     flex-direction: column;
     gap: 126px;
   }
+  .section.hero::before,
+  .section.services::before,
+  .treatment-container > *:nth-child(1)::before,
+  .wellness-container > *:nth-child(1)::before {
+    transform: translateY(10rem);
+  }
+  .section.about::before,
+  .main-footer:not(.background-bottom)::before {
+    transform: translateY(-10rem);
+  }
   .lg {
     height: auto;
   }
   /* MAIN HEADER ---------------------------------------- */
   .section.lg::before {
-    display: none;
+    /* display: none; */
   }
   .main-header {
     background-color: var(--color-white);
