@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* COLORS 
 
 logo(company name)
@@ -1167,10 +1174,14 @@ h3 {
   .section.services::before,
   .treatment-container > *:nth-child(1)::before,
   .wellness-container > *:nth-child(1)::before {
-    transform: translateY(10rem);
+    -webkit-transform: translateY(13rem);
+    -ms-transform: translateY(13rem);
+    transform: translateY(13rem);
   }
   .section.about::before,
   .main-footer:not(.background-bottom)::before {
+    -webkit-transform: translateY(-10rem);
+    -ms-transform: translateY(-10rem);
     transform: translateY(-10rem);
   }
   .lg {

@@ -141,6 +141,109 @@ function setSlides() {
           }
         }
       });
+    } else {
+      slides.forEach((slide, index) => {
+        /*------------------------------------------------ .treatment-card options FUNCTION -------------------------------------------------------*/
+        let currOption = 0;
+        const options = slide.querySelectorAll(
+          ".treatment-card.optional .treatment-options span"
+        );
+        // console.log("options", options);
+
+        if (options) {
+          options.forEach((option, index) => {
+            // optionalDotsContainer.innerHTML += `<div class="slider-dot"></div>`;
+
+            if (index === currOption) {
+              option.style.display = "inline-block";
+            } else if (index !== currOption) {
+              option.style.display = "none";
+            }
+          });
+        }
+
+        const optionsPrices = document.querySelectorAll(
+          ".treatment-card.optional .treatment-price"
+        );
+        // console.log("optionsPrices", optionsPrices);
+        if (optionsPrices) {
+          optionsPrices.forEach((optionsPrice) => {
+            optionsPrice.querySelectorAll("span").forEach((span, index) => {
+              if (index === currOption) {
+                span.style.display = "inline-block";
+              } else if (index !== currOption) {
+                span.style.display = "none";
+              }
+            });
+          });
+        }
+
+        const optionalControls = document.querySelectorAll(
+          ".options-controls .slider-btn"
+        );
+        // console.log("optionalControls", optionalControls);
+        if (optionalControls) {
+          optionalControls.forEach((control) => {
+            let currOption = 0;
+            const arrowRight = "chevron-forward-outline";
+            const arrowLeft = "chevron-back-outline";
+
+            control.addEventListener("click", function (event) {
+              //
+              const treatmentCardOptions = event.target
+                .closest(".treatment-card")
+                .children[1].children[1].querySelectorAll("span");
+              const optionPrices = event.target
+                .closest(".treatment-card")
+                .children[1].children[3].children[1].querySelectorAll("span");
+              //
+              if (event.target.name === arrowRight) {
+                if (currOption === treatmentCardOptions.length - 1) {
+                  currOption = 0;
+                  // console.log(currOption);
+                } else if (currOption !== treatmentCardOptions.length - 1) {
+                  currOption++;
+                  // console.log(currOption);
+                }
+              } else if (event.target.name === arrowLeft) {
+                if (currOption === 0) {
+                  currOption = treatmentCardOptions.length - 1;
+                  // console.log(currOption);
+                } else if (currOption !== 0) {
+                  currOption--;
+                  // console.log(currOption);
+                }
+              }
+
+              const optionsDots = slide.querySelectorAll(".slider-dot");
+
+              optionsDots.forEach((dot, index) => {
+                if (dot.classList.contains("active")) {
+                  dot.classList.remove("active");
+                }
+                if (index === currOption) {
+                  dot.classList.add("active");
+                }
+              });
+
+              treatmentCardOptions.forEach((option, index) => {
+                if (index === currOption) {
+                  option.style.display = "inline-block";
+                } else if (index !== currOption) {
+                  option.style.display = "none";
+                }
+              });
+              optionPrices.forEach((optionPrice, index) => {
+                if (index === currOption) {
+                  optionPrice.style.display = "inline-block";
+                } else if (index !== currOption) {
+                  optionPrice.style.display = "none";
+                }
+              });
+            });
+          });
+        }
+      });
     }
   });
 }
