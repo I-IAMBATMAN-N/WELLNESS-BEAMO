@@ -5,6 +5,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* COLORS 
 
 logo(company name)
@@ -1168,7 +1175,8 @@ h3 {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    gap: 126px;
+
+    gap: 19rem;
   }
   .section.hero::before,
   .section.services::before,
@@ -1261,9 +1269,23 @@ h3 {
     color: var(--color-accent);
   }
   .sec-nav--list {
-    -ms-grid-columns: 1fr;
+    /* -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    grid-gap: 8rem;
+    grid-gap: 8rem; */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 8rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
   /* SECTIONS ---------------------------------------- */
   .section {
@@ -1447,6 +1469,9 @@ h3 {
     width: 100%;
     max-width: 75rem;
   }
+  .sec-nav--link {
+    letter-spacing: 0.4rem;
+  }
   /* FOOTER SECTION ---------------------------------------- */
   .main-footer {
     padding-bottom: 19rem;
@@ -1519,5 +1544,16 @@ h3 {
   }
   .main-footer {
     padding-bottom: 8rem;
+  }
+  .section-heading {
+    font-size: 5.7rem;
+  }
+}
+@media (max-width: 20em) {
+  .sec-nav--link {
+    font-size: 2.8rem;
+  }
+  .section-heading {
+    font-size: 4.8rem;
   }
 }
