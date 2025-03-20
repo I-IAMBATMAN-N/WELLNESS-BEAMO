@@ -40,7 +40,7 @@ function setHeightAndPadding(service, userAgent) {
             price.style.paddingRight = "9rem";
           }
         });
-      } else {+++++++
+      } else {
         if (index !== 0) {
           treatmentPrices[0].style.paddingRight = "4rem";
         } else {
