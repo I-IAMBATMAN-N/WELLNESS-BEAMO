@@ -58,7 +58,7 @@ function setSlides() {
             });
           }
 
-          const optionsPrices = document.querySelectorAll(
+          const optionsPrices = slide.querySelectorAll(
             ".treatment-card.optional .treatment-price"
           );
           // console.log("optionsPrices", optionsPrices);
@@ -74,7 +74,7 @@ function setSlides() {
             });
           }
 
-          const optionalControls = document.querySelectorAll(
+          const optionalControls = slide.querySelectorAll(
             ".options-controls .slider-btn"
           );
           // console.log("optionalControls", optionalControls);
@@ -134,6 +134,22 @@ function setSlides() {
                     optionPrice.style.display = "inline-block";
                   } else if (index !== currOption) {
                     optionPrice.style.display = "none";
+                  }
+                });
+
+                const optionsTimes = slide.querySelectorAll(
+                  ".treatment-time span"
+                );
+                // console.log("optionTimes", optionTimes);
+
+                optionsTimes.forEach((optionTime, index) => {
+                  // console.log("optionTime index", index);
+                  // console.log("optionTime currOption", currOption);
+
+                  if (index === currOption) {
+                    optionTime.style.display = "inline-block";
+                  } else if (index !== currOption) {
+                    optionTime.style.display = "none";
                   }
                 });
               });
@@ -240,6 +256,22 @@ function setSlides() {
                   optionPrice.style.display = "none";
                 }
               });
+
+              const optionsTimes = slide.querySelectorAll(
+                ".treatment-time span"
+              );
+              // console.log("optionTimes", optionTimes);
+
+              optionsTimes.forEach((optionTime, index) => {
+                // console.log("optionTime index", index);
+                // console.log("optionTime currOption", currOption);
+
+                if (index === currOption) {
+                  optionTime.style.display = "inline-block";
+                } else if (index !== currOption) {
+                  optionTime.style.display = "none";
+                }
+              });
             });
           });
         }
@@ -323,7 +355,7 @@ secNavItems.forEach((navItem, index) => {
     const secNavInnerText = target
       .closest(".sec-nav--link")
       .innerText.toLowerCase();
-    console.log("secNavInnerText", secNavInnerText);
+    // console.log("secNavInnerText", secNavInnerText);
 
     if (secNavInnerText !== "Zusatzprogramme".toLowerCase()) {
       setTimeout(() => setSlides(), 200);
