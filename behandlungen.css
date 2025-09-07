@@ -375,6 +375,10 @@
   position: absolute;
   left: 0;
   top: 0;
+  white-space: wrap;
+  word-break: break-word;
+  width: 100%;
+  line-break: normal;
   -webkit-transform: translate(-12%, -110%);
   -moz-transform: translate(-12%, -110%);
   -ms-transform: translate(-12%, -110%);
@@ -716,5 +720,25 @@
     -webkit-border-bottom-right-radius: 2rem;
     border-bottom-right-radius: 2rem;
     -moz-border-radius-bottomright: 2rem; /* FF 1.0 - 12.0 */
+  }
+}
+@media (max-width: 20em) {
+  .service-heading {
+    font-size: 3.6rem;
+  }
+  .treatment-heading {
+    font-size: 4.4rem;
+  }
+  .treatment-description {
+    font-size: 1.6rem;
+  }
+  .treatment-slider {
+    gap: 25.6rem;
+  }
+  .treatment-price {
+    font-size: 8.6rem;
+  }
+  .treatment-time {
+    font-size: 1.2rem;
   }
 }
