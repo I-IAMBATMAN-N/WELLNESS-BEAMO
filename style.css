@@ -5,13 +5,6 @@
 * Browsers: last 4 version
 */
 
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 /* COLORS 
 
 logo(company name)
@@ -485,8 +478,14 @@ h3 {
   font-family: "Raleway", serif;
 }
 .nav-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 .nav-link {
@@ -1545,7 +1544,7 @@ h3 {
     width: 100%;
   }
   .company-name {
-    font-size: 2rem;
+    font-size: 2.4rem;
   }
   .logo-name {
     font-size: 3rem;
@@ -1561,8 +1560,14 @@ h3 {
   }
 }
 @media (max-width: 20em) {
+  .company-name {
+    font-size: 1.6rem;
+  }
+  .logo-name {
+    font-size: 2rem;
+  }
   .sec-nav--link {
-    font-size: 2.8rem;
+    font-size: 2rem;
   }
   .section-heading {
     font-size: 3rem;
@@ -1581,5 +1586,13 @@ h3 {
   .socials,
   .contact-card .socials {
     gap: 2.4rem;
+  }
+}
+@media (max-width: 15em) {
+  .company-name {
+    font-size: 1rem;
+  }
+  .logo-name {
+    font-size: 1.4rem;
   }
 }

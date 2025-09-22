@@ -13,7 +13,7 @@ const mainNav = document.querySelector(".main-nav");
 /*---------------------------------------- Hamburger Menu Function ----------------------------------------*/
 
 const navLinks = document.querySelectorAll(".nav-link");
-if (window.innerWidth > 768) {
+if (window.innerWidth > 880) {
   navLinks.forEach((navLink) => {
     navLink.addEventListener("click", function () {
       // reset navLinks
@@ -52,7 +52,7 @@ if (window.innerWidth < 768) {
 /*---------------------------------------- Certificate Images Function ----------------------------------------*/
 const certImgs = document.querySelectorAll(".certificate-img");
 
-if (window.innerWidth > 768) {
+if (window.innerWidth > 880) {
   certImgs.forEach((img) => {
     img.classList.add("scale");
     img.addEventListener("click", function (event) {
@@ -74,7 +74,7 @@ if (window.innerWidth > 768) {
 const sections = document.querySelectorAll(".section");
 
 sections.forEach((section, index) => {
-  if (window.innerWidth > 768) {
+  if (window.innerWidth > 880) {
     if (!section.classList.contains("section"))
       // index > 0 ? section.classList.add("hidden") : "";
       section.classList.add("hidden");
@@ -99,7 +99,7 @@ if (document.title !== "Schönheits- und Wellnessmassagen | BEAMO") {
 
 function obsCallback(entries, observer) {
   entries.forEach((entry) => {
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 880) {
       if (entry.isIntersecting) {
         setTimeout(() => {
           entry.target.classList.remove("hidden");
