@@ -1129,9 +1129,6 @@ h3 {
   }
 }
 @media (min-width: 50em) and (max-width: 64em) {
-  .socials {
-    margin-left: 2.4rem;
-  }
 }
 @media (max-width: 71.5em) {
   html {
