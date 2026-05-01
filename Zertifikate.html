@@ -53,43 +53,119 @@
     <!-- CUSTOM STYLES and SCRIPTS -->
     <link rel="stylesheet" href="style.css" />
     <style>
+      /*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
       .certificates {
+        padding-top: 16rem;
+        padding-bottom: 8rem;
+
+        background-image: url(./images/backgrounds/background-bottom.svg);
+        background-repeat: no-repeat;
+        background-position: bottom;
+
+        margin: 0;
+
+        width: 100%;
+        min-width: 100%;
+
+        position: static;
+      }
+      .certificates div {
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: 1fr 4.8rem 1fr;
         grid-template-columns: 1fr 1fr;
         gap: 4.8rem;
 
-        width: 100%;
-        max-width: 100rem;
+        margin: 0 auto;
+
+        width: 64%;
       }
       .section .certificate-img {
         border-radius: 0rem;
+      }
+      .section .certificate-img:not(.view) {
         width: 100%;
       }
-      .section .certificate-img:last-child {
+      .section a:last-child {
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
         align-self: center;
       }
-      .section .certificate-img:hover {
+      a {
+        height: auto;
+      }
+      a .certificate-img {
+        display: block;
+      }
+      a:hover {
         cursor: pointer;
       }
-      .scale:hover {
-        transform: scale(1.1);
-        transition: 1s ease;
+      a:not(.view):hover {
+        -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        transform: scale(1.05);
+        -webkit-transition: 0.3s ease;
+        -o-transition: 0.3s ease;
+        transition: 0.3s ease;
       }
-      .view {
+      a.view {
         position: absolute;
-        height: 100%;
+        height: 100vh;
 
         top: 0;
+        left: 50%;
 
-        transition: 1s ease;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+
+        z-index: 1000;
       }
+      a.view::before {
+        content: "";
+
+        width: 100vw;
+        height: 100vh;
+
+        background-color: rgba(255, 255, 255, 0);
+        -webkit-backdrop-filter: blur(8rem);
+        backdrop-filter: blur(8rem);
+
+        position: absolute;
+
+        top: 0;
+        left: 50%;
+
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+
+        z-index: -1;
+      }
+      a.view .certificate-img {
+        width: auto;
+        height: 100%;
+      }
+
       @media (max-width: 48em) {
-        .certificates {
+        body {
+          gap: 0rem;
+        }
+        .certificates div {
+          -ms-grid-columns: 1fr;
           grid-template-columns: 1fr;
+
+          width: 100%;
         }
       }
     </style>
-    <script defer src="script.js"></script>
+    <script defer src="script.js?v=2026_05_01"></script>
     <!-- <script defer src="classScript.js"></script> -->
     <!-- <script defer src="Zertifikate.js"></script> -->
     <script></script>
@@ -137,26 +213,33 @@
       </div>
     </header>
     <section class="section certificates lg">
-      <img
-        src="/images/Zertifikate/zertifikat_cnc.jpg"
-        alt="Zertifikat CNC Tatána Kern"
-        class="certificate-img"
-      />
-      <img
-        src="/images/Zertifikate/zertifikat_cnc_intensiv.jpg"
-        alt="Zertifikat CNC Intensiv Tatána Kern"
-        class="certificate-img"
-      />
-      <img
-        src="/images/Zertifikate/zertifikat_cnc_mikrodermabrasion.jpg"
-        alt="Zertifikat Mikrodermabarasion Tatána Kern"
-        class="certificate-img"
-      />
-      <img
-        src="/images/Zertifikate/PHYRIS_AQUActive_BEAUTY_REISE_Treatment.jpg"
-        alt="Zertifikat Mikrodermabarasion Tatána Kern"
-        class="certificate-img"
-      />
+      <div>
+        <a href="#">
+          <img
+            src="/images/Zertifikate/zertifikat_cnc.jpg"
+            alt="Zertifikat CNC Tatána Kern"
+            class="certificate-img"
+          />
+        </a>
+        <a href="#">
+          <img
+            src="/images/Zertifikate/zertifikat_cnc_intensiv.jpg"
+            alt="Zertifikat CNC Intensiv Tatána Kern"
+            class="certificate-img"
+        /></a>
+        <a href="#">
+          <img
+            src="/images/Zertifikate/zertifikat_cnc_mikrodermabrasion.jpg"
+            alt="Zertifikat Mikrodermabarasion Tatána Kern"
+            class="certificate-img"
+        /></a>
+        <a href="#">
+          <img
+            src="/images/Zertifikate/PHYRIS_AQUActive_BEAUTY_REISE_Treatment.jpg"
+            alt="Zertifikat Mikrodermabarasion Tatána Kern"
+            class="certificate-img"
+        /></a>
+      </div>
     </section>
     <footer class="main-footer section lg">
       <section id="Kontakt" class="section">

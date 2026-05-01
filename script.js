@@ -37,7 +37,7 @@ if (window.innerWidth < 768) {
         icon.classList.toggle("active");
       });
       mainNav.classList.toggle("active");
-    })
+    }),
   );
   navItems.forEach((navLink) => {
     navLink.addEventListener("click", function () {
@@ -50,22 +50,31 @@ if (window.innerWidth < 768) {
 }
 
 /*---------------------------------------- Certificate Images Function ----------------------------------------*/
-const certImgs = document.querySelectorAll(".certificate-img");
+function resetViews() {
+  const links_certImgs = document.querySelectorAll(".certificates > div > a");
+
+  links_certImgs.forEach((img) => img.classList.remove("view"));
+}
+const certificatesSection = document.querySelector(".certificates");
 
 if (window.innerWidth > 880) {
-  certImgs.forEach((img) => {
-    img.classList.add("scale");
-    img.addEventListener("click", function (event) {
+  certificatesSection.addEventListener("click", function (e) {
+    //
+    const targetImage = e.target.closest("img");
+    const targetLink = e.target.closest("a");
+
+    if (targetImage) {
       mainHeader.style.transition = ".3s ease";
       mainHeader.style.opacity = "0%";
-      if (this.classList.contains("view")) {
-        this.classList.remove("view");
-        mainHeader.style.opacity = "100%";
-      } else {
-        this.classList.add("view");
-        this.classList.remove("scale");
-      }
-    });
+
+      targetLink.classList.add("view");
+    }
+
+    if (!targetImage) {
+      mainHeader.style.opacity = "100%";
+
+      resetViews();
+    }
   });
 }
 /*---------------------------------------- Hidden Class Function ---------------------------------------- 
@@ -117,6 +126,6 @@ document
   .querySelectorAll(".sec-nav--item")
   .forEach((element) =>
     element.addEventListener("click", () =>
-      document.querySelector(".main-footer").classList.add("background-top")
-    )
+      document.querySelector(".main-footer").classList.add("background-top"),
+    ),
   );
