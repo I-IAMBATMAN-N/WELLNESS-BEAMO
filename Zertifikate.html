@@ -51,7 +51,7 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
     <!-- CUSTOM STYLES and SCRIPTS -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=1.1" />
     <style>
       /*
 * Prefixed by https://autoprefixer.github.io
@@ -97,16 +97,16 @@
         -ms-grid-row-align: center;
         align-self: center;
       }
-      a {
+      a:has(.certificate-img) {
         height: auto;
       }
       a .certificate-img {
         display: block;
       }
-      a:hover {
+      a:has(.certificate-img):hover {
         cursor: pointer;
       }
-      a:not(.view):hover {
+      a:has(.certificate-img):not(.view):hover {
         -webkit-transform: scale(1.05);
         -ms-transform: scale(1.05);
         transform: scale(1.05);
@@ -186,20 +186,33 @@
         <nav class="main-nav">
           <ul class="nav-list">
             <li class="nav-item">
-              <a href="Startseite.html" class="nav-link active">Start</a>
+              <a
+                href="#Start"
+                class="nav-link active"
+                aria-label="Link zu Start"
+                >Start</a
+              >
             </li>
             <li class="nav-item">
-              <a href="Schönheitsbehandlungen.html" class="nav-link"
+              <a
+                href="Schönheitsbehandlungen.html"
+                class="nav-link"
+                aria-label="Link zu Schönheitsbehandl"
                 >Behandlungen</a
               >
             </li>
             <li class="nav-item">
-              <a href="Wellness-Massagen.html" class="nav-link"
+              <a
+                href="Wellness-Massagen.html"
+                class="nav-link"
+                aria-label="Link zu Wellness-Massagen"
                 >Wellness-massagen</a
               >
             </li>
             <li class="nav-item">
-              <a href="#Kontakt" class="nav-link">Kontakt</a>
+              <a href="#Kontakt" class="nav-link" aria-label="Link zu Kontakt"
+                >Kontakt</a
+              >
             </li>
           </ul>
           <div class="menu-icon-container">
@@ -253,20 +266,31 @@
             <section class="contact-section">
               <div class="contact-content">
                 <ion-icon name="call-outline" class="contact-icon"></ion-icon>
-                <a href="tel:08207/958756" class="contact-link">08207/958756</a>
+                <a
+                  href="tel:08207/958756"
+                  class="contact-link"
+                  aria-label="Link zu Festnetzverbindung"
+                  >08207/958756</a
+                >
               </div>
               <div class="contact-content">
                 <ion-icon
                   name="phone-portrait-outline"
                   class="contact-icon"
                 ></ion-icon>
-                <a href="tel:0170-7003756" class="contact-link">0170-7003756</a>
+                <a
+                  href="tel:0170-7003756"
+                  class="contact-link"
+                  aria-label="Link zu Mobilfunknummer"
+                  >0170-7003756</a
+                >
               </div>
               <div class="contact-content">
                 <ion-icon name="logo-whatsapp" class="contact-icon"></ion-icon>
                 <a
                   target="_blank"
                   href="https://wa.me/+4901707003756"
+                  aria-label="Link zu WhatsApp"
                   class="contact-link"
                   >0170-7003756</a
                 >
@@ -286,6 +310,8 @@
                   target="_blank"
                   href="https://goo.gl/maps/8hwpFe9kPjQiwiBg6"
                   class="contact-link"
+                  aria-label="link beamo google maps"
+                  rel="noopener noreferrer"
                 >
                   <p class="contact-text">
                     Am Iglhof 4 <br />
@@ -305,6 +331,8 @@
                   href="https://goo.gl/maps/8hwpFe9kPjQiwiBg6"
                   class="social-link"
                   target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Link zu Beamo auf Google Maps"
                 >
                   <ion-icon name="map-outline" class="social-icon"></ion-icon>
                 </a>
@@ -312,6 +340,8 @@
                   href="https://www.facebook.com/kosmetikbeamo/"
                   class="social-link"
                   target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Link zur Beamo-Facebook-Seite"
                 >
                   <ion-icon name="logo-facebook" class="social-icon"></ion-icon>
                 </a>
@@ -319,6 +349,8 @@
                   href="https://www.instagram.com/kosmetikbeamo/"
                   class="social-link"
                   target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Link zur Beamo-Instagram-Seite"
                 >
                   <ion-icon
                     name="logo-instagram"

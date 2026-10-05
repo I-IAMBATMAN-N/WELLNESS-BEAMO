@@ -44,7 +44,7 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
     <!-- CUSTOM STYLES and SCRIPTS -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=1.1" />
     <link rel="stylesheet" href="behandlungen.css"></link>
     <style>
       .sec-nav--item {
@@ -82,16 +82,33 @@
         <nav class="main-nav">
           <ul class="nav-list">
             <li class="nav-item">
-              <a href="Startseite.html" class="nav-link">Startseite</a>
+              <a
+                href="#Start"
+                class="nav-link active"
+                aria-label="Link zu Start"
+                >Start</a
+              >
             </li>
             <li class="nav-item">
-              <a href="Schönheitsbehandlungen.html" class="nav-link">Behandlungen</a>
+              <a
+                href="Schönheitsbehandlungen.html"
+                class="nav-link"
+                aria-label="Link zu Schönheitsbehandl"
+                >Behandlungen</a
+              >
             </li>
             <li class="nav-item">
-              <a href="#top" class="nav-link active">Wellness-massagen</a>
+              <a
+                href="Wellness-Massagen.html"
+                class="nav-link"
+                aria-label="Link zu Wellness-Massagen"
+                >Wellness-massagen</a
+              >
             </li>
             <li class="nav-item">
-              <a href="#Kontakt" class="nav-link">Kontakt</a>
+              <a href="#Kontakt" class="nav-link" aria-label="Link zu Kontakt"
+                >Kontakt</a
+              >
             </li>
           </ul>
           <div class="menu-icon-container">
@@ -110,18 +127,18 @@
         <nav class="sec-nav">
           <ul class="sec-nav--list">
             <li class="sec-nav--item active">
-              <a href="#ayurvedische" class="sec-nav--link">Ayurvedische</a>
+              <a href="#ayurvedische" class="sec-nav--link" aria-label="Link zu Ayurvedische-Massagen">Ayurvedische</a>
             </li>
             <li class="sec-nav--item">
-              <a href="#kräuterstempel" class="sec-nav--link"
+              <a href="#kräuterstempel" class="sec-nav--link" aria-label="Link zu Kräuterstempel-Massagen"
                 >Relax Kräuterstempel</a
               >
             </li>
             <li class="sec-nav--item">
-              <a href="#aromaöl" class="sec-nav--link">Aromaöl</a>
+              <a href="#aromaöl" class="sec-nav--link" aria-label="Link zu Aromaöl-Massagen">Aromaöl</a>
             </li>
             <li class="sec-nav--item">
-              <a href="#thai-energie" class="sec-nav--link">Thai-Energie</a>
+              <a href="#thai-energie" class="sec-nav--link" aria-label="Link zu Thai-Energie-Massagen">Thai-Energie</a>
             </li>
           </ul>
         </nav>
@@ -470,20 +487,31 @@
             <section class="contact-section">
               <div class="contact-content">
                 <ion-icon name="call-outline" class="contact-icon"></ion-icon>
-                <a href="tel:08207/958756" class="contact-link">08207/958756</a>
+                <a
+                  href="tel:08207/958756"
+                  class="contact-link"
+                  aria-label="Link zu Festnetzverbindung"
+                  >08207/958756</a
+                >
               </div>
               <div class="contact-content">
                 <ion-icon
                   name="phone-portrait-outline"
                   class="contact-icon"
                 ></ion-icon>
-                <a href="tel:0170-7003756" class="contact-link">0170-7003756</a>
+                <a
+                  href="tel:0170-7003756"
+                  class="contact-link"
+                  aria-label="Link zu Mobilfunknummer"
+                  >0170-7003756</a
+                >
               </div>
               <div class="contact-content">
                 <ion-icon name="logo-whatsapp" class="contact-icon"></ion-icon>
                 <a
                   target="_blank"
                   href="https://wa.me/+4901707003756"
+                  aria-label="Link zu WhatsApp"
                   class="contact-link"
                   >0170-7003756</a
                 >
@@ -503,6 +531,8 @@
                   target="_blank"
                   href="https://goo.gl/maps/8hwpFe9kPjQiwiBg6"
                   class="contact-link"
+                  aria-label="link beamo google maps"
+                  rel="noopener noreferrer"
                 >
                   <p class="contact-text">
                     Am Iglhof 4 <br />
@@ -512,16 +542,18 @@
               </div>
               <section class="required-links">
                 <a href="Impressum.html" class="required-link">Impressum</a
-                  ><a href="Datenschutz.html" class="required-link"
-                    >Datenschutz</a
-                  >
-                  <a href="Zertifikate.html" class="required-link">Zertifikat</a>
+                ><a href="Datenschutz.html" class="required-link"
+                  >Datenschutz</a
+                >
+                <a href="Zertifikate.html" class="required-link">Zertifikat</a>
               </section>
               <section class="socials">
                 <a
                   href="https://goo.gl/maps/8hwpFe9kPjQiwiBg6"
                   class="social-link"
                   target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Link zu Beamo auf Google Maps"
                 >
                   <ion-icon name="map-outline" class="social-icon"></ion-icon>
                 </a>
@@ -529,6 +561,8 @@
                   href="https://www.facebook.com/kosmetikbeamo/"
                   class="social-link"
                   target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Link zur Beamo-Facebook-Seite"
                 >
                   <ion-icon name="logo-facebook" class="social-icon"></ion-icon>
                 </a>
@@ -536,6 +570,8 @@
                   href="https://www.instagram.com/kosmetikbeamo/"
                   class="social-link"
                   target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Link zur Beamo-Instagram-Seite"
                 >
                   <ion-icon
                     name="logo-instagram"
