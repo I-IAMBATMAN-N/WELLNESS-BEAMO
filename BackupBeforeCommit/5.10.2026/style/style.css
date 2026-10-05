@@ -1,12 +1,5 @@
 /*
 * Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.5.15,
-* Autoprefixer: v10.5.0
-* Browsers: last 4 version
-*/
-
-/*
-* Prefixed by https://autoprefixer.github.io
 * PostCSS: v8.4.14,
 * Autoprefixer: v10.4.7
 * Browsers: last 4 version
@@ -93,6 +86,7 @@ body {
   right: 2.4rem;
 
   -webkit-transition: 1s ease;
+  -o-transition: 1s ease;
   transition: 1s ease;
   margin-top: 0.8rem;
   opacity: 100%;
@@ -153,6 +147,7 @@ body {
   /* margin-bottom: 4.8rem; */
 
   -webkit-transition: opacity 2s ease;
+  -o-transition: opacity 2s ease;
   transition: opacity 2s ease;
   overflow: visible;
 }
@@ -347,11 +342,13 @@ h3 {
   position: fixed;
 
   background-color: rgba(255, 255, 255, 0);
+  -webkit-backdrop-filter: blur(8rem);
   backdrop-filter: blur(8rem);
 
   z-index: 1;
 
   -webkit-transition: background-color 1s ease;
+  -o-transition: background-color 1s ease;
   transition: background-color 1s ease;
 }
 .main-header.intro {
@@ -388,6 +385,7 @@ h3 {
 }
 .main-header .container {
   -webkit-transition: height 1s ease;
+  -o-transition: height 1s ease;
   transition: height 1s ease;
 
   width: 100%;
@@ -434,6 +432,7 @@ h3 {
   text-decoration: none;
 
   -webkit-transition: 1s ease;
+  -o-transition: 1s ease;
   transition: 1s ease;
 }
 .logo:hover {
@@ -518,6 +517,8 @@ h3 {
   background-color: var(--color-accent);
 
   -webkit-transition: 0.3s ease;
+
+  -o-transition: 0.3s ease;
 
   transition: 0.3s ease;
 }
@@ -704,6 +705,8 @@ h3 {
 
   transition: -webkit-transform 0.3s ease;
 
+  -o-transition: transform 0.3s ease;
+
   transition: transform 0.3s ease;
 
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
@@ -875,6 +878,7 @@ h3 {
 .sec-nav--item:hover,
 .sec-nav--link:hover {
   -webkit-transition: 1s ease;
+  -o-transition: 1s ease;
   transition: 1s ease;
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
@@ -1108,6 +1112,7 @@ h3 {
   transform: scale(1.1);
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
@@ -1231,6 +1236,7 @@ h3 {
 
     background-color: var(--color-white);
     -webkit-transition: 0s;
+    -o-transition: 0s;
     transition: 0s;
   }
   .main-nav.active .mobile-menu-icon {
@@ -1533,10 +1539,10 @@ h3 {
     width: 100%;
   }
   .company-name {
-    font-size: 1.8rem;
+    font-size: 2.4rem;
   }
   .logo-name {
-    font-size: 2rem;
+    font-size: 3rem;
   }
   .main-header .logo-img {
     display: none;
@@ -1550,10 +1556,10 @@ h3 {
 }
 @media (max-width: 20em) {
   .company-name {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
   }
   .logo-name {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
   .sec-nav--link {
     font-size: 2rem;
