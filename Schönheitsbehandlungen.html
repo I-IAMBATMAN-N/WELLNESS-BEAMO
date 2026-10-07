@@ -43,9 +43,45 @@
       defer
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <!-- PRELOAD IMAGES -->
+    <link
+      rel="preload"
+      as="image"
+      href="images/Dermazeutische_Behandlungen/ultra-sensitiv.jpg"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="images/Wellness_Behandlungen/beauty-and-more-1.jpg"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="images/Hand&Fußpflege/fusspflege-wellness.jpg"
+    />    
+    <link
+      rel="preload"
+      as="image"
+      href="images/Zusatzprogramme/Zusatzprogramm.jpg"
+    />
+
     <!-- CUSTOM STYLES and SCRIPTS -->
     <link rel="stylesheet" href="style.css?v=1.1" />
-    <link rel="stylesheet" href="behandlungen.css"></link>
+    <link rel="stylesheet" href="behandlungen.css?v=1.1"></link>
+    <style>
+      .sec-nav--item:nth-child(1) {
+        background-image: url(images/Dermazeutische_Behandlungen/ultra-sensitiv.jpg);
+      }
+      .sec-nav--item:nth-child(2) {
+        background-image: url(images/Wellness_Behandlungen/beauty-and-more-1.jpg);
+      }
+      .sec-nav--item:nth-child(3) {
+        background-image: url(images/Hand&Fußpflege/fusspflege-wellness.jpg);
+      }
+      .sec-nav--item:nth-child(4) {
+        background-image: url(images/Zusatzprogramme/Zusatzprogramm.jpg);
+      }
+    </style>
     <script defer src="script.js"></script>
     <!-- <script defer src="classScript.js"></script> -->
 
