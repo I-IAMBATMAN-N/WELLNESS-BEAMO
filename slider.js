@@ -217,6 +217,4 @@ secNavList.addEventListener("click", function(e) {
   // add listeners to active wrapper
   // slider controls listener
   activeWrapper.addEventListener("click", sliderControlsListener);
-
-
 })
