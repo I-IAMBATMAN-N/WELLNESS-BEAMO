@@ -194,9 +194,17 @@ secNavList.addEventListener("click", function(e) {
   if(!navLink) return;
 
   const servicesWrappers = document.querySelectorAll(".wrapper");
-  servicesWrappers.forEach((wrapper) => wrapper.classList.remove("active"));
-  servicesWrappers[Number(navLink.dataset.id)].classList.add("active");
+  const activeWrapper = servicesWrappers[Number(navLink.dataset.id)];
+  const hasOptionalSlides = activeWrapper.querySelectorAll(".optional");
 
+
+  servicesWrappers.forEach((wrapper) => wrapper.classList.remove("active"));
+  activeWrapper.classList.add("active");
+
+  servicesWrappers.forEach((wrapper) => wrapper.removeEventListener("click", optionsControlsListener));
+  // slide options controls listener
+  if(hasOptionalSlides) activeWrapper.addEventListener("click", optionsControlsListener);
+  
   // set height and padding for active wrapper elements
   if (window.innerWidth <= 768) return;
   setHeightAndPadding(document.querySelector(".wrapper.active"));
@@ -205,16 +213,10 @@ secNavList.addEventListener("click", function(e) {
   // remove all possible listeners from wrappers
   servicesWrappers.forEach((wrapper) => {
     wrapper.removeEventListener("click", sliderControlsListener);
-    wrapper.removeEventListener("click", optionsControlsListener);
   });
-  const activeWrapper = servicesWrappers[Number(navLink.dataset.id)];
-  const hasOptionalSlides = activeWrapper.querySelectorAll(".optional");
-
   // add listeners to active wrapper
   // slider controls listener
   activeWrapper.addEventListener("click", sliderControlsListener);
 
-  // slide options controls listener
-  if(!hasOptionalSlides) return;
-  activeWrapper.addEventListener("click", optionsControlsListener);
+
 })
