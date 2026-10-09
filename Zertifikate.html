@@ -403,6 +403,38 @@
         </section>
         <section class="map"></section>
       </section>
+      <script>
+        /*---------------------------------------- Certificate Images Function ----------------------------------------*/
+        function resetViews() {
+          const links_certImgs = document.querySelectorAll(
+            ".certificates > div > a",
+          );
+
+          links_certImgs.forEach((img) => img.classList.remove("view"));
+        }
+        const certificatesSection = document.querySelector(".certificates");
+
+        if (window.innerWidth > 880) {
+          certificatesSection?.addEventListener("click", function (e) {
+            //
+            const targetImage = e.target.closest("img");
+            const targetLink = e.target.closest("a");
+
+            if (targetImage) {
+              mainHeader.style.transition = ".3s ease";
+              mainHeader.style.opacity = "0%";
+
+              targetLink.classList.add("view");
+            }
+
+            if (!targetImage) {
+              mainHeader.style.opacity = "100%";
+
+              resetViews();
+            }
+          });
+        }
+      </script>
     </footer>
   </body>
 </html>
