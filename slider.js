@@ -150,10 +150,6 @@ function setSlides() {
       // fill dot container if there is any!
       fillDotContainer(dotContainer, index);
     });
-
-    // add background bottom to main footer
-    // - .add silently fails when footer already has class set
-    document.querySelector(".main-footer").classList.add("background-bottom");
   });
 }
 function setHeightAndPadding(service) {
@@ -193,10 +189,14 @@ secNavList.addEventListener("click", function(e) {
   const navLink = e.target.closest(".sec-nav--link");
   if(!navLink) return;
 
+  const mainFooter = document.querySelector(".main-footer");
   const servicesWrappers = document.querySelectorAll(".wrapper");
   const activeWrapper = servicesWrappers[Number(navLink.dataset.id)];
   const hasOptionalSlides = activeWrapper.querySelectorAll(".optional");
 
+  // add background bottom to main footer
+  // - .add silently fails when footer already has class set
+  mainFooter.classList.add("background-bottom");
 
   servicesWrappers.forEach((wrapper) => wrapper.classList.remove("active"));
   activeWrapper.classList.add("active");
