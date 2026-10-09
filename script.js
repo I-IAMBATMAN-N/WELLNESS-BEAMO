@@ -9,10 +9,6 @@ setTimeout(() => {
 
 const menuIcons = document.querySelectorAll(".mobile-menu-icon");
 const mainNav = document.querySelector(".main-nav");
-
-/*---------------------------------------- Hamburger Menu Function ----------------------------------------*/
-
-const navLinks = document.querySelectorAll(".nav-link");
 if (window.innerWidth > 880) {
   navLinks.forEach((navLink) => {
     navLink.addEventListener("click", function () {
@@ -28,37 +24,49 @@ if (window.innerWidth > 880) {
   });
 }
 
+/*---------------------------------------- Hamburger Menu Function ----------------------------------------*/
+
+const navList = document.querySelector(".nav-list");
+const navLinks = document.querySelectorAll(".nav-link");
+
 const navItems = document.querySelectorAll(".nav-item");
+const mobileBtnContainer = document.querySelector(".menu-btn-container");
+const menuBtns = mobileBtnContainer.querySelectorAll(".mobile-menu-btn");
+
 
 if (window.innerWidth < 768) {
-  menuIcons.forEach((icon) =>
-    icon.addEventListener("click", function () {
-      menuIcons.forEach((icon) => {
-        icon.classList.toggle("active");
-      });
-      mainNav.classList.toggle("active");
-    }),
-  );
-  navItems.forEach((navLink) => {
-    navLink.addEventListener("click", function () {
-      menuIcons.forEach((icon) => {
-        icon.classList.toggle("active");
-      });
-      mainNav.classList.toggle("active");
-    });
+  mobileBtnContainer.addEventListener("click", function(e) {
+    const mobileBtn = e.target.closest(".mobile-menu-btn");
+    if(!mobileBtn) return;
+
+    menuBtns.forEach(item => item.classList.toggle("hidden"));
+    mainNav.classList.toggle("active");
+  });
+  navList.addEventListener("click", function(e){
+    const navLink = e.target.closest(".nav-link");
+    if(!navLink) return;
+
+    const isLinkTextContact = navLink.innerText.toLowerCase() === "kontakt";
+    if(!isLinkTextContact) return;
+
+    menuBtns.forEach(btn => btn.classList.toggle("hidden"));
+    mainNav.classList.toggle("active");
   });
 }
 
 /*---------------------------------------- Certificate Images Function ----------------------------------------*/
+
 function resetViews() {
-  const links_certImgs = document.querySelectorAll(".certificates > div > a");
+  const links_certImgs = document.querySelectorAll(
+    ".certificates > div > a",
+  );
 
   links_certImgs.forEach((img) => img.classList.remove("view"));
 }
 const certificatesSection = document.querySelector(".certificates");
 
 if (window.innerWidth > 880) {
-  certificatesSection.addEventListener("click", function (e) {
+  certificatesSection?.addEventListener("click", function (e) {
     //
     const targetImage = e.target.closest("img");
     const targetLink = e.target.closest("a");
@@ -77,6 +85,7 @@ if (window.innerWidth > 880) {
     }
   });
 }
+
 /*---------------------------------------- Hidden Class Function ---------------------------------------- 
 - Add hidden class for each section (will be removed in future)
 */

@@ -90,7 +90,7 @@
       }
     </style>
     <script defer src="script.js"></script>
-    <script defer src="slider.js"></script>
+    <script defer src="slider.js?v=1.2"></script>
     <title>Wellness-Massagen | BEAMO</title>
   </head>
   <body>
@@ -109,8 +109,8 @@
           <ul class="nav-list">
             <li class="nav-item">
               <a
-                href="#Start"
-                class="nav-link active"
+                href="Startseite.html"
+                class="nav-link"
                 aria-label="Link zu Start"
                 >Start</a
               >
@@ -126,7 +126,7 @@
             <li class="nav-item">
               <a
                 href="Wellness-Massagen.html"
-                class="nav-link"
+                class="nav-link active"
                 aria-label="Link zu Wellness-Massagen"
                 >Wellness-massagen</a
               >
@@ -137,12 +137,16 @@
               >
             </li>
           </ul>
-          <div class="menu-icon-container">
-            <ion-icon
-              name="menu-outline"
-              class="mobile-menu-icon active"
-            ></ion-icon>
-            <ion-icon name="close-outline" class="mobile-menu-icon"></ion-icon>
+          <div class="menu-btn-container">
+            <button class="mobile-menu-btn open">
+              <ion-icon name="menu-outline" class="mobile-menu-icon"></ion-icon>
+            </button>
+            <button class="mobile-menu-btn close hidden">
+              <ion-icon
+                name="close-outline"
+                class="mobile-menu-icon"
+              ></ion-icon>
+            </button>
           </div>
         </nav>
       </div>

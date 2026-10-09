@@ -7,6 +7,13 @@
 
 /*
 * Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.5.15,
+* Autoprefixer: v10.5.0
+* Browsers: last 4 version
+*/
+
+/*
+* Prefixed by https://autoprefixer.github.io
 * PostCSS: v8.4.14,
 * Autoprefixer: v10.4.7
 * Browsers: last 4 version
@@ -97,13 +104,22 @@ body {
   margin-top: 0.8rem;
   opacity: 100%;
 }
-.mobile-menu-icon {
+.mobile-menu-btn {
+  background-color: transparent;
+  border: none;
+
   font-size: 4.4rem;
   color: var(--color-accent);
+
   display: none;
 }
-.mobile-menu-icon.active {
+.mobile-menu-btn.hidden {
   display: none;
+  visibility: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .section img {
   border-radius: 1000rem;
@@ -1212,8 +1228,16 @@ h3 {
     -ms-transform: translate(-50%, 0) scale(2.5);
     transform: translate(-50%, 0) scale(2.5);
   }
-  .mobile-menu-icon.active {
-    display: inline-block;
+  .mobile-menu-btn{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .main-nav {
     -webkit-box-orient: vertical;
@@ -1233,7 +1257,7 @@ h3 {
     -webkit-transition: 0s;
     transition: 0s;
   }
-  .main-nav.active .mobile-menu-icon {
+  .main-nav.active .mobile-menu-btn {
     font-size: 6.2rem;
   }
   .main-nav.active .nav-list {

@@ -61,7 +61,6 @@
 
     <!-- CUSTOM STYLES and SCRIPTS -->
     <link rel="stylesheet" href="style.css?v=1.1" />
-    <style></style>
     <script defer src="script.js"></script>
     <!-- <script defer src="classScript.js"></script> -->
 
@@ -111,12 +110,16 @@
               >
             </li>
           </ul>
-          <div class="menu-icon-container">
-            <ion-icon
-              name="menu-outline"
-              class="mobile-menu-icon active"
-            ></ion-icon>
-            <ion-icon name="close-outline" class="mobile-menu-icon"></ion-icon>
+          <div class="menu-btn-container">
+            <button class="mobile-menu-btn open">
+              <ion-icon name="menu-outline" class="mobile-menu-icon"></ion-icon>
+            </button>
+            <button class="mobile-menu-btn close hidden">
+              <ion-icon
+                name="close-outline"
+                class="mobile-menu-icon"
+              ></ion-icon>
+            </button>
           </div>
         </nav>
       </div>
