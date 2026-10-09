@@ -1,9 +1,4 @@
 "use strict";
-// ======================================================================
-// .remove intro class from header on load
-// ======================================================================
-const mainHeader = document.querySelector(".main-header");
-document.addEventListener("load", () => setTimeout(() => mainHeader.classList.remove("intro"), 1000));
 
 // ======================================================================
 // .hamburger menu function
@@ -15,7 +10,6 @@ const navLinks = document.querySelectorAll(".nav-link");
 
 const mobileBtnContainer = document.querySelector(".menu-btn-container");
 const menuBtns = mobileBtnContainer.querySelectorAll(".mobile-menu-btn");
-
 
 if (window.innerWidth < 768) {
   mobileBtnContainer.addEventListener("click", function(e) {
