@@ -89,10 +89,7 @@
       }
     </style>
     <script defer src="script.js"></script>
-    <!-- <script defer src="classScript.js"></script> -->
-
-    <script defer src="slider.js"></script>
-    <!-- <script defer src="classSlider.js"></script> -->
+    <script defer src="slider.js?v=1.2"></script>
     <title>Schönheits Behandlungen | BEAMO</title>
   </head>
   <body>
@@ -160,6 +157,7 @@
               <a
                 href="#cosmetic-dermaceutic"
                 class="sec-nav--link"
+                data-id="0"
                 aria-label="Link zu Professional Beauty Behandlungen"
                 ><span>Professional</span><span>Beauty</span>
               </a>
@@ -168,6 +166,7 @@
               <a
                 href="#wellness"
                 class="sec-nav--link"
+                data-id="1"
                 aria-label="Link zu Wellness Behandlungen"
                 >Wellness</a
               >
@@ -176,6 +175,7 @@
               <a
                 href="#manicure-pedicure"
                 class="sec-nav--link"
+                data-id="2"
                 aria-label="Link zu Fußpflege Behandlungen"
                 >Fußpflege</a
               >
@@ -184,6 +184,7 @@
               <a
                 href="#additional"
                 class="sec-nav--link"
+                data-id="3"
                 aria-label="Link zu Beauty Extra Behandlungen"
                 >Beauty Extra</a
               >
@@ -999,6 +1000,7 @@
               class="treatment-card medium optional"
               aria-live="polite"
               aria-labelledby="treatment-heading"
+              data-current-option="0"
             >
               <h3 id="treatment-heading" class="treatment-heading">
                 Fußpflege Intensiv

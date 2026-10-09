@@ -1,445 +1,220 @@
 "use strict";
 
-const sliderContainers = document.querySelectorAll(".treatment-slider");
-/* ---------------------------------------- setSlides function ----------------------------------------
-- default (onload) styling for slides
-- 
-*/
+// listeners
+function sliderControlsListener(e) {
+  function slideIndex() {
+    const sliderContainer = slideControls.closest(".treatment-slider");
 
-function setSlides() {
-  sliderContainers.forEach((sliderContainer) => {
-    let counter = 0;
-
-    // set controls
-    const dotContainer = sliderContainer.querySelector(
-      ".slider-controls .slider-dots"
-    );
-    // console.log("dotContainer", dotContainer);
-    if (dotContainer) dotContainer.innerHTML = ``;
-
-    const slides = sliderContainer.querySelectorAll(".treatment-card");
-    // console.log("slides", slides);
-
-    if (window.innerWidth > 768) {
-      //
-      slides.forEach((slide, index) => {
-        // set slides
-        if (slides.length > 1) {
-          slide.style.transform = `translate(${50 + 160 * index}%, -50%)`;
-          if (index !== 0) {
-            slide.style.opacity = "0%";
-          } else if (index === 0) {
-            slide.style.opacity = "100%";
-          }
-
-          if (dotContainer)
-            dotContainer.innerHTML += `<div class="slider-dot"></div>`;
-
-          const dots = dotContainer.querySelectorAll(".slider-dot");
-          dots[counter].classList.add("active");
-          // console.log("slide", slide);
-
-          /*------------------------------------------------ .treatment-card options FUNCTION -------------------------------------------------------*/
-          let currOption = 0;
-          const options = slide.querySelectorAll(
-            ".treatment-card.optional .treatment-options span"
-          );
-          // console.log("options", options);
-
-          if (options) {
-            options.forEach((option, index) => {
-              // optionalDotsContainer.innerHTML += `<div class="slider-dot"></div>`;
-
-              if (index === currOption) {
-                option.style.display = "inline-block";
-              } else if (index !== currOption) {
-                option.style.display = "none";
-              }
-            });
-          }
-
-          const optionsPrices = slide.querySelectorAll(
-            ".treatment-card.optional .treatment-price"
-          );
-          // console.log("optionsPrices", optionsPrices);
-          if (optionsPrices) {
-            optionsPrices.forEach((optionsPrice) => {
-              optionsPrice.querySelectorAll("span").forEach((span, index) => {
-                if (index === currOption) {
-                  span.style.display = "inline-block";
-                } else if (index !== currOption) {
-                  span.style.display = "none";
-                }
-              });
-            });
-          }
-
-          const optionalControls = slide.querySelectorAll(
-            ".options-controls .slider-btn"
-          );
-          // console.log("optionalControls", optionalControls);
-          if (optionalControls) {
-            optionalControls.forEach((control) => {
-              let currOption = 0;
-              const arrowRight = "chevron-forward-outline";
-              const arrowLeft = "chevron-back-outline";
-
-              control.addEventListener("click", function (event) {
-                //
-                const treatmentCardOptions = event.target
-                  .closest(".treatment-card")
-                  .children[1].children[1].querySelectorAll("span");
-                const optionPrices = event.target
-                  .closest(".treatment-card")
-                  .children[1].children[3].children[1].querySelectorAll("span");
-                //
-                if (event.target.name === arrowRight) {
-                  if (currOption === treatmentCardOptions.length - 1) {
-                    currOption = 0;
-                    // console.log(currOption);
-                  } else if (currOption !== treatmentCardOptions.length - 1) {
-                    currOption++;
-                    // console.log(currOption);
-                  }
-                } else if (event.target.name === arrowLeft) {
-                  if (currOption === 0) {
-                    currOption = treatmentCardOptions.length - 1;
-                    // console.log(currOption);
-                  } else if (currOption !== 0) {
-                    currOption--;
-                    // console.log(currOption);
-                  }
-                }
-
-                const optionsDots = slide.querySelectorAll(".slider-dot");
-
-                optionsDots.forEach((dot, index) => {
-                  if (dot.classList.contains("active")) {
-                    dot.classList.remove("active");
-                  }
-                  if (index === currOption) {
-                    dot.classList.add("active");
-                  }
-                });
-
-                treatmentCardOptions.forEach((option, index) => {
-                  if (index === currOption) {
-                    option.style.display = "inline-block";
-                  } else if (index !== currOption) {
-                    option.style.display = "none";
-                  }
-                });
-                optionPrices.forEach((optionPrice, index) => {
-                  if (index === currOption) {
-                    optionPrice.style.display = "inline-block";
-                  } else if (index !== currOption) {
-                    optionPrice.style.display = "none";
-                  }
-                });
-
-                const optionsTimes = slide.querySelectorAll(
-                  ".treatment-time span"
-                );
-                // console.log("optionTimes", optionTimes);
-
-                optionsTimes.forEach((optionTime, index) => {
-                  // console.log("optionTime index", index);
-                  // console.log("optionTime currOption", currOption);
-
-                  if (index === currOption) {
-                    optionTime.style.display = "inline-block";
-                  } else if (index !== currOption) {
-                    optionTime.style.display = "none";
-                  }
-                });
-              });
-            });
-          }
-        }
-      });
-    } else {
-      slides.forEach((slide, index) => {
-        /*------------------------------------------------ .treatment-card options FUNCTION -------------------------------------------------------*/
-        let currOption = 0;
-        const options = slide.querySelectorAll(
-          ".treatment-card.optional .treatment-options span"
-        );
-        // console.log("options", options);
-
-        if (options) {
-          options.forEach((option, index) => {
-            // optionalDotsContainer.innerHTML += `<div class="slider-dot"></div>`;
-
-            if (index === currOption) {
-              option.style.display = "inline-block";
-            } else if (index !== currOption) {
-              option.style.display = "none";
-            }
-          });
-        }
-
-        const optionsPrices = document.querySelectorAll(
-          ".treatment-card.optional .treatment-price"
-        );
-        // console.log("optionsPrices", optionsPrices);
-        if (optionsPrices) {
-          optionsPrices.forEach((optionsPrice) => {
-            optionsPrice.querySelectorAll("span").forEach((span, index) => {
-              if (index === currOption) {
-                span.style.display = "inline-block";
-              } else if (index !== currOption) {
-                span.style.display = "none";
-              }
-            });
-          });
-        }
-
-        const optionalControls = document.querySelectorAll(
-          ".options-controls .slider-btn"
-        );
-        // console.log("optionalControls", optionalControls);
-        if (optionalControls) {
-          optionalControls.forEach((control) => {
-            let currOption = 0;
-            const arrowRight = "chevron-forward-outline";
-            const arrowLeft = "chevron-back-outline";
-
-            control.addEventListener("click", function (event) {
-              //
-              const treatmentCardOptions = event.target
-                .closest(".treatment-card")
-                .children[1].children[1].querySelectorAll("span");
-              const optionPrices = event.target
-                .closest(".treatment-card")
-                .children[1].children[3].children[1].querySelectorAll("span");
-              //
-              if (event.target.name === arrowRight) {
-                if (currOption === treatmentCardOptions.length - 1) {
-                  currOption = 0;
-                  // console.log(currOption);
-                } else if (currOption !== treatmentCardOptions.length - 1) {
-                  currOption++;
-                  // console.log(currOption);
-                }
-              } else if (event.target.name === arrowLeft) {
-                if (currOption === 0) {
-                  currOption = treatmentCardOptions.length - 1;
-                  // console.log(currOption);
-                } else if (currOption !== 0) {
-                  currOption--;
-                  // console.log(currOption);
-                }
-              }
-
-              const optionsDots = slide.querySelectorAll(".slider-dot");
-
-              optionsDots.forEach((dot, index) => {
-                if (dot.classList.contains("active")) {
-                  dot.classList.remove("active");
-                }
-                if (index === currOption) {
-                  dot.classList.add("active");
-                }
-              });
-
-              treatmentCardOptions.forEach((option, index) => {
-                if (index === currOption) {
-                  option.style.display = "inline-block";
-                } else if (index !== currOption) {
-                  option.style.display = "none";
-                }
-              });
-              optionPrices.forEach((optionPrice, index) => {
-                if (index === currOption) {
-                  optionPrice.style.display = "inline-block";
-                } else if (index !== currOption) {
-                  optionPrice.style.display = "none";
-                }
-              });
-
-              const optionsTimes = slide.querySelectorAll(
-                ".treatment-time span"
-              );
-              // console.log("optionTimes", optionTimes);
-
-              optionsTimes.forEach((optionTime, index) => {
-                // console.log("optionTime index", index);
-                // console.log("optionTime currOption", currOption);
-
-                if (index === currOption) {
-                  optionTime.style.display = "inline-block";
-                } else if (index !== currOption) {
-                  optionTime.style.display = "none";
-                }
-              });
-            });
-          });
-        }
-      });
+    function getIndex(){
+      return sliderContainer.dataset.currentSlide * 1;
     }
-  });
-}
-//
-// setSlides();
-
-/* ---------------------------------------- setHeight function ----------------------------------------
-- sets height fgor slider-container
-- container has position: absolute property (container does not adjust height accordingly)
-*/
-//
-//
-//
-function setHeightAndPadding(service) {
-  const treatmentSlider = document.querySelectorAll(".treatment-slider");
-  //
-  treatmentSlider.forEach((slider, index) => {
-    //
-    let cardHeight = slider.children[0].getBoundingClientRect().height;
-    let headerHeight =
-      slider.children[0].children[0].getBoundingClientRect().height;
-    slider.style.height = `${cardHeight + headerHeight + 100}px`;
-    //
-    if (checkBrowser()) {
-      const treatmentPrices = service.querySelectorAll(".treatment-price");
-      if (treatmentPrices.length > 1) {
-        treatmentPrices.forEach((price) => {
-          if (index !== 0) {
-            price.style.paddingRight = "4rem";
-          } else {
-            price.style.paddingRight = "9rem";
-          }
-        });
-      } else {
-        if (index !== 0) {
-          treatmentPrices[0].style.paddingRight = "4rem";
-        } else {
-          treatmentPrices[0].style.paddingRight = "9rem";
-        }
-      }
+    function setIndex(index){
+      sliderContainer.dataset.currentSlide = index;
     }
-  });
-}
-
-/* ---------------------------------------- DEFAULT SLIDER STYLINGS ---------------------------------------- */
-function checkBrowser() {
-  let userAgent = navigator.userAgent;
-  let browserName;
-
-  if (userAgent.match(/chrome|chromium|crios/i)) {
-    browserName = "chrome";
-  } else if (userAgent.match(/firefox|fxios/i)) {
-    browserName = "firefox";
-  } else if (userAgent.match(/safari/i)) {
-    browserName = "safari";
-  } else if (userAgent.match(/opr\//i)) {
-    browserName = "opera";
-  } else if (userAgent.match(/edg/i)) {
-    browserName = "edge";
-  } else {
-    browserName = "No browser detection";
+    return { getIndex, setIndex };
   }
-  return browserName === "firefox";
+
+  const slideControls = e.target.closest(".slider-controls");
+  if(!slideControls) return;
+
+  const sliderContainer = slideControls.closest(".treatment-slider");
+  const currSlides = sliderContainer.querySelectorAll(".treatment-card");
+  const currDots = sliderContainer.querySelectorAll(".slider-controls .slider-dots .slider-dot");
+
+  const lastIndex = currSlides.length - 1;
+
+  const clickedNext = e.target.closest('.slider-btn.next');
+  const clickedPrev = e.target.closest('.slider-btn.previous');
+  const clickedDot = e.target.closest(".slider-dot");
+
+  const { getIndex, setIndex } = slideIndex();
+  console.log("getIndex() before", getIndex())
+
+  // set new currSlide index
+  if (clickedDot) setIndex(Number(clickedDot.dataset.index));
+
+  if (clickedNext) setIndex(getIndex() === lastIndex ? 0 : getIndex() + 1);
+  if (clickedPrev) setIndex(getIndex() === 0 ? lastIndex : getIndex() - 1);
+
+  console.log("getIndex() after", getIndex());
+
+
+  // shift all slides acc. to newly set currSlide
+  currSlides.forEach((slide, index) => {
+    slide.style.transform = `translate(${50 + 160 * (index - getIndex())}%, -50%)`;
+    slide.style.visibility = index === getIndex() ? "visible" : "hidden";
+  })
+  currDots.forEach((dot, index) => {
+    // reset active status for all dots
+    dot.classList.remove("active");
+
+    // set active class to current active dot
+    if(index === getIndex()) dot.classList.add("active");
+  });
+}
+function optionsControlsListener(e){
+  function currentOption(slide) {
+    function getCurrOption(){
+      return slide.dataset.currentOption * 1;
+    }
+    function setCurrOption(index) {
+      slide.dataset.currentOption = index;
+    }
+
+    return { getCurrOption, setCurrOption }
+  }
+  const { target } = e;
+
+  const optionsSlideControls = target.closest(".options-controls");
+  if(!optionsSlideControls) return;
+  //
+  const slide = target.closest(".treatment-card");
+  const treatmentOptions = slide.querySelectorAll(".treatment-options .option");
+  const optionPrices = slide.querySelectorAll(".treatment-price .amount");
+  const optionsDots = slide.querySelectorAll(".options-controls .slider-dot");
+  const optionsTimes = slide.querySelectorAll(".treatment-time .duration");
+
+  const lastIndex = treatmentOptions.length - 1;
+
+  const leftArrowClicked = target.closest(".slider-btn.previous");
+  const rightArrowClicked = target.closest(".slider-btn.next");
+
+  // const currOptionIndex = slide.dataset.currentOption * 1;
+
+  const { getCurrOption, setCurrOption } = currentOption(slide);
+
+  // currOptionIndex change
+  if (leftArrowClicked) setCurrOption(getCurrOption() === 0 ? lastIndex : getCurrOption() - 1);
+  if (rightArrowClicked) setCurrOption(getCurrOption() === lastIndex ? 0 : getCurrOption() + 1);
+
+  // change options data after currOptionIndex change
+  for(let i = 0; i <= lastIndex; i++) {
+    treatmentOptions[i].style.display = i === getCurrOption() ? "inline-block" : "none";
+    optionsTimes[i].style.display = i === getCurrOption() ? "inline-block" : "none";
+    optionPrices[i].style.display = i === getCurrOption() ? "inline-block" : "none";
+
+    optionsDots[i].classList.remove("active");
+
+    if (i === getCurrOption()) optionsDots[i].classList.add("active");
+  }
 }
 
-/*------------------------------------------------ .sec-nav FUNCTION -------------------------------------------------------*/
-const secNavItems = document.querySelectorAll(".sec-nav--item");
-const services = document.querySelectorAll(".wrapper");
-const mainFooter = document.querySelector(".main-footer");
+// style functions
+function setSlides() {
+  const sliderContainers = document.querySelectorAll(".wrapper.active .treatment-slider");
 
-secNavItems.forEach((navItem, index) => {
-  navItem.addEventListener("click", function (event) {
-    //
-    const { target } = event;
-    // console.log("target", target);
+  sliderContainers.forEach((sliderContainer) => {
+    function setSlideStyles(slide, index) {
+      // set initial slide styles
+      slide.style.transform = `translate(${50 + 160 * index}%, -50%)`;
+      slide.style.visibility = `${index === 0 ? "visible" :"hidden"}`
+    }
+    function fillDotContainer(dotContainer, index){
+      if(index === 0) dotContainer.innerHTML = "";
+      dotContainer.innerHTML += `<button type="button" data-index="${index}" aria-label="Behandlung Nummer ${index + 1} "class="slider-dot ${index === 0 ? "active" : ""}">`;
+    }
+    function setOptionalData(slide) {
+      const treatmentOptions = slide.querySelectorAll(".treatment-options .option");
+      const optionPrices = slide.querySelectorAll(".treatment-price .amount");
+      const optionsTimes = slide.querySelectorAll(".treatment-time .duration");
 
-    const secNavInnerText = target
-      .closest(".sec-nav--link")
-      .innerText.toLowerCase();
-    // console.log("secNavInnerText", secNavInnerText);
+      const optionsDots = slide.querySelectorAll(".options-controls .slider-dot");
 
-    if (secNavInnerText !== "Zusatzprogramme".toLowerCase()) {
-      setTimeout(() => setSlides(), 200);
+      for(let i = 0; i < treatmentOptions.length; i++) {
+        treatmentOptions[i].style.display = i === 0 ? "inline-block" : "none";
+        optionsTimes[i].style.display = i === 0 ? "inline-block" : "none";
+        optionPrices[i].style.display = i === 0 ? "inline-block" : "none";
+
+        optionsDots[i].classList.remove("active");
+      }
+      optionsDots[0].classList.add("active");
     }
 
-    if (!mainFooter.classList.contains("background-bottom")) {
-      mainFooter.classList.add("background-bottom");
-    }
-    //
-    services.forEach((service, serviceIndex) => {
-      //
-      if (service.classList.contains("active")) {
-        service.classList.remove("active");
-      }
-      //
-      if (serviceIndex === index) {
-        //
-        service.classList.add("active");
-        //
-        if (
-          window.innerWidth > 768 &&
-          secNavInnerText !== "Zusatzprogramme".toLowerCase()
-        ) {
-          setHeightAndPadding(service);
-        }
-      }
+    // set for each relevant slider container
+    // - used for slider navigation 
+    sliderContainer.setAttribute("data-current-slide", 0);
+    
+    const slides = sliderContainer.querySelectorAll(".treatment-card");
+    const dotContainer = sliderContainer.querySelector(".slider-controls .slider-dots");
+
+    slides.forEach((slide, index) => {
+      // set additional options of a slide(treatment-card) if there are any
+      // - relevant for mobbile and desktop layout
+      const hasOptions = slide.classList.contains("optional");
+      if(hasOptions) setOptionalData(slide, index);
+
+      if (window.innerWidth <= 768) return;
+      setSlideStyles(slide, index);
+
+      if(!dotContainer) return;
+      // fill dot container if there is any!
+      fillDotContainer(dotContainer, index);
     });
+
+    // add background bottom to main footer
+    // - .add silently fails when footer already has class set
+    document.querySelector(".main-footer").classList.add("background-bottom");
   });
-});
+}
+function setHeightAndPadding(service) {
+  function checkBrowser() {
+    if (/firefox|fxios/i.test(navigator.userAgent)) return true;
+    if (/edg(e|a|ios)?\//i.test(navigator.userAgent)) return false;
+    if (/opr\/|opera/i.test(navigator.userAgent)) return false;
+    if (/chrome|chromium|crios/i.test(navigator.userAgent)) return false;
+    if (/safari/i.test(navigator.userAgent)) return false;
+  }
+  
+  const treatmentSliders = document.querySelectorAll(".treatment-slider");
+  treatmentSliders.forEach(slider => {
+    const slide = slider.querySelector(".treatment-card");
+    const heading = slide.querySelector(".treatment-heading");
 
-sliderContainers.forEach((sliderComponent) => {
-  //
-  let currSlide = 0;
-  //
-  sliderComponent
-    .querySelectorAll(".slider-controls")
-    .forEach((sliderControl) => {
-      sliderControl.addEventListener("click", function (event) {
-        //
-        let currSlides = event.target.closest(".treatment-slider").children;
-        let currControls = event.target.closest(".slider-controls");
-        let currDots =
-          currControls.closest(".slider-controls").children[1].children;
-        //
-        //define slider direction
-        if (event.target.name === "chevron-forward-outline") {
-          //
-          if (currSlide === currSlides.length - 2) {
-            currSlide = 0;
-          } else {
-            currSlide++;
-          }
-        } else if (event.target.name === "chevron-back-outline") {
-          if (currSlide === 0) {
-            currSlide = currSlides.length - 2;
-          } else {
-            currSlide--;
-          }
-        }
-        //
-        //shift all current slides on click
-        for (let i = 0; i < currSlides.length - 1; i++) {
-          currSlides[i].style.transform = `translate(${
-            50 + 160 * (i - currSlide)
-          }%, -50%)`;
-          if (i !== currSlide) {
-            // console.log(currSlides[i]);
-            currSlides[i].style.opacity = "0%";
-          } else if (i === currSlide) {
-            currSlides[i].style.opacity = "100%";
-          }
-        }
-        //reset active status for all dots
-        for (let i = 0; i < currDots.length; i++) {
-          currDots[i].classList.remove("active");
-        }
-        //display current active dot
-        currDots[currSlide].classList.add("active");
-      });
-    });
-});
+    let slideHeight = slide.getBoundingClientRect().height;
+    let headingHeight = heading.getBoundingClientRect().height;
 
-// =======================================================================================================================================================
-// =======================================================================================================================================================
-// =======================================================================================================================================================
-// =======================================================================================================================================================
-// =======================================================================================================================================================
+    // set slider initial height based on inner content
+    slider.style.height = `${slideHeight + headingHeight + 100}px`;
+
+    if (!checkBrowser()) return;
+
+    // set larger right padding for firefox browser
+    const treatmentPrices = service.querySelectorAll(".treatment-price");
+    treatmentPrices.forEach((price) => price.style.paddingRight = "4rem");
+  });
+}
+
+// ======================================================================
+// .sec-nav listener
+// - dynamically displays relevant content and attaches event listener
+// ======================================================================
+const secNavList = document.querySelector(".sec-nav--list");
+secNavList.addEventListener("click", function(e) {
+  const navLink = e.target.closest(".sec-nav--link");
+  if(!navLink) return;
+
+  const servicesWrappers = document.querySelectorAll(".wrapper");
+  servicesWrappers.forEach((wrapper) => wrapper.classList.remove("active"));
+  servicesWrappers[Number(navLink.dataset.id)].classList.add("active");
+
+  // set height and padding for active wrapper elements
+  if (window.innerWidth <= 768) return;
+  setHeightAndPadding(document.querySelector(".wrapper.active"));
+  setSlides();
+
+  // remove all possible listeners from wrappers
+  servicesWrappers.forEach((wrapper) => {
+    wrapper.removeEventListener("click", sliderControlsListener);
+    wrapper.removeEventListener("click", optionsControlsListener);
+  });
+  const activeWrapper = servicesWrappers[Number(navLink.dataset.id)];
+  const hasOptionalSlides = activeWrapper.querySelectorAll(".optional");
+
+  // add listeners to active wrapper
+  // slider controls listener
+  activeWrapper.addEventListener("click", sliderControlsListener);
+
+  // slide options controls listener
+  if(!hasOptionalSlides) return;
+  activeWrapper.addEventListener("click", optionsControlsListener);
+})
