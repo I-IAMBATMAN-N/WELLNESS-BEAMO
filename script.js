@@ -1,35 +1,18 @@
 "use strict";
-
+// ======================================================================
+// .remove intro class from header on load
+// ======================================================================
 const mainHeader = document.querySelector(".main-header");
+document.addEventListener("load", () => setTimeout(() => mainHeader.classList.remove("intro"), 1000));
 
-/*---------------------------------------- Header Start Animation ----------------------------------------*/
-setTimeout(() => {
-  mainHeader.classList.remove("intro");
-}, 2000);
-
-const menuIcons = document.querySelectorAll(".mobile-menu-icon");
+// ======================================================================
+// .hamburger menu function
+// ======================================================================
 const mainNav = document.querySelector(".main-nav");
-if (window.innerWidth > 880) {
-  navLinks.forEach((navLink) => {
-    navLink.addEventListener("click", function () {
-      // reset navLinks
-      navLinks.forEach((navLink) => {
-        if (navLink.classList.contains("active"))
-          navLink.classList.remove("active");
-      });
-
-      // set to active
-      navLink.classList.add("active");
-    });
-  });
-}
-
-/*---------------------------------------- Hamburger Menu Function ----------------------------------------*/
 
 const navList = document.querySelector(".nav-list");
 const navLinks = document.querySelectorAll(".nav-link");
 
-const navItems = document.querySelectorAll(".nav-item");
 const mobileBtnContainer = document.querySelector(".menu-btn-container");
 const menuBtns = mobileBtnContainer.querySelectorAll(".mobile-menu-btn");
 
@@ -53,88 +36,3 @@ if (window.innerWidth < 768) {
     mainNav.classList.toggle("active");
   });
 }
-
-/*---------------------------------------- Certificate Images Function ----------------------------------------*/
-
-function resetViews() {
-  const links_certImgs = document.querySelectorAll(
-    ".certificates > div > a",
-  );
-
-  links_certImgs.forEach((img) => img.classList.remove("view"));
-}
-const certificatesSection = document.querySelector(".certificates");
-
-if (window.innerWidth > 880) {
-  certificatesSection?.addEventListener("click", function (e) {
-    //
-    const targetImage = e.target.closest("img");
-    const targetLink = e.target.closest("a");
-
-    if (targetImage) {
-      mainHeader.style.transition = ".3s ease";
-      mainHeader.style.opacity = "0%";
-
-      targetLink.classList.add("view");
-    }
-
-    if (!targetImage) {
-      mainHeader.style.opacity = "100%";
-
-      resetViews();
-    }
-  });
-}
-
-/*---------------------------------------- Hidden Class Function ---------------------------------------- 
-- Add hidden class for each section (will be removed in future)
-*/
-const sections = document.querySelectorAll(".section");
-
-sections.forEach((section, index) => {
-  if (window.innerWidth > 880) {
-    if (!section.classList.contains("section"))
-      // index > 0 ? section.classList.add("hidden") : "";
-      section.classList.add("hidden");
-  }
-});
-
-/*---------------------------------------- Hidden Class Function ---------------------------------------- 
-- remove hidden class on scroll
-*/
-const obsOptions = {
-  root: null,
-  threshold: 0.4,
-};
-
-const observer = new IntersectionObserver(obsCallback, obsOptions);
-let time = 0;
-if (document.title !== "Schönheits- und Wellnessmassagen | BEAMO") {
-  time = 2000;
-} else {
-  time = 3000;
-}
-
-function obsCallback(entries, observer) {
-  entries.forEach((entry) => {
-    if (window.innerWidth > 880) {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.remove("hidden");
-        }, time);
-        time = 0;
-      }
-    }
-  });
-}
-sections.forEach((section) => {
-  observer.observe(section);
-});
-
-document
-  .querySelectorAll(".sec-nav--item")
-  .forEach((element) =>
-    element.addEventListener("click", () =>
-      document.querySelector(".main-footer").classList.add("background-top"),
-    ),
-  );
