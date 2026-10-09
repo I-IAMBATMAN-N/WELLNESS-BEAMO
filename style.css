@@ -104,14 +104,15 @@ body {
   margin-top: 0.8rem;
   opacity: 100%;
 }
+.menu-btn-container {
+  display: none;
+}
 .mobile-menu-btn {
   background-color: transparent;
   border: none;
 
   font-size: 4.4rem;
   color: var(--color-accent);
-
-  display: none;
 }
 .mobile-menu-btn.hidden {
   display: none;
@@ -1227,6 +1228,9 @@ h3 {
     -webkit-transform: translate(-50%, 0) scale(2.5);
     -ms-transform: translate(-50%, 0) scale(2.5);
     transform: translate(-50%, 0) scale(2.5);
+  }
+  .menu-btn-container {
+    display: inline-block;
   }
   .mobile-menu-btn{
     display: -webkit-box;
