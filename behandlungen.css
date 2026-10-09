@@ -4,7 +4,9 @@
 * Autoprefixer: v10.5.0
 * Browsers: last 4 version
 */
-
+button:hover {
+  cursor: pointer;
+}
 .start-btn {
   position: fixed;
   bottom: 3.2rem;
@@ -44,6 +46,13 @@
   transform: translate(50%, 0%);
 }
 .slider-btn {
+  background-color: transparent;
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   color: var(--color-accent);
   font-size: 3.6rem;
 
@@ -52,7 +61,12 @@
   transition: 0.3s;
   cursor: pointer;
 }
-.slider-btn:first-child:hover {
+.slider-btn:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+/* .slider-btn:first-child:hover {
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
@@ -61,7 +75,7 @@
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
-}
+} */
 .slider-dots {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 0px;
@@ -84,6 +98,9 @@
   gap: 3.2rem;
 }
 .slider-dot {
+  background-color: transparent;
+  border: none;
+
   width: 1.2rem;
   height: 1.2rem;
 
@@ -92,9 +109,10 @@
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-.slider-dot.active {
-  width: 2.4rem;
-  height: 2.4rem;
+.slider-dot.active,
+.slider-dot:hover,
+.slider-dot:focus-visible {
+  transform: scale(2);
 
   background-color: var(--color-accent);
 }
@@ -262,10 +280,6 @@
   height: 0.8rem;
 
   border: solid 0.1rem var(--color-accent);
-}
-.options-controls .slider-dot.active {
-  width: 1.2rem;
-  height: 1.2rem;
 }
 .options-controls .slider-btn {
   font-size: 2.4rem;
@@ -461,7 +475,8 @@
   left: 3.2rem;
   bottom: 0;
 }
-.treatment-time span {
+.treatment-time span,
+.treatment-time .duration {
   display: inline-block;
 
   font-family: "Great Vibes";
@@ -495,11 +510,11 @@
   border-top-left-radius: 2rem;
 }
 .treatment-price,
-.treatment-price span {
+.treatment-price .amount {
   font-size: 9.6rem;
   letter-spacing: 0.2rem;
 }
-.treatment-price span {
+.treatment-price .amount {
   margin-left: 0.2rem;
 }
 .treatment-benefits {
