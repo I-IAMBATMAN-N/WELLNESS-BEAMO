@@ -50,17 +50,44 @@
       defer
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <!-- PRELOAD IMAGES -->
+    <link
+      rel="preload"
+      as="image"
+      href="images/Zertifikate/zertifikat_cnc.jpg"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="images/Zertifikate/zertifikat_cnc_intensiv.jpg"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="images/Zertifikate/zertifikat_cnc_mikrodermabrasion.jpg"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="images/Zertifikate/PHYRIS_AQUActive_BEAUTY_REISE_Treatment.jpg"
+    />
+
     <!-- CUSTOM STYLES and SCRIPTS -->
     <link rel="stylesheet" href="style.css?v=1.2" />
     <style>
       /*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
-      .certificates {
+      * Prefixed by https://autoprefixer.github.io
+      * PostCSS: v8.5.15,
+      * Autoprefixer: v10.5.0
+      * Browsers: last 4 version
+      */
+      /*
+        * Prefixed by https://autoprefixer.github.io
+        * PostCSS: v8.4.14,
+        * Autoprefixer: v10.4.7
+        * Browsers: last 4 version
+      */
+      .section.certificates {
         padding-top: 16rem;
         padding-bottom: 8rem;
 
@@ -89,70 +116,6 @@
       .section .certificate-img {
         border-radius: 0rem;
       }
-      .section .certificate-img:not(.view) {
-        width: 100%;
-      }
-      .section a:last-child {
-        -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-      }
-      a:has(.certificate-img) {
-        height: auto;
-      }
-      a .certificate-img {
-        display: block;
-      }
-      a:has(.certificate-img):hover {
-        cursor: pointer;
-      }
-      a:has(.certificate-img):not(.view):hover {
-        -webkit-transform: scale(1.05);
-        -ms-transform: scale(1.05);
-        transform: scale(1.05);
-        -webkit-transition: 0.3s ease;
-        -o-transition: 0.3s ease;
-        transition: 0.3s ease;
-      }
-      a.view {
-        position: absolute;
-        height: 100vh;
-
-        top: 0;
-        left: 50%;
-
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        transform: translateX(-50%);
-
-        z-index: 1000;
-      }
-      a.view::before {
-        content: "";
-
-        width: 100vw;
-        height: 100vh;
-
-        background-color: rgba(255, 255, 255, 0);
-        -webkit-backdrop-filter: blur(8rem);
-        backdrop-filter: blur(8rem);
-
-        position: absolute;
-
-        top: 0;
-        left: 50%;
-
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        transform: translateX(-50%);
-
-        z-index: -1;
-      }
-      a.view .certificate-img {
-        width: auto;
-        height: 100%;
-      }
-
       @media (max-width: 48em) {
         body {
           gap: 0rem;
@@ -167,8 +130,6 @@
     </style>
     <script defer src="script.js?v=1.2"></script>
     <!-- <script defer src="classScript.js"></script> -->
-    <!-- <script defer src="Zertifikate.js"></script> -->
-    <script></script>
     <title>Zertifikat | BEAMO</title>
   </head>
   <body>
@@ -231,31 +192,46 @@
     </header>
     <section class="section certificates lg">
       <div>
-        <a href="#">
+        <a
+          href="images/Zertifikate/zertifikat_cnc.jpg"
+          aria-label="Link zu CNC Zertifikat"
+        >
           <img
-            src="/images/Zertifikate/zertifikat_cnc.jpg"
+            src="images/Zertifikate/zertifikat_cnc.jpg"
             alt="Zertifikat CNC Tatána Kern"
             class="certificate-img"
           />
         </a>
-        <a href="#">
+        <a
+          href="images/Zertifikate/zertifikat_cnc_intensiv.jpg"
+          aria-label="Link zu CNC Intensiv Zertifikat"
+        >
           <img
-            src="/images/Zertifikate/zertifikat_cnc_intensiv.jpg"
+            src="images/Zertifikate/zertifikat_cnc_intensiv.jpg"
             alt="Zertifikat CNC Intensiv Tatána Kern"
             class="certificate-img"
-        /></a>
-        <a href="#">
+          />
+        </a>
+        <a
+          href="images/Zertifikate/zertifikat_cnc_mikrodermabrasion.jpg"
+          aria-label="Link zu CNC Mikrodermabrasion Zertifikat"
+        >
           <img
-            src="/images/Zertifikate/zertifikat_cnc_mikrodermabrasion.jpg"
+            src="images/Zertifikate/zertifikat_cnc_mikrodermabrasion.jpg"
             alt="Zertifikat Mikrodermabarasion Tatána Kern"
             class="certificate-img"
-        /></a>
-        <a href="#">
+          />
+        </a>
+        <a
+          href="images/Zertifikate/PHYRIS_AQUActive_BEAUTY_REISE_Treatment.jpg"
+          aria-label="Link zu Zertifikat Beauty Reise Behandlung"
+        >
           <img
-            src="/images/Zertifikate/PHYRIS_AQUActive_BEAUTY_REISE_Treatment.jpg"
+            src="images/Zertifikate/PHYRIS_AQUActive_BEAUTY_REISE_Treatment.jpg"
             alt="Zertifikat Mikrodermabarasion Tatána Kern"
             class="certificate-img"
-        /></a>
+          />
+        </a>
       </div>
     </section>
     <footer class="main-footer section lg">
@@ -403,38 +379,6 @@
         </section>
         <section class="map"></section>
       </section>
-      <script>
-        /*---------------------------------------- Certificate Images Function ----------------------------------------*/
-        function resetViews() {
-          const links_certImgs = document.querySelectorAll(
-            ".certificates > div > a",
-          );
-
-          links_certImgs.forEach((img) => img.classList.remove("view"));
-        }
-        const certificatesSection = document.querySelector(".certificates");
-
-        if (window.innerWidth > 880) {
-          certificatesSection?.addEventListener("click", function (e) {
-            //
-            const targetImage = e.target.closest("img");
-            const targetLink = e.target.closest("a");
-
-            if (targetImage) {
-              mainHeader.style.transition = ".3s ease";
-              mainHeader.style.opacity = "0%";
-
-              targetLink.classList.add("view");
-            }
-
-            if (!targetImage) {
-              mainHeader.style.opacity = "100%";
-
-              resetViews();
-            }
-          });
-        }
-      </script>
     </footer>
   </body>
 </html>
